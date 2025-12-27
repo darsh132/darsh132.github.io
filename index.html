@@ -34,7 +34,7 @@
   <!-- HERO -->
   <section
     class="relative bg-cover bg-center"
-    style="background-image: url('./assets/hero-bg.jpg');"
+    style="background-image: url('./assets/hero.png');"
   >
     <div class="absolute inset-0 bg-gray-950/85"></div>
 
@@ -247,6 +247,8 @@ ${description}
 `;
 
       const encodedMessage = encodeURIComponent(message);
+
+alert(encodedMessage);
 
       // 🔴 REPLACE WITH YOUR NUMBER
       const whatsappUrl = `https://wa.me/919372181313?text=${encodedMessage}`;
