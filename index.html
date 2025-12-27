@@ -1,121 +1,264 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Darshan Bane | .NET Backend Developer</title>
+  <title>Darshan Bane | Full-Stack .NET Developer</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Subtle Corporate Animations -->
+  <style>
+    .fade-up {
+      animation: fadeUp 0.8s ease-out both;
+    }
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
+
 <body class="bg-gray-950 text-gray-100">
 
   <!-- HERO -->
-  <section class="max-w-5xl mx-auto px-6 py-20">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Darshan Bane</h1>
-    <h2 class="text-xl md:text-2xl text-gray-400 mb-6">
-      Backend / Full-Stack .NET Developer
-    </h2>
-    <p class="text-lg text-gray-300 max-w-2xl mb-8">
-      I build secure, scalable Web APIs and business-ready applications using
-      C#, ASP.NET Core, and SQL Server.
-      <span class="text-white font-semibold">Available for freelance & contract work.</span>
-    </p>
+  <section
+    class="relative bg-cover bg-center"
+    style="background-image: url('./assets/hero-bg.jpg');"
+  >
+    <div class="absolute inset-0 bg-gray-950/85"></div>
 
-    <div class="flex gap-4">
-      <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold">
-        Contact Me
-      </a>
-      <a href="#projects" class="border border-gray-700 hover:border-gray-500 px-6 py-3 rounded-lg">
-        View Projects
-      </a>
+    <div class="relative max-w-5xl mx-auto px-6 py-28 fade-up">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        Darshan Bane
+      </h1>
+
+      <h2 class="text-xl md:text-2xl text-gray-300 mb-6">
+        Full-Stack .NET Developer
+      </h2>
+
+      <p class="text-lg text-gray-300 max-w-2xl mb-8">
+        I design and build scalable backend systems and full-stack applications
+        using .NET, SQL Server, and modern frontend frameworks.
+        <span class="text-white font-semibold">
+          Available for contract & freelance engagements.
+        </span>
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact"
+           class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition">
+          <i data-lucide="mail"></i>
+          Contact
+        </a>
+
+        <a href="#projects"
+           class="flex items-center gap-2 border border-gray-400 hover:border-white px-6 py-3 rounded-lg transition">
+          <i data-lucide="folder-code"></i>
+          View Work
+        </a>
+
+        <a href="#quote"
+           class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-lg transition">
+          <i data-lucide="file-text"></i>
+          Request a Quote
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800">
-    <h3 class="text-2xl font-semibold mb-8">Skills</h3>
+  <!-- EXPERTISE -->
+  <section class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800 fade-up">
+    <h3 class="text-2xl font-semibold mb-8 flex items-center gap-2">
+      <i data-lucide="layers"></i> Expertise
+    </h3>
 
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid md:grid-cols-2 gap-8 text-gray-300">
       <div>
-        <h4 class="font-semibold mb-2">Backend</h4>
-        <ul class="text-gray-300 space-y-1">
-          <li>C#, .NET 6 / 8, ASP.NET Core Web API</li>
+        <h4 class="font-semibold mb-2 flex items-center gap-2">
+          <i data-lucide="server"></i> Backend
+        </h4>
+        <ul class="space-y-1">
+          <li>.NET 6 / 8, ASP.NET Core Web API</li>
           <li>Entity Framework Core, LINQ</li>
-          <li>REST API design, validation, error handling</li>
+          <li>Authentication, validation, error handling</li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-semibold mb-2">Database</h4>
-        <ul class="text-gray-300 space-y-1">
+        <h4 class="font-semibold mb-2 flex items-center gap-2">
+          <i data-lucide="database"></i> Database
+        </h4>
+        <ul class="space-y-1">
           <li>SQL Server</li>
-          <li>Joins, indexing, query optimization</li>
+          <li>Query optimization, indexing</li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-semibold mb-2">Frontend</h4>
-        <ul class="text-gray-300 space-y-1">
-          <li>HTML, CSS, JavaScript</li>
-          <li>Basic React</li>
+        <h4 class="font-semibold mb-2 flex items-center gap-2">
+          <i data-lucide="layout"></i> Frontend
+        </h4>
+        <ul class="space-y-1">
+          <li>Angular / React (SPA)</li>
+          <li>REST API integration</li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-semibold mb-2">Tools</h4>
-        <ul class="text-gray-300 space-y-1">
-          <li>Visual Studio 2022</li>
-          <li>Git & GitHub</li>
-          <li>Postman</li>
+        <h4 class="font-semibold mb-2 flex items-center gap-2">
+          <i data-lucide="wrench"></i> Tools
+        </h4>
+        <ul class="space-y-1">
+          <li>Visual Studio, Git, GitHub</li>
+          <li>Postman, CI/CD basics</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800">
-    <h3 class="text-2xl font-semibold mb-8">Projects</h3>
+  <section id="projects" class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800 fade-up">
+    <h3 class="text-2xl font-semibold mb-8 flex items-center gap-2">
+      <i data-lucide="code-2"></i> Selected Work
+    </h3>
 
     <div class="space-y-6">
-      <div class="p-6 border border-gray-800 rounded-lg">
-        <h4 class="text-xl font-semibold mb-2">Phishing Simulation Portal</h4>
+      <div class="p-6 border border-gray-800 rounded-lg hover:border-gray-600 transition">
+        <h4 class="text-xl font-semibold mb-2">
+          Phishing Simulation Portal
+        </h4>
         <p class="text-gray-300 mb-2">
-          ASP.NET Core Web API + SQL Server. Role-based access, reporting,
-          and security-focused backend design.
+          Enterprise-grade system built using ASP.NET Core Web API and SQL Server,
+          focused on security, reporting, and role-based access.
         </p>
-        <a href="https://github.com/your-github-link" class="text-blue-500 hover:underline">
-          View on GitHub →
+        <a href="https://github.com/your-github-link"
+           class="inline-flex items-center gap-2 text-blue-500 hover:underline">
+          <i data-lucide="github"></i> View Repository
         </a>
       </div>
-
-      <!-- Add 1–2 more projects max -->
     </div>
   </section>
 
-  <!-- AVAILABILITY -->
-  <section class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800">
-    <h3 class="text-2xl font-semibold mb-6">Availability</h3>
-    <p class="text-gray-300 mb-4">
-      Currently available for:
+  <!-- REQUEST A QUOTE (WHATSAPP SUBMISSION) -->
+  <section id="quote" class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800 fade-up">
+    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-2">
+      <i data-lucide="file-text"></i> Request a Quote
+    </h3>
+
+    <p class="text-gray-300 mb-6 max-w-2xl">
+      Fill in the details below. You’ll be redirected to WhatsApp with your
+      requirements pre-filled for a quick and structured discussion.
     </p>
-    <ul class="list-disc list-inside text-gray-300 space-y-1">
-      <li>Backend API development (.NET)</li>
-      <li>Bug fixing & performance improvements</li>
-      <li>SQL Server query optimization</li>
-      <li>.NET project support & code cleanup</li>
-    </ul>
+
+    <form id="quoteForm" class="grid md:grid-cols-2 gap-6">
+      <input id="name" type="text" required placeholder="Your Name"
+        class="bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500">
+
+      <input id="email" type="email" required placeholder="Email Address"
+        class="bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500">
+
+      <select id="projectType" required
+        class="md:col-span-2 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500">
+        <option value="">Project Type</option>
+        <option>Backend API (.NET)</option>
+        <option>Full-Stack Application</option>
+        <option>Bug Fixing / Support</option>
+        <option>Performance Optimization</option>
+      </select>
+
+      <textarea id="description" rows="4" required
+        placeholder="Brief project description"
+        class="md:col-span-2 bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500"></textarea>
+
+      <button type="submit"
+        class="md:col-span-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition">
+        Send via WhatsApp
+      </button>
+    </form>
+
+    <p class="text-gray-500 text-sm mt-4">
+      You’ll be redirected to WhatsApp with the above details filled in.
+    </p>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800">
-    <h3 class="text-2xl font-semibold mb-6">Contact</h3>
-    <p class="text-gray-300 mb-4">
-      Let’s talk about your project.
-    </p>
-    <ul class="text-gray-300 space-y-2">
-      <li>Email: <a href="mailto:darshanbbane2000@gmail.com" class="text-blue-500">darshanbbane2000@gmail.com</a></li>
-      <li>GitHub: <a href="https://github.com/darsh132" class="text-blue-500">github.com/darsh132</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/darshan-bane-06b414216/" class="text-blue-500">https://www.linkedin.com/in/darshan-bane-06b414216/</a></li>
-    </ul>
+  <section id="contact" class="max-w-5xl mx-auto px-6 py-16 border-t border-gray-800 fade-up">
+    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-2">
+      <i data-lucide="phone"></i> Contact
+    </h3>
+
+    <div class="space-y-3 text-gray-300">
+      <p class="flex items-center gap-2">
+        <i data-lucide="mail"></i>
+        <a href="mailto:darshanbbane2000@gmail.com" class="text-blue-500">
+          darshanbbane2000@gmail.com
+        </a>
+      </p>
+
+      <p class="flex items-center gap-2">
+        <i data-lucide="github"></i>
+        <a href="https://github.com/darsh132" class="text-blue-500">
+          github.com/darsh132
+        </a>
+      </p>
+
+      <p class="flex items-center gap-2">
+        <i data-lucide="linkedin"></i>
+        <a href="https://www.linkedin.com/in/darshan-bane-06b414216/"
+           class="text-blue-500">
+          LinkedIn Profile
+        </a>
+      </p>
+    </div>
   </section>
+
+  <!-- FORM → WHATSAPP LOGIC -->
+  <script>
+    document.getElementById("quoteForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const projectType = document.getElementById("projectType").value;
+      const description = document.getElementById("description").value;
+
+      const message =
+`Hello Darshan,
+
+I'm interested in discussing a project.
+
+Name: ${name}
+Email: ${email}
+Project Type: ${projectType}
+
+Project Details:
+${description}
+`;
+
+      const encodedMessage = encodeURIComponent(message);
+
+      // 🔴 REPLACE WITH YOUR NUMBER
+      const whatsappUrl = `https://wa.me/91XXXXXXXXXX?text=${encodedMessage}`;
+
+      window.open(whatsappUrl, "_blank");
+    });
+  </script>
+
+  <!-- INIT ICONS -->
+  <script>
+    lucide.createIcons();
+  </script>
 
 </body>
 </html>
