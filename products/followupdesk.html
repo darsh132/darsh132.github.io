@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="FollowUpDesk - self-hosted sales follow-up and customer management software built with .NET 8.">
+
+    <meta name="keywords"
+          content="FollowUpDesk, CRM, sales follow-up software, .NET 8, self-hosted CRM">
+
+    <title>FollowUpDesk | Business Software | Darshan Bane</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: #f8fafc;
+            color: #0f172a;
+
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(248, 250, 252, 0.92);
+
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .nav-inner {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 24px;
+        }
+
+        .brand {
+            font-size: 18px;
+            font-weight: 800;
+
+            letter-spacing: -0.02em;
+        }
+
+        .brand span {
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+
+            color: #475569;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #0f172a;
+        }
+
+        .nav-button {
+            padding: 10px 16px;
+
+            background: #0f172a;
+            color: white;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            padding: 90px 0 80px;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(148, 163, 184, 0.18),
+                    transparent 35%
+                );
+        }
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.1fr
+                0.9fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+
+            padding: 7px 12px;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 999px;
+
+            background: white;
+
+            color: #475569;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.08em;
+        }
+
+        .hero h1 {
+            margin: 22px 0 0;
+
+            max-width: 760px;
+
+            font-size: clamp(44px, 6vw, 70px);
+
+            line-height: 0.98;
+
+            letter-spacing: -0.055em;
+        }
+
+        .hero h1 span {
+            color: #64748b;
+        }
+
+        .hero-description {
+            max-width: 650px;
+
+            margin: 26px 0 0;
+
+            color: #64748b;
+
+            font-size: 19px;
+
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 34px;
+        }
+
+        .button-primary {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 20px;
+
+            background: #0f172a;
+            color: white;
+
+            border-radius: 9px;
+
+            font-size: 14px;
+            font-weight: 800;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 25px rgba(15, 23, 42, 0.15);
+        }
+
+        .button-secondary {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 20px;
+
+            background: white;
+
+            color: #0f172a;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 9px;
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .button-secondary:hover {
+            border-color: #94a3b8;
+        }
+
+        .hero-meta {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 30px;
+        }
+
+        .meta-item {
+            padding: 7px 10px;
+
+            background: #f1f5f9;
+
+            border-radius: 6px;
+
+            color: #475569;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+        /* =========================================
+           PRODUCT PREVIEW
+        ========================================= */
+
+        .product-preview {
+            position: relative;
+
+            min-height: 430px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .browser-window {
+            width: 100%;
+
+            overflow: hidden;
+
+            background: white;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 30px 70px rgba(15, 23, 42, 0.13);
+        }
+
+        .browser-header {
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            padding: 0 14px;
+
+            background: #f1f5f9;
+
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .browser-dot {
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: #cbd5e1;
+        }
+
+        .dashboard {
+            padding: 20px;
+        }
+
+        .dashboard-title {
+            font-size: 18px;
+
+            font-weight: 800;
+        }
+
+        .dashboard-subtitle {
+            margin-top: 3px;
+
+            color: #94a3b8;
+
+            font-size: 11px;
+        }
+
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 10px;
+
+            margin-top: 18px;
+        }
+
+        .stat {
+            padding: 14px;
+
+            background: #f8fafc;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 8px;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+
+            font-size: 10px;
+
+            font-weight: 700;
+        }
+
+        .stat-value {
+            margin-top: 5px;
+
+            font-size: 21px;
+
+            font-weight: 800;
+        }
+
+        .chart {
+            height: 145px;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            gap: 8px;
+
+            margin-top: 16px;
+
+            padding: 18px;
+
+            background: #f8fafc;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 8px;
+        }
+
+        .bar {
+            flex: 1;
+
+            background: #94a3b8;
+
+            border-radius: 4px 4px 0 0;
+        }
+
+        .bar:nth-child(1) {
+            height: 35%;
+        }
+
+        .bar:nth-child(2) {
+            height: 55%;
+        }
+
+        .bar:nth-child(3) {
+            height: 45%;
+        }
+
+        .bar:nth-child(4) {
+            height: 70%;
+        }
+
+        .bar:nth-child(5) {
+            height: 60%;
+        }
+
+        .bar:nth-child(6) {
+            height: 85%;
+        }
+
+        /* =========================================
+           SECTION
+        ========================================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+
+            margin-bottom: 45px;
+        }
+
+        .section-heading .eyebrow {
+            margin-bottom: 15px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+
+            font-size: clamp(32px, 4vw, 48px);
+
+            line-height: 1.05;
+
+            letter-spacing: -0.04em;
+        }
+
+        .section-heading p {
+            margin-top: 15px;
+
+            color: #64748b;
+
+            font-size: 17px;
+        }
+
+        /* =========================================
+           FEATURES
+        ========================================= */
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .feature-card {
+            padding: 28px;
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 14px;
+        }
+
+        .feature-number {
+            color: #94a3b8;
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+        .feature-card h3 {
+            margin: 16px 0 8px;
+
+            font-size: 20px;
+
+            letter-spacing: -0.02em;
+        }
+
+        .feature-card p {
+            margin: 0;
+
+            color: #64748b;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        /* =========================================
+           SCREENSHOTS
+        ========================================= */
+
+        .screenshots-section {
+            background: #0f172a;
+
+            color: white;
+        }
+
+        .screenshots-section .section-heading p {
+            color: #94a3b8;
+        }
+
+        .screenshots-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .screenshot-placeholder {
+            min-height: 260px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #1e293b;
+
+            border: 1px solid #334155;
+
+            border-radius: 14px;
+
+            color: #94a3b8;
+
+            font-size: 14px;
+
+            text-align: center;
+        }
+
+        .screenshot-placeholder.large {
+            min-height: 360px;
+
+            grid-column: span 2;
+        }
+
+        /* =========================================
+           TECHNOLOGY
+        ========================================= */
+
+        .tech-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 14px;
+        }
+
+        .tech-item {
+            padding: 20px;
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            font-size: 14px;
+
+            font-weight: 800;
+        }
+
+        /* =========================================
+           INCLUDED
+        ========================================= */
+
+        .included-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 50px;
+
+            align-items: start;
+        }
+
+        .check-list {
+            display: grid;
+
+            gap: 14px;
+
+            padding: 0;
+
+            margin: 0;
+
+            list-style: none;
+        }
+
+        .check-list li {
+            display: flex;
+
+            gap: 12px;
+
+            align-items: flex-start;
+
+            padding: 16px;
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 10px;
+
+            color: #334155;
+
+            font-size: 14px;
+        }
+
+        .check {
+            flex-shrink: 0;
+
+            width: 22px;
+            height: 22px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #f1f5f9;
+
+            border-radius: 50%;
+
+            font-size: 12px;
+
+            font-weight: 900;
+        }
+
+        /* =========================================
+           REQUIREMENTS
+        ========================================= */
+
+        .requirements {
+            padding: 30px;
+
+            background: #0f172a;
+
+            color: white;
+
+            border-radius: 14px;
+        }
+
+        .requirements h3 {
+            margin-top: 0;
+
+            font-size: 22px;
+        }
+
+        .requirements ul {
+            padding-left: 20px;
+
+            color: #cbd5e1;
+
+            line-height: 2;
+        }
+
+        /* =========================================
+           PRICING
+        ========================================= */
+
+        .pricing {
+            background: #f1f5f9;
+        }
+
+        .pricing-card {
+            max-width: 760px;
+
+            margin: 0 auto;
+
+            padding: 42px;
+
+            background: white;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 25px 50px rgba(15, 23, 42, 0.07);
+        }
+
+        .pricing-top {
+            display: flex;
+
+            align-items: flex-start;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .pricing-name {
+            color: #64748b;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.08em;
+        }
+
+        .pricing-card h3 {
+            margin: 8px 0 0;
+
+            font-size: 30px;
+        }
+
+        .price {
+            font-size: 44px;
+
+            font-weight: 900;
+
+            letter-spacing: -0.04em;
+        }
+
+        .price-note {
+            color: #94a3b8;
+
+            font-size: 12px;
+
+            text-align: right;
+        }
+
+        .pricing-divider {
+            height: 1px;
+
+            margin: 30px 0;
+
+            background: #e2e8f0;
+        }
+
+        .pricing-features {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 12px 30px;
+
+            padding: 0;
+
+            margin: 0;
+
+            list-style: none;
+
+            color: #475569;
+
+            font-size: 14px;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+
+            margin-right: 9px;
+
+            font-weight: 900;
+        }
+
+        .pricing-button {
+            width: 100%;
+
+            margin-top: 30px;
+
+            padding: 15px;
+
+            border: 0;
+
+            background: #0f172a;
+
+            color: white;
+
+            border-radius: 9px;
+
+            font-size: 15px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+        }
+
+        .pricing-small {
+            margin-top: 14px;
+
+            color: #94a3b8;
+
+            font-size: 12px;
+
+            text-align: center;
+        }
+
+        /* =========================================
+           FAQ
+        ========================================= */
+
+        .faq {
+            max-width: 850px;
+
+            margin: 0 auto;
+        }
+
+        details {
+            margin-bottom: 12px;
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+
+            cursor: pointer;
+
+            font-size: 15px;
+
+            font-weight: 800;
+        }
+
+        details p {
+            margin: 0;
+
+            padding: 0 20px 20px;
+
+            color: #64748b;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        /* =========================================
+           FINAL CTA
+        ========================================= */
+
+        .final-cta {
+            padding: 90px 0;
+
+            background: #0f172a;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            font-size: clamp(34px, 5vw, 55px);
+
+            line-height: 1;
+
+            letter-spacing: -0.045em;
+        }
+
+        .final-cta p {
+            max-width: 600px;
+
+            margin: 22px auto 0;
+
+            color: #94a3b8;
+
+            font-size: 17px;
+        }
+
+        .final-cta .hero-actions {
+            justify-content: center;
+        }
+
+        .final-cta .button-secondary {
+            background: transparent;
+
+            color: white;
+
+            border-color: #475569;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            padding: 40px 0;
+
+            background: #020617;
+
+            color: #64748b;
+
+            font-size: 14px;
+        }
+
+        .footer-inner {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .feature-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .tech-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .feature-grid,
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshot-placeholder.large {
+                grid-column: span 1;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pricing-card {
+                padding: 28px 22px;
+            }
+
+            .pricing-top {
+                flex-direction: column;
+            }
+
+            .price-note {
+                text-align: left;
+            }
+
+            .pricing-features {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a
+            href="../index.html"
+            class="brand"
+        >
+            DB <span>/ Darshan Bane</span>
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="../index.html">
+                Portfolio
+            </a>
+
+            <a href="../products.html">
+                Products
+            </a>
+
+            <a href="#features">
+                Features
+            </a>
+
+            <a href="#pricing">
+                Pricing
+            </a>
+
+        </nav>
+
+
+        <a
+            href="#pricing"
+            class="nav-button"
+        >
+            Get FollowUpDesk
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+
+        <div>
+
+            <span class="eyebrow">
+                Business Software
+            </span>
+
+
+            <h1>
+
+                FollowUpDesk
+
+                <br>
+
+                <span>
+                    Turn follow-ups into a system.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                A practical sales follow-up and customer
+                management application designed to help
+                teams organize leads, customers, tasks
+                and follow-up activities from one place.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a
+                    href="#pricing"
+                    class="button-primary"
+                >
+                    Get FollowUpDesk
+                </a>
+
+
+                <a
+                    href="#features"
+                    class="button-secondary"
+                >
+                    Explore Features
+                </a>
+
+            </div>
+
+
+            <div class="hero-meta">
+
+                <span class="meta-item">
+                    .NET 8
+                </span>
+
+                <span class="meta-item">
+                    ASP.NET Core
+                </span>
+
+                <span class="meta-item">
+                    SQL Server
+                </span>
+
+                <span class="meta-item">
+                    Self Hosted
+                </span>
+
+                <span class="meta-item">
+                    Commercial License
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT MOCKUP -->
+
+        <div class="product-preview">
+
+            <div class="browser-window">
+
+                <div class="browser-header">
+
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+
+                </div>
+
+
+                <div class="dashboard">
+
+                    <div class="dashboard-title">
+                        FollowUpDesk
+                    </div>
+
+                    <div class="dashboard-subtitle">
+                        Sales overview
+                    </div>
+
+
+                    <div class="stats">
+
+                        <div class="stat">
+
+                            <div class="stat-label">
+                                LEADS
+                            </div>
+
+                            <div class="stat-value">
+                                128
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <div class="stat-label">
+                                FOLLOW-UPS
+                            </div>
+
+                            <div class="stat-value">
+                                42
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <div class="stat-label">
+                                CUSTOMERS
+                            </div>
+
+                            <div class="stat-value">
+                                76
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart">
+
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FEATURES
+========================================= -->
+
+<section id="features">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                Features
+            </span>
+
+            <h2>
+                Everything you need
+                to manage follow-ups.
+            </h2>
+
+            <p>
+                Keep important customer activity,
+                sales tasks and follow-up workflows
+                organized in one application.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+            <article class="feature-card">
+
+                <span class="feature-number">
+                    01
+                </span>
+
+                <h3>
+                    Lead Management
+                </h3>
+
+                <p>
+                    Organize prospects and maintain
+                    structured information throughout
+                    the sales process.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <span class="feature-number">
+                    02
+                </span>
+
+                <h3>
+                    Customer Management
+                </h3>
+
+                <p>
+                    Maintain customer records and
+                    keep important business information
+                    accessible to your team.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <span class="feature-number">
+                    03
+                </span>
+
+                <h3>
+                    Follow-up Tracking
+                </h3>
+
+                <p>
+                    Track pending follow-ups so important
+                    opportunities don't disappear from
+                    your workflow.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <span class="feature-number">
+                    04
+                </span>
+
+                <h3>
+                    Task Management
+                </h3>
+
+                <p>
+                    Organize sales activities and
+                    actionable tasks associated with
+                    customers and prospects.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <span class="feature-number">
+                    05
+                </span>
+
+                <h3>
+                    Dashboard
+                </h3>
+
+                <p>
+                    Get a centralized view of important
+                    sales activity and operational data.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <span class="feature-number">
+                    06
+                </span>
+
+                <h3>
+                    Self Hosted
+                </h3>
+
+                <p>
+                    Deploy the application on infrastructure
+                    controlled by your organization.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SCREENSHOTS
+========================================= -->
+
+<section class="screenshots-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                Product Preview
+            </span>
+
+            <h2>
+                Built around the
+                workflow.
+            </h2>
+
+            <p>
+                Replace these placeholders with
+                real FollowUpDesk screenshots before
+                publishing the product for sale.
+            </p>
+
+        </div>
+
+
+        <div class="screenshots-grid">
+
+
+            <div class="screenshot-placeholder large">
+
+                FOLLOWUPDESK DASHBOARD SCREENSHOT
+
+                <br>
+
+                Replace with:
+                assets/images/products/followupdesk/dashboard.png
+
+            </div>
+
+
+            <div class="screenshot-placeholder">
+
+                LEADS SCREENSHOT
+
+                <br>
+
+                Replace with:
+                assets/images/products/followupdesk/leads.png
+
+            </div>
+
+
+            <div class="screenshot-placeholder">
+
+                FOLLOW-UPS SCREENSHOT
+
+                <br>
+
+                Replace with:
+                assets/images/products/followupdesk/followups.png
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     TECHNOLOGY
+========================================= -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                Technology
+            </span>
+
+            <h2>
+                Built with modern
+                Microsoft technologies.
+            </h2>
+
+            <p>
+                Designed for developers and businesses
+                that want control over their deployment.
+            </p>
+
+        </div>
+
+
+        <div class="tech-grid">
+
+            <div class="tech-item">
+                .NET 8
+            </div>
+
+            <div class="tech-item">
+                ASP.NET Core
+            </div>
+
+            <div class="tech-item">
+                Entity Framework Core
+            </div>
+
+            <div class="tech-item">
+                SQL Server
+            </div>
+
+            <div class="tech-item">
+                Razor / MVC
+            </div>
+
+            <div class="tech-item">
+                IIS Deployment
+            </div>
+
+            <div class="tech-item">
+                Authentication
+            </div>
+
+            <div class="tech-item">
+                Self Hosted
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     WHAT YOU GET
+========================================= -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                Included
+            </span>
+
+            <h2>
+                What you get.
+            </h2>
+
+            <p>
+                A commercial software package designed
+                to give you a working starting point
+                instead of an empty project.
+            </p>
+
+        </div>
+
+
+        <div class="included-grid">
+
+
+            <ul class="check-list">
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <span>
+                        FollowUpDesk application
+                        source package
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Database structure and
+                        deployment scripts
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Configuration and
+                        environment setup guidance
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Deployment documentation
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Commercial usage license
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Product updates according
+                        to the selected license
+                    </span>
+
+                </li>
+
+
+            </ul>
+
+
+            <div class="requirements">
+
+                <h3>
+                    Deployment Requirements
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        Windows environment
+                    </li>
+
+                    <li>
+                        IIS
+                    </li>
+
+                    <li>
+                        .NET 8 runtime or
+                        self-contained deployment
+                    </li>
+
+                    <li>
+                        SQL Server
+                    </li>
+
+                    <li>
+                        Basic server configuration
+                        access
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PRICING
+========================================= -->
+
+<section
+    id="pricing"
+    class="pricing"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                Pricing
+            </span>
+
+            <h2>
+                Start with a working
+                foundation.
+            </h2>
+
+            <p>
+                Choose a commercial license that fits
+                how you intend to use the software.
+            </p>
+
+        </div>
+
+
+        <div class="pricing-card">
+
+
+            <div class="pricing-top">
+
+
+                <div>
+
+                    <div class="pricing-name">
+                        Commercial License
+                    </div>
+
+                    <h3>
+                        FollowUpDesk
+                    </h3>
+
+                </div>
+
+
+                <div>
+
+                    <div class="price">
+                        Coming Soon
+                    </div>
+
+                    <div class="price-note">
+                        Final pricing will be published
+                        before launch.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="pricing-divider"></div>
+
+
+            <ul class="pricing-features">
+
+                <li>
+                    Commercial usage
+                </li>
+
+                <li>
+                    Self-hosted deployment
+                </li>
+
+                <li>
+                    Application source
+                </li>
+
+                <li>
+                    Database scripts
+                </li>
+
+                <li>
+                    Deployment documentation
+                </li>
+
+                <li>
+                    Configuration guidance
+                </li>
+
+                <li>
+                    Product updates
+                </li>
+
+                <li>
+                    Technical support
+                </li>
+
+            </ul>
+
+
+            <button
+                class="pricing-button"
+                type="button"
+                onclick="showComingSoon()"
+            >
+                Buy FollowUpDesk
+            </button>
+
+
+            <div class="pricing-small">
+                Secure checkout and automated delivery
+                will be enabled at launch.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FAQ
+========================================= -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                FAQ
+            </span>
+
+            <h2>
+                Frequently asked questions.
+            </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+
+            <details>
+
+                <summary>
+                    Is FollowUpDesk cloud hosted?
+                </summary>
+
+                <p>
+                    FollowUpDesk is designed as a
+                    self-hosted application. You control
+                    the infrastructure and deployment.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Can I customize the application?
+                </summary>
+
+                <p>
+                    The commercial licensing model is
+                    intended to allow customers to adapt
+                    the application to their own business
+                    requirements, subject to the license
+                    terms.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Do I receive the source code?
+                </summary>
+
+                <p>
+                    The source-code availability depends
+                    on the specific license purchased.
+                    The final product package and license
+                    terms will clearly state what is included.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Can I resell FollowUpDesk?
+                </summary>
+
+                <p>
+                    No. A standard commercial license does
+                    not automatically grant redistribution
+                    or resale rights. Separate licensing
+                    may be offered for those requirements.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    What support is included?
+                </summary>
+
+                <p>
+                    Support coverage will depend on the
+                    license or package selected at purchase.
+                    The final checkout page will clearly
+                    specify the support period and scope.
+                </p>
+
+            </details>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FINAL CTA
+========================================= -->
+
+<section class="final-cta">
+
+    <div class="container">
+
+
+        <h2>
+            Start with software.
+            Build from there.
+        </h2>
+
+
+        <p>
+            Explore FollowUpDesk and see whether
+            it fits your sales workflow.
+        </p>
+
+
+        <div class="hero-actions">
+
+            <a
+                href="#pricing"
+                class="button-primary"
+            >
+                Get FollowUpDesk
+            </a>
+
+
+            <a
+                href="../products.html"
+                class="button-secondary"
+            >
+                View All Products
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+            © 2026 Darshan Bane
+        </div>
+
+        <div>
+            <a href="../products.html">
+                Products
+            </a>
+
+            &nbsp; · &nbsp;
+
+            <a href="../index.html">
+                Portfolio
+            </a>
+
+            &nbsp; · &nbsp;
+
+            <a href="../index.html#contact">
+                Contact
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    function showComingSoon() {
+
+        alert(
+            "FollowUpDesk purchasing will be available soon. " +
+            "Please check back shortly."
+        );
+
+    }
+
+</script>
+
+
+</body>
+</html>
