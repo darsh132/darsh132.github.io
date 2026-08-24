@@ -4,10 +4,11 @@
   const root = nested ? '../' : './';
 
   // Global visual correction layer: keeps text contrast and product media consistent.
+  // Versioned URL prevents stale CSS from GitHub Pages/browser cache.
   if (!document.querySelector('link[data-theme-fixes]')) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `${root}assets/css/theme-fixes.css`;
+    link.href = `${root}assets/css/theme-fixes.css?v=20260825-2`;
     link.dataset.themeFixes = 'true';
     document.head.appendChild(link);
   }
