@@ -1,487 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Darshan Bane - .NET Developer specializing in ASP.NET Core, Angular, SQL Server, APIs, integrations, modernization, and automation."
-  />
-  <title>Darshan Bane | .NET Developer</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background:
-        radial-gradient(circle at 20% 0%, rgba(34, 211, 238, 0.09), transparent 26rem),
-        linear-gradient(180deg, #020617 0%, #07111f 44%, #020617 100%);
-    }
-
-    .fade-up {
-      animation: fadeUp 0.7s ease-out both;
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .developer-grid {
-      background-image:
-        linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-
-    .code-line::before {
-      content: attr(data-line);
-      color: #64748b;
-      display: inline-block;
-      margin-right: 1rem;
-      text-align: right;
-      width: 1.5rem;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Darshan Bane — Full Stack .NET developer building business applications, internal tools and practical software products.">
+  <title>Darshan Bane — Software Developer & Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="assets/css/app.css">
 </head>
-
-<body class="text-slate-100 antialiased">
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-      <a href="#" class="flex items-center gap-3 text-sm font-semibold tracking-wide text-white">
-        <span class="grid h-9 w-9 place-items-center rounded-md bg-cyan-400 text-slate-950">DB</span>
-        Darshan Bane
-      </a>
-
-      <div class="hidden items-center gap-7 text-sm text-slate-300 md:flex">
-        <a href="#capabilities" class="transition hover:text-white">Capabilities</a>
-        <a href="#experience" class="transition hover:text-white">Experience</a>
-        <a href="#projects" class="transition hover:text-white">Work</a>
-        <a href="#contact" class="transition hover:text-white">Contact</a>
-      </div>
-
-      <a
-        href="./assets/darshan-bane-cv.pdf"
-        download
-        class="inline-flex items-center gap-2 rounded-md border border-cyan-300/40 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/10"
-      >
-        <i data-lucide="download" class="h-4 w-4"></i>
-        CV
-      </a>
-    </nav>
-  </header>
-
+<body class="bg-base-100 text-base-content antialiased">
+  <div id="site-header"></div>
   <main>
-    <section class="developer-grid relative overflow-hidden border-b border-white/10">
-      <div
-        class="absolute inset-0 bg-cover bg-center opacity-75"
-        style="background-image: url('./assets/developer-banner.png');"
-      ></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/88 to-slate-950/52"></div>
-      <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-950 to-transparent"></div>
-
-      <div class="relative mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl content-center gap-10 px-5 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-        <div class="max-w-3xl fade-up">
-          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-sm font-medium text-cyan-100">
-            <i data-lucide="code-2" class="h-4 w-4"></i>
-            .NET / Angular / SQL Server / APIs
-          </p>
-
-          <h1 class="text-4xl font-bold leading-tight text-white md:text-6xl">
-            .NET developer building APIs, web apps, and practical automation.
-          </h1>
-
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            I am Darshan B. Bane, a Mumbai-based developer with 4+ years of experience working on
-            ASP.NET Core APIs, Angular apps, SQL-backed systems, authentication flows, integrations,
-            reporting, and internal tools that support real business workflows.
-          </p>
-
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#contact"
-              class="inline-flex items-center gap-2 rounded-md bg-cyan-400 px-5 py-3 font-semibold text-slate-950 shadow-lg shadow-cyan-950/40 transition hover:bg-cyan-300"
-            >
-              <i data-lucide="mail" class="h-5 w-5"></i>
-              Contact Me
-            </a>
-            <a
-              href="#projects"
-              class="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/5 px-5 py-3 font-semibold text-white transition hover:border-cyan-200 hover:bg-white/10"
-            >
-              <i data-lucide="folder-code" class="h-5 w-5"></i>
-              View Work
-            </a>
-            <a
-              href="#quote"
-              class="inline-flex items-center gap-2 rounded-md border border-white/20 bg-white/5 px-5 py-3 font-semibold text-white transition hover:border-cyan-200 hover:bg-white/10"
-            >
-              <i data-lucide="send" class="h-5 w-5"></i>
-              Request Quote
-            </a>
+    <section class="hero-shell relative overflow-hidden border-b border-base-300">
+      <div class="hero-grid absolute inset-0"></div>
+      <div class="pointer-events-none absolute right-0 top-0 h-[520px] w-[520px] rounded-full bg-primary/8 blur-3xl"></div>
+      <div class="relative mx-auto grid max-w-7xl gap-12 px-5 py-24 lg:grid-cols-[1.15fr_.85fr] lg:px-8 lg:py-32">
+        <div class="reveal max-w-4xl">
+          <div class="eyebrow"><span class="status-dot"></span> FULL STACK .NET DEVELOPER</div>
+          <h1 class="mt-6 max-w-4xl font-display text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">Building software that solves business problems.</h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-base-content/70">I build modern business applications, internal tools and practical software products — from the workflow and API to deployment.</p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a class="btn btn-primary" href="projects.html">View My Work</a>
+            <a class="btn btn-outline" href="products.html">Explore Products</a>
+            <a class="btn btn-ghost" href="contact.html">Work With Me <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-base-content/55">
+            <span>4+ years experience</span><span>ASP.NET Core</span><span>Angular</span><span>SQL-backed systems</span>
           </div>
         </div>
-
-        <aside class="self-end overflow-hidden border border-white/10 bg-slate-950/80 shadow-2xl shadow-black/40 backdrop-blur fade-up">
-          <div class="flex items-center justify-between border-b border-white/10 px-5 py-3">
-            <div class="flex gap-2">
-              <span class="h-3 w-3 rounded-full bg-red-400"></span>
-              <span class="h-3 w-3 rounded-full bg-amber-300"></span>
-              <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+        <aside class="reveal self-end border border-base-300 bg-base-200/55 p-1 shadow-2xl shadow-black/20">
+          <div class="border border-base-300 bg-base-100 p-6 sm:p-7">
+            <div class="flex items-center justify-between border-b border-base-300 pb-4">
+              <span class="font-mono text-xs text-base-content/45">darshan-bane / profile</span>
+              <span class="badge badge-outline badge-sm">BUILD MODE</span>
             </div>
-            <p class="text-xs text-slate-500">developer-profile.cs</p>
-          </div>
-
-          <div class="p-5 font-mono text-sm leading-7 text-slate-300">
-            <p class="code-line" data-line="1"><span class="text-cyan-300">var</span> developer = <span class="text-white">"Darshan Bane"</span>;</p>
-            <p class="code-line" data-line="2"><span class="text-cyan-300">var</span> focus = <span class="text-white">".NET APIs + Angular"</span>;</p>
-            <p class="code-line" data-line="3"><span class="text-cyan-300">var</span> experience = <span class="text-white">"4+ years"</span>;</p>
-            <p class="code-line" data-line="4"><span class="text-cyan-300">var</span> strengths = <span class="text-white">new[]</span> {</p>
-            <p class="code-line pl-6" data-line="5">"backend", "SQL", "auth",</p>
-            <p class="code-line pl-6" data-line="6">"integrations", "support"</p>
-            <p class="code-line" data-line="7">};</p>
-          </div>
-
-          <div class="grid grid-cols-3 border-t border-white/10 text-center">
-            <div class="p-4">
-              <p class="text-2xl font-bold text-white">4+</p>
-              <p class="mt-1 text-xs text-slate-500">years</p>
+            <div class="py-7 font-mono text-sm leading-8">
+              <p><span class="text-primary">role</span> = <span class="text-base-content">"Full Stack .NET Developer"</span></p>
+              <p><span class="text-primary">focus</span> = <span class="text-base-content">"Business Software"</span></p>
+              <p><span class="text-primary">approach</span> = <span class="text-base-content">"Understand → Define → Build → Deploy"</span></p>
+              <p><span class="text-primary">direction</span> = <span class="text-base-content">"Products + Services"</span></p>
             </div>
-            <div class="border-x border-white/10 p-4">
-              <p class="text-2xl font-bold text-white">.NET 8</p>
-              <p class="mt-1 text-xs text-slate-500">APIs</p>
-            </div>
-            <div class="p-4">
-              <p class="text-2xl font-bold text-white">SQL</p>
-              <p class="mt-1 text-xs text-slate-500">data</p>
+            <div class="grid grid-cols-3 border-t border-base-300 pt-5 text-center">
+              <div><strong class="font-display text-xl">.NET</strong><p class="text-xs text-base-content/45">backend</p></div>
+              <div class="border-x border-base-300"><strong class="font-display text-xl">SQL</strong><p class="text-xs text-base-content/45">data</p></div>
+              <div><strong class="font-display text-xl">WEB</strong><p class="text-xs text-base-content/45">apps</p></div>
             </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="capabilities" class="border-b border-white/10 bg-slate-950">
-      <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <div class="mb-10 max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">What I Work On</p>
-          <h2 class="mt-3 text-3xl font-semibold text-white md:text-4xl">Practical development across backend, frontend, and data.</h2>
-          <p class="mt-4 text-slate-300">
-            I like building maintainable features, clean APIs, useful admin workflows, and fixes that make production systems easier to run.
-          </p>
-        </div>
-
-        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          <article class="border border-white/10 bg-slate-900/70 p-6 transition hover:border-cyan-300/50">
-            <i data-lucide="server-cog" class="h-7 w-7 text-cyan-300"></i>
-            <h3 class="mt-5 text-lg font-semibold text-white">Backend Development</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">ASP.NET Core, .NET 6/8, Minimal APIs, REST APIs, LINQ, validation, error handling, and optimization.</p>
-          </article>
-
-          <article class="border border-white/10 bg-slate-900/70 p-6 transition hover:border-cyan-300/50">
-            <i data-lucide="lock-keyhole" class="h-7 w-7 text-cyan-300"></i>
-            <h3 class="mt-5 text-lg font-semibold text-white">Authentication &amp; Security</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">MFA, secure API development, vulnerability fixes, authentication flows, and production hardening.</p>
-          </article>
-
-          <article class="border border-white/10 bg-slate-900/70 p-6 transition hover:border-cyan-300/50">
-            <i data-lucide="plug-zap" class="h-7 w-7 text-cyan-300"></i>
-            <h3 class="mt-5 text-lg font-semibold text-white">API Integrations</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">Azure Marketplace APIs, Apple App Store APIs, Firebase Cloud Messaging, and mobile app integrations.</p>
-          </article>
-
-          <article class="border border-white/10 bg-slate-900/70 p-6 transition hover:border-cyan-300/50">
-            <i data-lucide="sparkles" class="h-7 w-7 text-cyan-300"></i>
-            <h3 class="mt-5 text-lg font-semibold text-white">Automation &amp; AI</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">Semantic Kernel, Ollama, Gemini APIs, certificate generation, small tools, and workflow automation.</p>
-          </article>
-        </div>
-
-        <div class="mt-8 flex flex-wrap gap-2 text-sm">
-          <span class="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-slate-300">C#</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-slate-300">ASP.NET Core</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-slate-300">Minimal APIs</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-slate-300">Angular</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-slate-300">SQL Server</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-slate-300">EF Core</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-slate-300">SSRS</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-slate-300">Power BI</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-slate-300">Postman</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-slate-300">Git</span>
+    <section class="section-shell">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="section-heading reveal"><div><p class="eyebrow">01 / WHAT I BUILD</p><h2>Software around real workflows.</h2></div><p>One identity, three connected directions: engineering, custom software and products.</p></div>
+        <div class="grid gap-px overflow-hidden border border-base-300 bg-base-300 md:grid-cols-2 xl:grid-cols-4">
+          <article class="editorial-card reveal"><span class="card-index">01</span><h3>Business applications</h3><p>Applications designed around operational workflows, data and the people who use them.</p></article>
+          <article class="editorial-card reveal"><span class="card-index">02</span><h3>Internal tools</h3><p>Focused tools that remove repetitive work and make business processes easier to run.</p></article>
+          <article class="editorial-card reveal"><span class="card-index">03</span><h3>MVP development</h3><p>Small, useful software foundations for testing an idea before overbuilding it.</p></article>
+          <article class="editorial-card reveal"><span class="card-index">04</span><h3>Software products</h3><p>Reusable software foundations that can evolve into products for specific business needs.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="border-b border-white/10 bg-slate-900/45">
-      <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <div class="mb-10 max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">How I Build</p>
-          <h2 class="mt-3 text-3xl font-semibold text-white md:text-4xl">Simple habits that keep code maintainable.</h2>
-        </div>
-
-        <div class="grid gap-5 md:grid-cols-3">
-          <article class="border border-white/10 bg-slate-950/70 p-6">
-            <span class="text-sm font-semibold text-cyan-200">01</span>
-            <h3 class="mt-4 text-lg font-semibold text-white">Understand the workflow</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">Start from the user flow, data shape, API contract, and production issue before touching the implementation.</p>
-          </article>
-
-          <article class="border border-white/10 bg-slate-950/70 p-6">
-            <span class="text-sm font-semibold text-cyan-200">02</span>
-            <h3 class="mt-4 text-lg font-semibold text-white">Keep the backend clean</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">Prefer clear validation, predictable errors, focused services, readable LINQ, and SQL that can be supported later.</p>
-          </article>
-
-          <article class="border border-white/10 bg-slate-950/70 p-6">
-            <span class="text-sm font-semibold text-cyan-200">03</span>
-            <h3 class="mt-4 text-lg font-semibold text-white">Ship practical improvements</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">Improve performance, fix edge cases, document behavior, and make deployment or support easier where possible.</p>
-          </article>
+    <section class="section-shell border-y border-base-300 bg-base-200/25">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="section-heading reveal"><div><p class="eyebrow">02 / CAPABILITY</p><h2>Engineering depth without the theatre.</h2></div><a class="text-sm font-semibold text-primary hover:underline" href="about.html">See the full profile →</a></div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <article class="tech-card reveal"><span>BACKEND</span><h3>C# · .NET · ASP.NET Core</h3><p>Web applications, APIs, MVC and Minimal APIs.</p></article>
+          <article class="tech-card reveal"><span>FRONTEND</span><h3>JavaScript · TypeScript · Angular</h3><p>Responsive interfaces with Tailwind CSS and Bootstrap.</p></article>
+          <article class="tech-card reveal"><span>DATA</span><h3>SQL Server · MySQL · SQLite</h3><p>Application data, queries and persistence.</p></article>
+          <article class="tech-card reveal"><span>DEPLOYMENT</span><h3>IIS · Windows Server · GitHub</h3><p>Practical deployment and source control workflows.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="border-b border-white/10 bg-slate-900/45">
-      <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <div class="mb-10 flex items-end justify-between gap-6">
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">Experience</p>
-            <h2 class="mt-3 text-3xl font-semibold text-white md:text-4xl">Development work across products, support, and internal apps.</h2>
-          </div>
-        </div>
-
-        <div class="space-y-5">
-          <article class="grid gap-6 border border-white/10 bg-slate-950/70 p-6 md:grid-cols-[15rem_1fr]">
-            <div>
-              <p class="text-sm font-medium text-cyan-200">Oct 2023 - Present</p>
-              <h3 class="mt-2 text-xl font-semibold text-white">.NET Developer</h3>
-              <p class="mt-2 text-sm text-slate-400">MicroWorld Technologies Inc. (eScan Antivirus), Mumbai</p>
-            </div>
-            <div class="grid gap-4 text-slate-300 lg:grid-cols-3">
-              <p>Built and maintained .NET 8 Minimal APIs and ASP.NET Core applications for security products.</p>
-              <p>Integrated Azure Marketplace, Apple App Store, FCM, Android, iOS, and Windows application APIs.</p>
-              <p>Worked on MFA, QR phishing features, AI/LLM workflows, performance improvements, and legacy modernization.</p>
-            </div>
-          </article>
-
-          <article class="grid gap-6 border border-white/10 bg-slate-950/70 p-6 md:grid-cols-[15rem_1fr]">
-            <div>
-              <p class="text-sm font-medium text-cyan-200">Jan 2022 - Sep 2023</p>
-              <h3 class="mt-2 text-xl font-semibold text-white">Software Developer</h3>
-              <p class="mt-2 text-sm text-slate-400">Fabtech Consultancy Ltd. - L&amp;T Precision Engineering</p>
-            </div>
-            <div class="grid gap-4 text-slate-300 lg:grid-cols-3">
-              <p>Enhanced .NET Core and Angular internal applications in SLA-driven support environments.</p>
-              <p>Developed SharePoint-integrated CRUD modules and backend functionality for operational workflows.</p>
-              <p>Optimized SQL, SSRS, and Power BI reporting while supporting ERP LN debugging and production issue resolution.</p>
-            </div>
-          </article>
+    <section class="section-shell">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="section-heading reveal"><div><p class="eyebrow">03 / SELECTED WORK</p><h2>Evidence of building, not just talking.</h2></div><a class="text-sm font-semibold text-primary hover:underline" href="projects.html">View all projects →</a></div>
+        <div class="grid gap-5 lg:grid-cols-3">
+          <article class="project-card reveal"><div class="project-meta"><span>BUSINESS APPLICATION</span><span>.NET</span></div><h3>eScan Campaign Manager</h3><p>A business-facing campaign workflow where application design, integrations and operational usability matter together.</p><a href="projects.html#campaign-manager">Read project →</a></article>
+          <article class="project-card reveal"><div class="project-meta"><span>SECURITY TOOLING</span><span>.NET 6</span></div><h3>Phishing Simulation Portal</h3><p>An end-to-end portal developed as a self-contained deployment, including workflow and UI iterations.</p><a href="projects.html#phishing-portal">Read project →</a></article>
+          <article class="project-card reveal"><div class="project-meta"><span>INTEGRATION</span><span>API</span></div><h3>Business API Integrations</h3><p>Practical integrations connecting application workflows with external platform APIs and notifications.</p><a href="projects.html#integrations">Read project →</a></article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="border-b border-white/10 bg-slate-950">
-      <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">Technical Stack</p>
-        <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div class="border border-white/10 bg-slate-900/60 p-5">
-            <h3 class="font-semibold text-white">Backend</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">C#, ASP.NET Core, .NET 6/8, Web APIs, Minimal APIs, LINQ</p>
-          </div>
-          <div class="border border-white/10 bg-slate-900/60 p-5">
-            <h3 class="font-semibold text-white">Frontend</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">Angular, HTML, CSS, JavaScript, responsive UI development</p>
-          </div>
-          <div class="border border-white/10 bg-slate-900/60 p-5">
-            <h3 class="font-semibold text-white">Data &amp; Reporting</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">SQL Server, EF Core, SQLite, SSRS, Power BI, query optimization</p>
-          </div>
-          <div class="border border-white/10 bg-slate-900/60 p-5">
-            <h3 class="font-semibold text-white">Tools &amp; Delivery</h3>
-            <p class="mt-3 text-sm leading-6 text-slate-300">Git, IIS, Apache, Visual Studio, VS Code, Postman, Agile support</p>
-          </div>
+    <section class="section-shell border-y border-base-300 bg-base-200/25">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="section-heading reveal"><div><p class="eyebrow">04 / SOFTWARE PRODUCTS</p><h2>Software built for real workflows.</h2></div><p>Practical software foundations that can be adopted, customized and extended.</p></div>
+        <div id="featured-products" class="grid gap-5 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <section class="section-shell">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="section-heading reveal"><div><p class="eyebrow">05 / SERVICES</p><h2>Need software around an existing workflow?</h2></div><a class="btn btn-outline btn-sm" href="services.html">See services</a></div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <article class="service-row reveal"><span>01</span><div><h3>Custom software</h3><p>Build an application around a specific business requirement.</p></div></article>
+          <article class="service-row reveal"><span>02</span><div><h3>Business applications</h3><p>Turn an operational workflow into a maintainable application.</p></div></article>
+          <article class="service-row reveal"><span>03</span><div><h3>Internal tools</h3><p>Reduce repetitive work with focused software.</p></div></article>
+          <article class="service-row reveal"><span>04</span><div><h3>MVP development</h3><p>Build the smallest useful version of an idea.</p></div></article>
+          <article class="service-row reveal"><span>05</span><div><h3>Product customization</h3><p>Adapt an existing product foundation to a real workflow.</p></div></article>
+          <article class="service-row reveal"><span>06</span><div><h3>Workflow automation</h3><p>Connect steps, systems and repetitive operations with software.</p></div></article>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="border-b border-white/10 bg-slate-900/45">
-      <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <div class="mb-10 max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">Selected Work</p>
-          <h2 class="mt-3 text-3xl font-semibold text-white md:text-4xl">Projects and work samples with a developer-first focus.</h2>
-        </div>
-
-        <div class="grid gap-5 lg:grid-cols-2">
-          <article class="border border-white/10 bg-slate-950/70 p-6 transition hover:border-cyan-300/50">
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <p class="text-sm font-medium text-cyan-200">Cybersecurity Feature Work</p>
-                <h3 class="mt-2 text-xl font-semibold text-white">Phishing Simulation Platform</h3>
-              </div>
-              <i data-lucide="shield-alert" class="h-7 w-7 text-cyan-300"></i>
-            </div>
-            <p class="mt-4 text-slate-300">Phishing simulation features using .NET technologies, including security workflows, reporting, and QR phishing capability.</p>
-            <ul class="mt-5 space-y-2 text-sm text-slate-400">
-              <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-cyan-300"></i>Backend feature work for security-focused workflows.</li>
-              <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-cyan-300"></i>Reporting and simulation improvements for users and admins.</li>
-            </ul>
-            <p class="mt-5 text-sm text-slate-500">ASP.NET Core / SQL Server / Security / Reporting</p>
-          </article>
-
-          <article class="border border-white/10 bg-slate-950/70 p-6 transition hover:border-cyan-300/50">
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <p class="text-sm font-medium text-cyan-200">CLI Productivity</p>
-                <h3 class="mt-2 text-xl font-semibold text-white">TaskX CLI Task Manager</h3>
-              </div>
-              <i data-lucide="terminal-square" class="h-7 w-7 text-cyan-300"></i>
-            </div>
-            <p class="mt-4 text-slate-300">.NET 8 command-line task manager using EF Core, SQLite, Spectre.Console, migrations, assignment, notes, export, and SLA tracking.</p>
-            <ul class="mt-5 space-y-2 text-sm text-slate-400">
-              <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-cyan-300"></i>Command pattern with dispatcher and console abstraction.</li>
-              <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-cyan-300"></i>SQLite persistence, EF migrations, export service, and SLA summary.</li>
-            </ul>
-            <a href="https://github.com/darsh132/CLI-TaskManager" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 hover:text-cyan-100">
-              <i data-lucide="github" class="h-4 w-4"></i>
-              View Repository
-            </a>
-          </article>
-
-          <article class="border border-white/10 bg-slate-950/70 p-6 transition hover:border-cyan-300/50">
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <p class="text-sm font-medium text-cyan-200">Console Application</p>
-                <h3 class="mt-2 text-xl font-semibold text-white">QuickNotes</h3>
-              </div>
-              <i data-lucide="notebook-pen" class="h-7 w-7 text-cyan-300"></i>
-            </div>
-            <p class="mt-4 text-slate-300">Lightweight .NET 8 CLI note-taking app with command-based menu flow, in-memory repository, search, add, delete, and list operations.</p>
-            <ul class="mt-5 space-y-2 text-sm text-slate-400">
-              <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-cyan-300"></i>Separation between commands, services, repository, and UI.</li>
-              <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-cyan-300"></i>Small app built to practice clean loops, lists, and console flow.</li>
-            </ul>
-            <a href="https://github.com/darsh132/QuickNotes" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 hover:text-cyan-100">
-              <i data-lucide="github" class="h-4 w-4"></i>
-              View Repository
-            </a>
-          </article>
-
-          <article class="border border-white/10 bg-slate-950/70 p-6 transition hover:border-cyan-300/50">
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <p class="text-sm font-medium text-cyan-200">Integration Work</p>
-                <h3 class="mt-2 text-xl font-semibold text-white">API Integrations &amp; Modernization</h3>
-              </div>
-              <i data-lucide="network" class="h-7 w-7 text-cyan-300"></i>
-            </div>
-            <p class="mt-4 text-slate-300">API integration and migration work spanning Azure Marketplace, Apple App Store, mobile clients, Windows apps, .NET Framework, Classic ASP, and .NET Core.</p>
-            <ul class="mt-5 space-y-2 text-sm text-slate-400">
-              <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-cyan-300"></i>Worked with third-party APIs and subscription/licensing flows.</li>
-              <li class="flex gap-2"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-cyan-300"></i>Supported migration from older stacks into modern .NET Core solutions.</li>
-            </ul>
-            <p class="mt-5 text-sm text-slate-500">Integrations / Legacy Migration / API Architecture</p>
-          </article>
+    <section class="section-shell border-y border-base-300 bg-base-200/25">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="section-heading reveal"><div><p class="eyebrow">06 / HOW I WORK</p><h2>Smallest useful solution first.</h2></div></div>
+        <div class="grid gap-0 border border-base-300 md:grid-cols-5">
+          <div class="process-step"><span>01</span><h3>Understand</h3><p>Business problem and workflow.</p></div>
+          <div class="process-step"><span>02</span><h3>Define</h3><p>Smallest useful solution.</p></div>
+          <div class="process-step"><span>03</span><h3>Build</h3><p>Application around the workflow.</p></div>
+          <div class="process-step"><span>04</span><h3>Deploy</h3><p>Usable in the target environment.</p></div>
+          <div class="process-step"><span>05</span><h3>Improve</h3><p>Iterate from real usage.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="quote" class="border-b border-white/10 bg-slate-950">
-      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-16 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">Project Inquiry</p>
-          <h2 class="mt-3 text-3xl font-semibold text-white md:text-4xl">Need help with a .NET API, Angular app, integration, or bug fix?</h2>
-          <p class="mt-4 text-slate-300">Send the basics and the form will open WhatsApp with a structured project brief.</p>
-        </div>
-
-        <form id="quoteForm" class="grid gap-4 border border-white/10 bg-slate-900/70 p-6 md:grid-cols-2">
-          <input id="name" type="text" required placeholder="Your name" class="border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300" />
-          <input id="email" type="email" required placeholder="Email address" class="border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300" />
-          <select id="projectType" required class="border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-cyan-300 md:col-span-2">
-            <option value="">Project type</option>
-            <option>Backend API (.NET)</option>
-            <option>Full-stack application</option>
-            <option>API integration</option>
-            <option>AI / automation integration</option>
-            <option>Bug fixing / support</option>
-            <option>Performance optimization</option>
-          </select>
-          <textarea id="description" rows="4" required placeholder="Brief project description" class="border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300 md:col-span-2"></textarea>
-          <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-md bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300 md:col-span-2">
-            <i data-lucide="send" class="h-5 w-5"></i>
-            Send via WhatsApp
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <section id="contact" class="bg-slate-900/45">
-      <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8">
-        <div class="mb-8 max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">Contact</p>
-          <h2 class="mt-3 text-3xl font-semibold text-white md:text-4xl">Available for .NET development, support, and modernization work.</h2>
-        </div>
-
-        <div class="grid gap-4 text-slate-300 md:grid-cols-2 xl:grid-cols-4">
-          <a href="mailto:darshanbbane2000@gmail.com" class="flex min-h-24 items-center gap-3 border border-white/10 bg-slate-950/70 p-5 transition hover:border-cyan-300/60">
-            <i data-lucide="mail" class="h-5 w-5 shrink-0 text-cyan-300"></i>
-            <span class="break-all">darshanbbane2000@gmail.com</span>
-          </a>
-          <a href="tel:+919372181313" class="flex min-h-24 items-center gap-3 border border-white/10 bg-slate-950/70 p-5 transition hover:border-cyan-300/60">
-            <i data-lucide="phone-call" class="h-5 w-5 shrink-0 text-cyan-300"></i>
-            <span>+91 9372181313</span>
-          </a>
-          <a href="https://github.com/darsh132" class="flex min-h-24 items-center gap-3 border border-white/10 bg-slate-950/70 p-5 transition hover:border-cyan-300/60">
-            <i data-lucide="github" class="h-5 w-5 shrink-0 text-cyan-300"></i>
-            <span>github.com/darsh132</span>
-          </a>
-          <a href="https://www.linkedin.com/in/darshan-bane-06b414216/" class="flex min-h-24 items-center gap-3 border border-white/10 bg-slate-950/70 p-5 transition hover:border-cyan-300/60">
-            <i data-lucide="linkedin" class="h-5 w-5 shrink-0 text-cyan-300"></i>
-            <span>LinkedIn Profile</span>
-          </a>
-        </div>
+    <section class="section-shell">
+      <div class="mx-auto max-w-4xl px-5 text-center lg:px-8">
+        <p class="eyebrow justify-center">07 / BUSINESS RELATIONSHIP</p>
+        <h2 class="mt-5 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">Have a software requirement?</h2>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-base-content/65">Tell me what you need to build. We can start with the workflow, define the smallest useful solution and decide what should happen next.</p>
+        <div class="mt-8 flex justify-center gap-3"><a class="btn btn-primary" href="contact.html">Let's discuss your requirement</a><a class="btn btn-ghost" href="products.html">Browse products</a></div>
       </div>
     </section>
   </main>
-
-  <footer class="border-t border-white/10 bg-slate-950 px-5 py-8 text-center text-sm text-slate-500">
-    <p>(c) 2026 Darshan Bane. .NET developer portfolio built with HTML and Tailwind CSS.</p>
-  </footer>
-
-  <script>
-    document.getElementById("quoteForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const projectType = document.getElementById("projectType").value;
-      const description = document.getElementById("description").value.trim();
-
-      const message = `Hello Darshan,
-
-I'm interested in discussing a project.
-
-Name: ${name}
-Email: ${email}
-Project Type: ${projectType}
-
-Project Details:
-${description}`;
-
-      const whatsappUrl = `https://wa.me/919372181313?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-    });
-
-    lucide.createIcons();
-  </script>
+  <div id="site-footer"></div>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
