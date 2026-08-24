@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="FollowUpDesk - self-hosted sales follow-up and customer management software built with .NET 8.">
+          content="FollowUpDesk - self-hosted customer follow-up and sales management software.">
 
-    <meta name="keywords"
-          content="FollowUpDesk, CRM, sales follow-up software, .NET 8, self-hosted CRM">
+    <title>FollowUpDesk | Business Follow-Up Software</title>
 
-    <title>FollowUpDesk | Business Software | Darshan Bane</title>
 
     <style>
 
@@ -45,62 +45,72 @@
             text-decoration: none;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
         .container {
-            width: min(1180px, calc(100% - 40px));
+            width:
+                min(
+                    1180px,
+                    calc(100% - 40px)
+                );
+
             margin: 0 auto;
         }
 
-        /* =========================================
+
+        /* ==================================
            NAVIGATION
-        ========================================= */
+        ================================== */
 
         .navbar {
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
 
-            background: rgba(248, 250, 252, 0.92);
+            background:
+                rgba(248,250,252,.94);
 
             backdrop-filter: blur(14px);
 
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom:
+                1px solid #e2e8f0;
         }
 
         .nav-inner {
             min-height: 72px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
-            gap: 24px;
+            gap: 25px;
         }
 
         .brand {
             font-size: 18px;
-            font-weight: 800;
 
-            letter-spacing: -0.02em;
+            font-weight: 800;
         }
 
         .brand span {
             color: #64748b;
+
             font-weight: 500;
         }
 
         .nav-links {
             display: flex;
+
             align-items: center;
-            gap: 26px;
+
+            gap: 25px;
 
             color: #475569;
 
             font-size: 14px;
+
             font-weight: 600;
         }
 
@@ -112,17 +122,20 @@
             padding: 10px 16px;
 
             background: #0f172a;
+
             color: white;
 
             border-radius: 8px;
 
-            font-size: 14px;
-            font-weight: 700;
+            font-size: 13px;
+
+            font-weight: 800;
         }
 
-        /* =========================================
+
+        /* ==================================
            HERO
-        ========================================= */
+        ================================== */
 
         .hero {
             padding: 90px 0 80px;
@@ -130,7 +143,7 @@
             background:
                 radial-gradient(
                     circle at top right,
-                    rgba(148, 163, 184, 0.18),
+                    rgba(148,163,184,.18),
                     transparent 35%
                 );
         }
@@ -139,8 +152,7 @@
             display: grid;
 
             grid-template-columns:
-                1.1fr
-                0.9fr;
+                1fr 1fr;
 
             align-items: center;
 
@@ -152,32 +164,33 @@
 
             padding: 7px 12px;
 
-            border: 1px solid #cbd5e1;
+            background: white;
+
+            border:
+                1px solid #cbd5e1;
 
             border-radius: 999px;
 
-            background: white;
-
             color: #475569;
 
-            font-size: 12px;
+            font-size: 11px;
+
             font-weight: 800;
 
             text-transform: uppercase;
 
-            letter-spacing: 0.08em;
+            letter-spacing: .08em;
         }
 
         .hero h1 {
             margin: 22px 0 0;
 
-            max-width: 760px;
+            font-size:
+                clamp(44px, 6vw, 70px);
 
-            font-size: clamp(44px, 6vw, 70px);
+            line-height: .98;
 
-            line-height: 0.98;
-
-            letter-spacing: -0.055em;
+            letter-spacing: -.055em;
         }
 
         .hero h1 span {
@@ -187,7 +200,7 @@
         .hero-description {
             max-width: 650px;
 
-            margin: 26px 0 0;
+            margin-top: 25px;
 
             color: #64748b;
 
@@ -201,43 +214,48 @@
 
             flex-wrap: wrap;
 
-            gap: 12px;
+            gap: 10px;
 
-            margin-top: 34px;
+            margin-top: 32px;
         }
 
         .button-primary {
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
             padding: 13px 20px;
 
             background: #0f172a;
+
             color: white;
 
             border-radius: 9px;
 
-            font-size: 14px;
+            font-size: 13px;
+
             font-weight: 800;
 
             transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
+                transform .2s ease,
+                box-shadow .2s ease;
         }
 
         .button-primary:hover {
             transform: translateY(-2px);
 
             box-shadow:
-                0 12px 25px rgba(15, 23, 42, 0.15);
+                0 15px 30px
+                rgba(15,23,42,.15);
         }
 
         .button-secondary {
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
             padding: 13px 20px;
@@ -246,16 +264,14 @@
 
             color: #0f172a;
 
-            border: 1px solid #cbd5e1;
+            border:
+                1px solid #cbd5e1;
 
             border-radius: 9px;
 
-            font-size: 14px;
-            font-weight: 800;
-        }
+            font-size: 13px;
 
-        .button-secondary:hover {
-            border-color: #94a3b8;
+            font-weight: 800;
         }
 
         .hero-meta {
@@ -263,13 +279,13 @@
 
             flex-wrap: wrap;
 
-            gap: 10px;
+            gap: 8px;
 
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
-        .meta-item {
-            padding: 7px 10px;
+        .meta {
+            padding: 6px 9px;
 
             background: #f1f5f9;
 
@@ -277,42 +293,36 @@
 
             color: #475569;
 
-            font-size: 12px;
+            font-size: 11px;
 
             font-weight: 700;
         }
 
-        /* =========================================
-           PRODUCT PREVIEW
-        ========================================= */
+
+        /* ==================================
+           PRODUCT MOCKUP
+        ================================== */
 
         .product-preview {
-            position: relative;
-
-            min-height: 430px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
+            padding: 10px;
         }
 
-        .browser-window {
-            width: 100%;
-
+        .browser {
             overflow: hidden;
 
             background: white;
 
-            border: 1px solid #cbd5e1;
+            border:
+                1px solid #cbd5e1;
 
-            border-radius: 14px;
+            border-radius: 12px;
 
             box-shadow:
-                0 30px 70px rgba(15, 23, 42, 0.13);
+                0 30px 70px
+                rgba(15,23,42,.14);
         }
 
-        .browser-header {
+        .browser-bar {
             height: 42px;
 
             display: flex;
@@ -325,11 +335,13 @@
 
             background: #f1f5f9;
 
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom:
+                1px solid #e2e8f0;
         }
 
-        .browser-dot {
+        .dot {
             width: 9px;
+
             height: 9px;
 
             border-radius: 50%;
@@ -337,22 +349,83 @@
             background: #cbd5e1;
         }
 
-        .dashboard {
-            padding: 20px;
+        .app {
+            display: grid;
+
+            grid-template-columns:
+                145px 1fr;
+
+            min-height: 390px;
         }
 
-        .dashboard-title {
+        .sidebar {
+            padding: 20px 13px;
+
+            background: #0f172a;
+
+            color: #cbd5e1;
+        }
+
+        .sidebar-title {
+            margin-bottom: 25px;
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 900;
+        }
+
+        .sidebar-item {
+            margin-bottom: 6px;
+
+            padding: 9px 8px;
+
+            border-radius: 6px;
+
+            font-size: 10px;
+        }
+
+        .sidebar-item.active {
+            background: #334155;
+
+            color: white;
+        }
+
+        .app-content {
+            padding: 24px;
+
+            background: #f8fafc;
+        }
+
+        .app-header {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-bottom: 20px;
+        }
+
+        .app-header h3 {
+            margin: 0;
+
             font-size: 18px;
+        }
+
+        .add-button {
+            padding: 7px 11px;
+
+            background: #0f172a;
+
+            color: white;
+
+            border-radius: 6px;
+
+            font-size: 9px;
 
             font-weight: 800;
-        }
-
-        .dashboard-subtitle {
-            margin-top: 3px;
-
-            color: #94a3b8;
-
-            font-size: 11px;
         }
 
         .stats {
@@ -363,15 +436,16 @@
 
             gap: 10px;
 
-            margin-top: 18px;
+            margin-bottom: 15px;
         }
 
         .stat {
-            padding: 14px;
+            padding: 13px;
 
-            background: #f8fafc;
+            background: white;
 
-            border: 1px solid #e2e8f0;
+            border:
+                1px solid #e2e8f0;
 
             border-radius: 8px;
         }
@@ -379,97 +453,94 @@
         .stat-label {
             color: #94a3b8;
 
-            font-size: 10px;
+            font-size: 8px;
 
-            font-weight: 700;
+            font-weight: 800;
+
+            text-transform: uppercase;
         }
 
         .stat-value {
-            margin-top: 5px;
+            margin-top: 4px;
 
-            font-size: 21px;
+            font-size: 20px;
 
-            font-weight: 800;
+            font-weight: 900;
         }
 
-        .chart {
-            height: 145px;
+        .table {
+            overflow: hidden;
 
-            display: flex;
+            background: white;
 
-            align-items: flex-end;
-
-            gap: 8px;
-
-            margin-top: 16px;
-
-            padding: 18px;
-
-            background: #f8fafc;
-
-            border: 1px solid #e2e8f0;
+            border:
+                1px solid #e2e8f0;
 
             border-radius: 8px;
         }
 
-        .bar {
-            flex: 1;
+        .table-row {
+            display: grid;
 
-            background: #94a3b8;
+            grid-template-columns:
+                1.3fr 1fr 1fr .7fr;
 
-            border-radius: 4px 4px 0 0;
+            padding: 10px;
+
+            border-bottom:
+                1px solid #e2e8f0;
+
+            font-size: 9px;
         }
 
-        .bar:nth-child(1) {
-            height: 35%;
+        .table-row:last-child {
+            border-bottom: 0;
         }
 
-        .bar:nth-child(2) {
-            height: 55%;
+        .table-header {
+            background: #f1f5f9;
+
+            font-weight: 800;
         }
 
-        .bar:nth-child(3) {
-            height: 45%;
+        .badge {
+            display: inline-block;
+
+            padding: 3px 6px;
+
+            background: #f1f5f9;
+
+            border-radius: 999px;
+
+            font-size: 7px;
+
+            font-weight: 800;
         }
 
-        .bar:nth-child(4) {
-            height: 70%;
-        }
 
-        .bar:nth-child(5) {
-            height: 60%;
-        }
-
-        .bar:nth-child(6) {
-            height: 85%;
-        }
-
-        /* =========================================
-           SECTION
-        ========================================= */
+        /* ==================================
+           SECTIONS
+        ================================== */
 
         section {
             padding: 100px 0;
         }
 
         .section-heading {
-            max-width: 700px;
+            max-width: 720px;
 
             margin-bottom: 45px;
         }
 
-        .section-heading .eyebrow {
-            margin-bottom: 15px;
-        }
-
         .section-heading h2 {
-            margin: 0;
+            margin: 15px 0 0;
 
-            font-size: clamp(32px, 4vw, 48px);
+            font-size:
+                clamp(32px, 4vw, 48px);
 
             line-height: 1.05;
 
-            letter-spacing: -0.04em;
+            letter-spacing: -.04em;
         }
 
         .section-heading p {
@@ -480,9 +551,59 @@
             font-size: 17px;
         }
 
-        /* =========================================
+
+        /* ==================================
+           PROBLEM
+        ================================== */
+
+        .problem-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .problem-card {
+            padding: 28px;
+
+            background: white;
+
+            border:
+                1px solid #e2e8f0;
+
+            border-radius: 13px;
+        }
+
+        .problem-number {
+            color: #94a3b8;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+        .problem-card h3 {
+            margin: 17px 0 8px;
+
+            font-size: 19px;
+        }
+
+        .problem-card p {
+            margin: 0;
+
+            color: #64748b;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* ==================================
            FEATURES
-        ========================================= */
+        ================================== */
 
         .feature-grid {
             display: grid;
@@ -498,25 +619,24 @@
 
             background: white;
 
-            border: 1px solid #e2e8f0;
+            border:
+                1px solid #e2e8f0;
 
-            border-radius: 14px;
+            border-radius: 13px;
         }
 
         .feature-number {
             color: #94a3b8;
 
-            font-size: 12px;
+            font-size: 11px;
 
             font-weight: 800;
         }
 
         .feature-card h3 {
-            margin: 16px 0 8px;
+            margin: 16px 0 7px;
 
-            font-size: 20px;
-
-            letter-spacing: -0.02em;
+            font-size: 19px;
         }
 
         .feature-card p {
@@ -524,66 +644,26 @@
 
             color: #64748b;
 
-            font-size: 14px;
-
-            line-height: 1.7;
+            font-size: 13px;
         }
 
-        /* =========================================
-           SCREENSHOTS
-        ========================================= */
 
-        .screenshots-section {
+        /* ==================================
+           WORKFLOW
+        ================================== */
+
+        .workflow {
             background: #0f172a;
 
             color: white;
         }
 
-        .screenshots-section .section-heading p {
+        .workflow
+        .section-heading p {
             color: #94a3b8;
         }
 
-        .screenshots-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 20px;
-        }
-
-        .screenshot-placeholder {
-            min-height: 260px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            background: #1e293b;
-
-            border: 1px solid #334155;
-
-            border-radius: 14px;
-
-            color: #94a3b8;
-
-            font-size: 14px;
-
-            text-align: center;
-        }
-
-        .screenshot-placeholder.large {
-            min-height: 360px;
-
-            grid-column: span 2;
-        }
-
-        /* =========================================
-           TECHNOLOGY
-        ========================================= */
-
-        .tech-grid {
+        .workflow-grid {
             display: grid;
 
             grid-template-columns:
@@ -592,42 +672,69 @@
             gap: 14px;
         }
 
-        .tech-item {
-            padding: 20px;
+        .workflow-card {
+            padding: 25px;
 
-            background: white;
+            background: #1e293b;
 
-            border: 1px solid #e2e8f0;
+            border:
+                1px solid #334155;
 
             border-radius: 12px;
-
-            text-align: center;
-
-            font-size: 14px;
-
-            font-weight: 800;
         }
 
-        /* =========================================
+        .workflow-number {
+            width: 34px;
+
+            height: 34px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #334155;
+
+            border-radius: 50%;
+
+            font-size: 11px;
+
+            font-weight: 900;
+        }
+
+        .workflow-card h3 {
+            margin: 18px 0 7px;
+
+            font-size: 17px;
+        }
+
+        .workflow-card p {
+            margin: 0;
+
+            color: #94a3b8;
+
+            font-size: 12px;
+        }
+
+
+        /* ==================================
            INCLUDED
-        ========================================= */
+        ================================== */
 
         .included-grid {
             display: grid;
 
             grid-template-columns:
-                1fr
-                1fr;
+                1fr 1fr;
 
             gap: 50px;
-
-            align-items: start;
         }
 
         .check-list {
             display: grid;
 
-            gap: 14px;
+            gap: 12px;
 
             padding: 0;
 
@@ -641,51 +748,48 @@
 
             gap: 12px;
 
-            align-items: flex-start;
+            align-items: center;
 
-            padding: 16px;
+            padding: 15px;
 
             background: white;
 
-            border: 1px solid #e2e8f0;
+            border:
+                1px solid #e2e8f0;
 
-            border-radius: 10px;
+            border-radius: 9px;
 
             color: #334155;
 
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .check {
-            flex-shrink: 0;
-
             width: 22px;
+
             height: 22px;
 
             display: flex;
 
             align-items: center;
+
             justify-content: center;
+
+            flex-shrink: 0;
 
             background: #f1f5f9;
 
             border-radius: 50%;
 
-            font-size: 12px;
+            font-size: 11px;
 
             font-weight: 900;
         }
 
-        /* =========================================
-           REQUIREMENTS
-        ========================================= */
-
         .requirements {
             padding: 30px;
 
-            background: #0f172a;
-
-            color: white;
+            background: #f1f5f9;
 
             border-radius: 14px;
         }
@@ -693,89 +797,115 @@
         .requirements h3 {
             margin-top: 0;
 
-            font-size: 22px;
+            font-size: 21px;
         }
 
         .requirements ul {
             padding-left: 20px;
 
-            color: #cbd5e1;
+            color: #64748b;
 
             line-height: 2;
         }
 
-        /* =========================================
+
+        /* ==================================
            PRICING
-        ========================================= */
+        ================================== */
 
         .pricing {
             background: #f1f5f9;
         }
 
+        .pricing-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
         .pricing-card {
-            max-width: 760px;
-
-            margin: 0 auto;
-
-            padding: 42px;
+            padding: 30px;
 
             background: white;
 
-            border: 1px solid #cbd5e1;
+            border:
+                1px solid #e2e8f0;
 
-            border-radius: 18px;
-
-            box-shadow:
-                0 25px 50px rgba(15, 23, 42, 0.07);
+            border-radius: 15px;
         }
 
-        .pricing-top {
-            display: flex;
+        .pricing-card.featured {
+            border:
+                2px solid #0f172a;
 
-            align-items: flex-start;
-            justify-content: space-between;
+            box-shadow:
+                0 20px 45px
+                rgba(15,23,42,.1);
+        }
 
-            gap: 30px;
+        .pricing-badge {
+            display: inline-block;
+
+            padding: 5px 9px;
+
+            background: #0f172a;
+
+            color: white;
+
+            border-radius: 999px;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
         }
 
         .pricing-name {
+            margin-top: 16px;
+
             color: #64748b;
 
-            font-size: 13px;
+            font-size: 11px;
 
             font-weight: 800;
 
             text-transform: uppercase;
 
-            letter-spacing: 0.08em;
+            letter-spacing: .08em;
         }
 
         .pricing-card h3 {
-            margin: 8px 0 0;
+            margin: 6px 0 0;
 
-            font-size: 30px;
+            font-size: 24px;
         }
 
         .price {
-            font-size: 44px;
+            margin-top: 20px;
+
+            font-size: 30px;
 
             font-weight: 900;
 
-            letter-spacing: -0.04em;
+            letter-spacing: -.04em;
         }
 
         .price-note {
+            min-height: 42px;
+
             color: #94a3b8;
 
-            font-size: 12px;
-
-            text-align: right;
+            font-size: 11px;
         }
 
-        .pricing-divider {
+        .divider {
             height: 1px;
 
-            margin: 30px 0;
+            margin: 22px 0;
 
             background: #e2e8f0;
         }
@@ -783,10 +913,7 @@
         .pricing-features {
             display: grid;
 
-            grid-template-columns:
-                1fr 1fr;
-
-            gap: 12px 30px;
+            gap: 10px;
 
             padding: 0;
 
@@ -796,77 +923,71 @@
 
             color: #475569;
 
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .pricing-features li::before {
             content: "✓";
 
-            margin-right: 9px;
+            margin-right: 7px;
 
             font-weight: 900;
         }
 
         .pricing-button {
+            display: block;
+
             width: 100%;
 
-            margin-top: 30px;
+            margin-top: 25px;
 
-            padding: 15px;
-
-            border: 0;
+            padding: 12px;
 
             background: #0f172a;
 
             color: white;
 
-            border-radius: 9px;
+            border: 0;
 
-            font-size: 15px;
+            border-radius: 8px;
+
+            font-size: 12px;
 
             font-weight: 800;
+
+            text-align: center;
 
             cursor: pointer;
         }
 
-        .pricing-small {
-            margin-top: 14px;
 
-            color: #94a3b8;
-
-            font-size: 12px;
-
-            text-align: center;
-        }
-
-        /* =========================================
+        /* ==================================
            FAQ
-        ========================================= */
+        ================================== */
 
         .faq {
             max-width: 850px;
 
-            margin: 0 auto;
+            margin: auto;
         }
 
         details {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
 
             background: white;
 
-            border: 1px solid #e2e8f0;
+            border:
+                1px solid #e2e8f0;
 
-            border-radius: 10px;
-
-            overflow: hidden;
+            border-radius: 9px;
         }
 
         summary {
-            padding: 20px;
+            padding: 18px;
 
             cursor: pointer;
 
-            font-size: 15px;
+            font-size: 14px;
 
             font-weight: 800;
         }
@@ -874,20 +995,19 @@
         details p {
             margin: 0;
 
-            padding: 0 20px 20px;
+            padding: 0 18px 18px;
 
             color: #64748b;
 
-            font-size: 14px;
-
-            line-height: 1.7;
+            font-size: 13px;
         }
 
-        /* =========================================
-           FINAL CTA
-        ========================================= */
 
-        .final-cta {
+        /* ==================================
+           CTA
+        ================================== */
+
+        .cta {
             padding: 90px 0;
 
             background: #0f172a;
@@ -897,33 +1017,42 @@
             text-align: center;
         }
 
-        .final-cta h2 {
+        .cta h2 {
             max-width: 700px;
 
             margin: 0 auto;
 
-            font-size: clamp(34px, 5vw, 55px);
+            font-size:
+                clamp(35px, 5vw, 55px);
 
             line-height: 1;
 
-            letter-spacing: -0.045em;
+            letter-spacing: -.05em;
         }
 
-        .final-cta p {
+        .cta p {
             max-width: 600px;
 
-            margin: 22px auto 0;
+            margin: 20px auto 0;
 
             color: #94a3b8;
 
-            font-size: 17px;
+            font-size: 16px;
         }
 
-        .final-cta .hero-actions {
+        .cta-actions {
+            display: flex;
+
             justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 30px;
         }
 
-        .final-cta .button-secondary {
+        .cta .button-secondary {
             background: transparent;
 
             color: white;
@@ -931,9 +1060,10 @@
             border-color: #475569;
         }
 
-        /* =========================================
+
+        /* ==================================
            FOOTER
-        ========================================= */
+        ================================== */
 
         footer {
             padding: 40px 0;
@@ -942,49 +1072,60 @@
 
             color: #64748b;
 
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .footer-inner {
             display: flex;
 
             align-items: center;
+
             justify-content: space-between;
 
             gap: 20px;
         }
 
-        /* =========================================
+
+        /* ==================================
            RESPONSIVE
-        ========================================= */
+        ================================== */
 
         @media (max-width: 900px) {
 
             .hero-grid {
                 grid-template-columns: 1fr;
-
-                gap: 45px;
             }
 
+            .problem-grid,
             .feature-grid {
                 grid-template-columns:
                     repeat(2, 1fr);
             }
 
-            .tech-grid {
+            .workflow-grid {
                 grid-template-columns:
                     repeat(2, 1fr);
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
             }
 
             .included-grid {
                 grid-template-columns: 1fr;
             }
+
         }
 
-        @media (max-width: 650px) {
+
+        @media (max-width: 600px) {
 
             .container {
-                width: min(100% - 28px, 1180px);
+                width:
+                    min(
+                        100% - 28px,
+                        1180px
+                    );
             }
 
             .nav-links {
@@ -995,37 +1136,23 @@
                 padding: 65px 0;
             }
 
-            section {
-                padding: 70px 0;
-            }
-
+            .problem-grid,
             .feature-grid,
-            .screenshots-grid {
+            .workflow-grid {
                 grid-template-columns: 1fr;
             }
 
-            .screenshot-placeholder.large {
-                grid-column: span 1;
+            .app {
+                grid-template-columns:
+                    90px 1fr;
             }
 
-            .tech-grid {
-                grid-template-columns: 1fr 1fr;
+            .sidebar {
+                padding: 15px 8px;
             }
 
-            .pricing-card {
-                padding: 28px 22px;
-            }
-
-            .pricing-top {
-                flex-direction: column;
-            }
-
-            .price-note {
-                text-align: left;
-            }
-
-            .pricing-features {
-                grid-template-columns: 1fr;
+            .app-content {
+                padding: 15px;
             }
 
             .footer-inner {
@@ -1033,18 +1160,20 @@
 
                 align-items: flex-start;
             }
+
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================================
+<!-- ==================================
      NAVIGATION
-========================================= -->
+================================== -->
 
 <header class="navbar">
 
@@ -1065,7 +1194,7 @@
             </a>
 
             <a href="../products.html">
-                Products
+                Store
             </a>
 
             <a href="#features">
@@ -1094,9 +1223,9 @@
 <main>
 
 
-<!-- =========================================
+<!-- ==================================
      HERO
-========================================= -->
+================================== -->
 
 <section class="hero">
 
@@ -1106,7 +1235,7 @@
         <div>
 
             <span class="eyebrow">
-                Business Software
+                Sales & Follow-Up Management
             </span>
 
 
@@ -1117,7 +1246,7 @@
                 <br>
 
                 <span>
-                    Turn follow-ups into a system.
+                    Never lose a follow-up.
                 </span>
 
             </h1>
@@ -1125,10 +1254,10 @@
 
             <p class="hero-description">
 
-                A practical sales follow-up and customer
-                management application designed to help
-                teams organize leads, customers, tasks
-                and follow-up activities from one place.
+                A self-hosted business follow-up
+                management application for organizing
+                leads, customers, activities and
+                follow-up tasks in one place.
 
             </p>
 
@@ -1139,7 +1268,7 @@
                     href="#pricing"
                     class="button-primary"
                 >
-                    Get FollowUpDesk
+                    View License Options
                 </a>
 
 
@@ -1155,24 +1284,24 @@
 
             <div class="hero-meta">
 
-                <span class="meta-item">
+                <span class="meta">
                     .NET 8
                 </span>
 
-                <span class="meta-item">
-                    ASP.NET Core
+                <span class="meta">
+                    ASP.NET Core MVC
                 </span>
 
-                <span class="meta-item">
+                <span class="meta">
                     SQL Server
                 </span>
 
-                <span class="meta-item">
+                <span class="meta">
                     Self Hosted
                 </span>
 
-                <span class="meta-item">
-                    Commercial License
+                <span class="meta">
+                    Windows / IIS
                 </span>
 
             </div>
@@ -1180,83 +1309,222 @@
         </div>
 
 
-        <!-- PRODUCT MOCKUP -->
+        <!-- PRODUCT PREVIEW -->
 
         <div class="product-preview">
 
-            <div class="browser-window">
+            <div class="browser">
 
-                <div class="browser-header">
 
-                    <span class="browser-dot"></span>
-                    <span class="browser-dot"></span>
-                    <span class="browser-dot"></span>
+                <div class="browser-bar">
+
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
 
                 </div>
 
 
-                <div class="dashboard">
-
-                    <div class="dashboard-title">
-                        FollowUpDesk
-                    </div>
-
-                    <div class="dashboard-subtitle">
-                        Sales overview
-                    </div>
+                <div class="app">
 
 
-                    <div class="stats">
+                    <aside class="sidebar">
 
-                        <div class="stat">
+                        <div class="sidebar-title">
+                            FollowUpDesk
+                        </div>
 
-                            <div class="stat-label">
-                                LEADS
-                            </div>
 
-                            <div class="stat-value">
-                                128
-                            </div>
+                        <div
+                            class="sidebar-item active"
+                        >
+                            Dashboard
+                        </div>
+
+                        <div class="sidebar-item">
+                            Leads
+                        </div>
+
+                        <div class="sidebar-item">
+                            Customers
+                        </div>
+
+                        <div class="sidebar-item">
+                            Follow-ups
+                        </div>
+
+                        <div class="sidebar-item">
+                            Activities
+                        </div>
+
+                        <div class="sidebar-item">
+                            Reports
+                        </div>
+
+                        <div class="sidebar-item">
+                            Settings
+                        </div>
+
+                    </aside>
+
+
+                    <div class="app-content">
+
+
+                        <div class="app-header">
+
+                            <h3>
+                                Follow-ups
+                            </h3>
+
+                            <span class="add-button">
+                                + Add Follow-up
+                            </span>
 
                         </div>
 
 
-                        <div class="stat">
+                        <div class="stats">
 
-                            <div class="stat-label">
-                                FOLLOW-UPS
+
+                            <div class="stat">
+
+                                <div class="stat-label">
+                                    Open
+                                </div>
+
+                                <div class="stat-value">
+                                    42
+                                </div>
+
                             </div>
 
-                            <div class="stat-value">
-                                42
+
+                            <div class="stat">
+
+                                <div class="stat-label">
+                                    Due Today
+                                </div>
+
+                                <div class="stat-value">
+                                    11
+                                </div>
+
                             </div>
+
+
+                            <div class="stat">
+
+                                <div class="stat-label">
+                                    Completed
+                                </div>
+
+                                <div class="stat-value">
+                                    184
+                                </div>
+
+                            </div>
+
 
                         </div>
 
 
-                        <div class="stat">
+                        <div class="table">
 
-                            <div class="stat-label">
-                                CUSTOMERS
+
+                            <div
+                                class="table-row table-header"
+                            >
+
+                                <div>
+                                    Customer
+                                </div>
+
+                                <div>
+                                    Owner
+                                </div>
+
+                                <div>
+                                    Due
+                                </div>
+
+                                <div>
+                                    Status
+                                </div>
+
                             </div>
 
-                            <div class="stat-value">
-                                76
+
+                            <div class="table-row">
+
+                                <div>
+                                    Acme Corporation
+                                </div>
+
+                                <div>
+                                    Sales
+                                </div>
+
+                                <div>
+                                    Today
+                                </div>
+
+                                <div>
+                                    <span class="badge">
+                                        Open
+                                    </span>
+                                </div>
+
                             </div>
+
+
+                            <div class="table-row">
+
+                                <div>
+                                    Global Systems
+                                </div>
+
+                                <div>
+                                    John
+                                </div>
+
+                                <div>
+                                    Tomorrow
+                                </div>
+
+                                <div>
+                                    <span class="badge">
+                                        Pending
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="table-row">
+
+                                <div>
+                                    Nova Technologies
+                                </div>
+
+                                <div>
+                                    Sarah
+                                </div>
+
+                                <div>
+                                    Aug 27
+                                </div>
+
+                                <div>
+                                    <span class="badge">
+                                        Open
+                                    </span>
+                                </div>
+
+                            </div>
+
 
                         </div>
-
-                    </div>
-
-
-                    <div class="chart">
-
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
 
                     </div>
 
@@ -1271,9 +1539,106 @@
 </section>
 
 
-<!-- =========================================
+<!-- ==================================
+     PROBLEM
+================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                The Problem
+            </span>
+
+            <h2>
+                Follow-ups shouldn't
+                live in someone's memory.
+            </h2>
+
+            <p>
+                Sales teams often rely on spreadsheets,
+                notebooks, email reminders and scattered
+                messages to remember what needs to happen.
+            </p>
+
+        </div>
+
+
+        <div class="problem-grid">
+
+
+            <article class="problem-card">
+
+                <span class="problem-number">
+                    01
+                </span>
+
+                <h3>
+                    Missed Follow-Ups
+                </h3>
+
+                <p>
+                    Important prospects and customers
+                    can easily fall through the cracks
+                    when follow-up information is
+                    scattered across multiple systems.
+                </p>
+
+            </article>
+
+
+            <article class="problem-card">
+
+                <span class="problem-number">
+                    02
+                </span>
+
+                <h3>
+                    No Central Visibility
+                </h3>
+
+                <p>
+                    Managers often have difficulty
+                    understanding which leads are active,
+                    overdue or waiting for action.
+                </p>
+
+            </article>
+
+
+            <article class="problem-card">
+
+                <span class="problem-number">
+                    03
+                </span>
+
+                <h3>
+                    Spreadsheet Dependency
+                </h3>
+
+                <p>
+                    Manual spreadsheets become difficult
+                    to maintain when multiple users need
+                    to update customer and follow-up data.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================
      FEATURES
-========================================= -->
+================================== -->
 
 <section id="features">
 
@@ -1287,15 +1652,9 @@
             </span>
 
             <h2>
-                Everything you need
-                to manage follow-ups.
+                Everything your team needs
+                to stay on top of follow-ups.
             </h2>
-
-            <p>
-                Keep important customer activity,
-                sales tasks and follow-up workflows
-                organized in one application.
-            </p>
 
         </div>
 
@@ -1314,9 +1673,8 @@
                 </h3>
 
                 <p>
-                    Organize prospects and maintain
-                    structured information throughout
-                    the sales process.
+                    Maintain structured information
+                    about prospects and sales opportunities.
                 </p>
 
             </article>
@@ -1333,9 +1691,8 @@
                 </h3>
 
                 <p>
-                    Maintain customer records and
-                    keep important business information
-                    accessible to your team.
+                    Keep customer information accessible
+                    from a centralized application.
                 </p>
 
             </article>
@@ -1348,13 +1705,12 @@
                 </span>
 
                 <h3>
-                    Follow-up Tracking
+                    Follow-Up Scheduling
                 </h3>
 
                 <p>
-                    Track pending follow-ups so important
-                    opportunities don't disappear from
-                    your workflow.
+                    Record the next action and expected
+                    follow-up date for each relationship.
                 </p>
 
             </article>
@@ -1367,13 +1723,12 @@
                 </span>
 
                 <h3>
-                    Task Management
+                    Activity Tracking
                 </h3>
 
                 <p>
-                    Organize sales activities and
-                    actionable tasks associated with
-                    customers and prospects.
+                    Maintain a history of interactions
+                    and activities related to customers.
                 </p>
 
             </article>
@@ -1386,12 +1741,12 @@
                 </span>
 
                 <h3>
-                    Dashboard
+                    Team Visibility
                 </h3>
 
                 <p>
-                    Get a centralized view of important
-                    sales activity and operational data.
+                    Give managers a clearer view of
+                    workload and outstanding actions.
                 </p>
 
             </article>
@@ -1404,12 +1759,12 @@
                 </span>
 
                 <h3>
-                    Self Hosted
+                    Dashboard
                 </h3>
 
                 <p>
-                    Deploy the application on infrastructure
-                    controlled by your organization.
+                    Quickly understand open, due and
+                    completed follow-up activities.
                 </p>
 
             </article>
@@ -1422,11 +1777,11 @@
 </section>
 
 
-<!-- =========================================
-     SCREENSHOTS
-========================================= -->
+<!-- ==================================
+     WORKFLOW
+================================== -->
 
-<section class="screenshots-section">
+<section class="workflow">
 
     <div class="container">
 
@@ -1434,60 +1789,94 @@
         <div class="section-heading">
 
             <span class="eyebrow">
-                Product Preview
+                Workflow
             </span>
 
             <h2>
-                Built around the
-                workflow.
+                A simple operating cycle.
             </h2>
 
             <p>
-                Replace these placeholders with
-                real FollowUpDesk screenshots before
-                publishing the product for sale.
+                Keep every customer interaction
+                connected to the next action.
             </p>
 
         </div>
 
 
-        <div class="screenshots-grid">
+        <div class="workflow-grid">
 
 
-            <div class="screenshot-placeholder large">
+            <article class="workflow-card">
 
-                FOLLOWUPDESK DASHBOARD SCREENSHOT
+                <div class="workflow-number">
+                    01
+                </div>
 
-                <br>
+                <h3>
+                    Capture
+                </h3>
 
-                Replace with:
-                assets/images/products/followupdesk/dashboard.png
+                <p>
+                    Add a new lead or customer into
+                    the system.
+                </p>
 
-            </div>
-
-
-            <div class="screenshot-placeholder">
-
-                LEADS SCREENSHOT
-
-                <br>
-
-                Replace with:
-                assets/images/products/followupdesk/leads.png
-
-            </div>
+            </article>
 
 
-            <div class="screenshot-placeholder">
+            <article class="workflow-card">
 
-                FOLLOW-UPS SCREENSHOT
+                <div class="workflow-number">
+                    02
+                </div>
 
-                <br>
+                <h3>
+                    Engage
+                </h3>
 
-                Replace with:
-                assets/images/products/followupdesk/followups.png
+                <p>
+                    Record calls, meetings, emails and
+                    other customer activities.
+                </p>
 
-            </div>
+            </article>
+
+
+            <article class="workflow-card">
+
+                <div class="workflow-number">
+                    03
+                </div>
+
+                <h3>
+                    Schedule
+                </h3>
+
+                <p>
+                    Define the next follow-up action
+                    and due date.
+                </p>
+
+            </article>
+
+
+            <article class="workflow-card">
+
+                <div class="workflow-number">
+                    04
+                </div>
+
+                <h3>
+                    Close
+                </h3>
+
+                <p>
+                    Complete the activity and continue
+                    the relationship lifecycle.
+                </p>
+
+            </article>
 
 
         </div>
@@ -1497,9 +1886,9 @@
 </section>
 
 
-<!-- =========================================
-     TECHNOLOGY
-========================================= -->
+<!-- ==================================
+     INCLUDED
+================================== -->
 
 <section>
 
@@ -1509,87 +1898,12 @@
         <div class="section-heading">
 
             <span class="eyebrow">
-                Technology
+                Product Package
             </span>
 
             <h2>
-                Built with modern
-                Microsoft technologies.
+                What you receive.
             </h2>
-
-            <p>
-                Designed for developers and businesses
-                that want control over their deployment.
-            </p>
-
-        </div>
-
-
-        <div class="tech-grid">
-
-            <div class="tech-item">
-                .NET 8
-            </div>
-
-            <div class="tech-item">
-                ASP.NET Core
-            </div>
-
-            <div class="tech-item">
-                Entity Framework Core
-            </div>
-
-            <div class="tech-item">
-                SQL Server
-            </div>
-
-            <div class="tech-item">
-                Razor / MVC
-            </div>
-
-            <div class="tech-item">
-                IIS Deployment
-            </div>
-
-            <div class="tech-item">
-                Authentication
-            </div>
-
-            <div class="tech-item">
-                Self Hosted
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================
-     WHAT YOU GET
-========================================= -->
-
-<section>
-
-    <div class="container">
-
-
-        <div class="section-heading">
-
-            <span class="eyebrow">
-                Included
-            </span>
-
-            <h2>
-                What you get.
-            </h2>
-
-            <p>
-                A commercial software package designed
-                to give you a working starting point
-                instead of an empty project.
-            </p>
 
         </div>
 
@@ -1608,7 +1922,6 @@
 
                     <span>
                         FollowUpDesk application
-                        source package
                     </span>
 
                 </li>
@@ -1621,22 +1934,7 @@
                     </span>
 
                     <span>
-                        Database structure and
-                        deployment scripts
-                    </span>
-
-                </li>
-
-
-                <li>
-
-                    <span class="check">
-                        ✓
-                    </span>
-
-                    <span>
-                        Configuration and
-                        environment setup guidance
+                        Database structure
                     </span>
 
                 </li>
@@ -1662,7 +1960,21 @@
                     </span>
 
                     <span>
-                        Commercial usage license
+                        Configuration documentation
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Commercial license according
+                        to selected edition
                     </span>
 
                 </li>
@@ -1676,7 +1988,7 @@
 
                     <span>
                         Product updates according
-                        to the selected license
+                        to selected license
                     </span>
 
                 </li>
@@ -1688,13 +2000,14 @@
             <div class="requirements">
 
                 <h3>
-                    Deployment Requirements
+                    Technical Requirements
                 </h3>
 
 
                 <ul>
 
                     <li>
+                        Windows Server or compatible
                         Windows environment
                     </li>
 
@@ -1703,8 +2016,7 @@
                     </li>
 
                     <li>
-                        .NET 8 runtime or
-                        self-contained deployment
+                        .NET 8
                     </li>
 
                     <li>
@@ -1712,13 +2024,13 @@
                     </li>
 
                     <li>
-                        Basic server configuration
-                        access
+                        Network access for internal users
                     </li>
 
                 </ul>
 
             </div>
+
 
         </div>
 
@@ -1727,9 +2039,9 @@
 </section>
 
 
-<!-- =========================================
+<!-- ==================================
      PRICING
-========================================= -->
+================================== -->
 
 <section
     id="pricing"
@@ -1742,110 +2054,216 @@
         <div class="section-heading">
 
             <span class="eyebrow">
-                Pricing
+                Licensing
             </span>
 
             <h2>
-                Start with a working
-                foundation.
+                Choose the license
+                that fits your deployment.
             </h2>
 
             <p>
-                Choose a commercial license that fits
-                how you intend to use the software.
+                Pricing is currently being finalized.
+                The store will connect these options
+                to automated checkout and licensing.
             </p>
 
         </div>
 
 
-        <div class="pricing-card">
+        <div class="pricing-grid">
 
 
-            <div class="pricing-top">
+            <!-- PERSONAL -->
+
+            <article class="pricing-card">
+
+                <div class="pricing-name">
+                    Personal
+                </div>
+
+                <h3>
+                    Developer
+                </h3>
 
 
-                <div>
-
-                    <div class="pricing-name">
-                        Commercial License
-                    </div>
-
-                    <h3>
-                        FollowUpDesk
-                    </h3>
-
+                <div class="price">
+                    Coming Soon
                 </div>
 
 
-                <div>
-
-                    <div class="price">
-                        Coming Soon
-                    </div>
-
-                    <div class="price-note">
-                        Final pricing will be published
-                        before launch.
-                    </div>
-
+                <div class="price-note">
+                    For evaluation and development.
                 </div>
 
-            </div>
+
+                <div class="divider"></div>
 
 
-            <div class="pricing-divider"></div>
+                <ul class="pricing-features">
+
+                    <li>
+                        Application access
+                    </li>
+
+                    <li>
+                        Development use
+                    </li>
+
+                    <li>
+                        Documentation
+                    </li>
+
+                    <li>
+                        Single deployment
+                    </li>
+
+                </ul>
 
 
-            <ul class="pricing-features">
+                <button
+                    class="pricing-button"
+                    onclick="comingSoon()"
+                >
+                    Coming Soon
+                </button>
 
-                <li>
-                    Commercial usage
-                </li>
-
-                <li>
-                    Self-hosted deployment
-                </li>
-
-                <li>
-                    Application source
-                </li>
-
-                <li>
-                    Database scripts
-                </li>
-
-                <li>
-                    Deployment documentation
-                </li>
-
-                <li>
-                    Configuration guidance
-                </li>
-
-                <li>
-                    Product updates
-                </li>
-
-                <li>
-                    Technical support
-                </li>
-
-            </ul>
+            </article>
 
 
-            <button
-                class="pricing-button"
-                type="button"
-                onclick="showComingSoon()"
+            <!-- BUSINESS -->
+
+            <article
+                class="pricing-card featured"
             >
-                Buy FollowUpDesk
-            </button>
+
+                <span class="pricing-badge">
+                    Recommended
+                </span>
 
 
-            <div class="pricing-small">
-                Secure checkout and automated delivery
-                will be enabled at launch.
-            </div>
+                <div class="pricing-name">
+                    Business
+                </div>
+
+                <h3>
+                    Commercial
+                </h3>
+
+
+                <div class="price">
+                    Coming Soon
+                </div>
+
+
+                <div class="price-note">
+                    For commercial internal business use.
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <ul class="pricing-features">
+
+                    <li>
+                        Commercial usage
+                    </li>
+
+                    <li>
+                        Self-hosted deployment
+                    </li>
+
+                    <li>
+                        Application package
+                    </li>
+
+                    <li>
+                        Database scripts
+                    </li>
+
+                    <li>
+                        Documentation
+                    </li>
+
+                    <li>
+                        Product updates
+                    </li>
+
+                </ul>
+
+
+                <button
+                    class="pricing-button"
+                    onclick="comingSoon()"
+                >
+                    Get Commercial License
+                </button>
+
+            </article>
+
+
+            <!-- ENTERPRISE -->
+
+            <article class="pricing-card">
+
+                <div class="pricing-name">
+                    Enterprise
+                </div>
+
+                <h3>
+                    Extended
+                </h3>
+
+
+                <div class="price">
+                    Contact
+                </div>
+
+
+                <div class="price-note">
+                    For larger deployments and
+                    customized requirements.
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <ul class="pricing-features">
+
+                    <li>
+                        Commercial usage
+                    </li>
+
+                    <li>
+                        Multiple deployments
+                    </li>
+
+                    <li>
+                        Extended support
+                    </li>
+
+                    <li>
+                        Customization options
+                    </li>
+
+                    <li>
+                        Deployment assistance
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="../index.html#contact"
+                    class="pricing-button"
+                >
+                    Contact Sales
+                </a>
+
+            </article>
+
 
         </div>
 
@@ -1854,9 +2272,9 @@
 </section>
 
 
-<!-- =========================================
+<!-- ==================================
      FAQ
-========================================= -->
+================================== -->
 
 <section>
 
@@ -1870,7 +2288,7 @@
             </span>
 
             <h2>
-                Frequently asked questions.
+                Questions before buying.
             </h2>
 
         </div>
@@ -1882,13 +2300,14 @@
             <details>
 
                 <summary>
-                    Is FollowUpDesk cloud hosted?
+                    Is FollowUpDesk cloud based?
                 </summary>
 
                 <p>
-                    FollowUpDesk is designed as a
-                    self-hosted application. You control
-                    the infrastructure and deployment.
+                    FollowUpDesk is designed primarily
+                    as a self-hosted application, allowing
+                    organizations to deploy it within
+                    their own infrastructure.
                 </p>
 
             </details>
@@ -1897,15 +2316,29 @@
             <details>
 
                 <summary>
-                    Can I customize the application?
+                    Can I deploy it on IIS?
                 </summary>
 
                 <p>
-                    The commercial licensing model is
-                    intended to allow customers to adapt
-                    the application to their own business
-                    requirements, subject to the license
-                    terms.
+                    Yes. The application is designed
+                    for ASP.NET Core deployment on
+                    Windows/IIS environments.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Can multiple employees use it?
+                </summary>
+
+                <p>
+                    The commercial edition is intended
+                    for internal business teams. The
+                    exact user and deployment limits
+                    depend on the selected license.
                 </p>
 
             </details>
@@ -1918,10 +2351,10 @@
                 </summary>
 
                 <p>
-                    The source-code availability depends
-                    on the specific license purchased.
-                    The final product package and license
-                    terms will clearly state what is included.
+                    Source-code availability depends
+                    on the license edition purchased.
+                    The commercial license terms will
+                    specify the exact rights included.
                 </p>
 
             </details>
@@ -1930,14 +2363,13 @@
             <details>
 
                 <summary>
-                    Can I resell FollowUpDesk?
+                    Can you customize FollowUpDesk?
                 </summary>
 
                 <p>
-                    No. A standard commercial license does
-                    not automatically grant redistribution
-                    or resale rights. Separate licensing
-                    may be offered for those requirements.
+                    Yes. Custom development and
+                    business-specific modifications
+                    can be discussed separately.
                 </p>
 
             </details>
@@ -1946,14 +2378,14 @@
             <details>
 
                 <summary>
-                    What support is included?
+                    Can I resell the software?
                 </summary>
 
                 <p>
-                    Support coverage will depend on the
-                    license or package selected at purchase.
-                    The final checkout page will clearly
-                    specify the support period and scope.
+                    Standard commercial licensing does
+                    not automatically grant redistribution,
+                    white-label or resale rights.
+                    Those rights require a separate agreement.
                 </p>
 
             </details>
@@ -1966,34 +2398,35 @@
 </section>
 
 
-<!-- =========================================
-     FINAL CTA
-========================================= -->
+<!-- ==================================
+     CTA
+================================== -->
 
-<section class="final-cta">
+<section class="cta">
 
     <div class="container">
 
 
         <h2>
-            Start with software.
-            Build from there.
+            Ready to take control
+            of your follow-ups?
         </h2>
 
 
         <p>
-            Explore FollowUpDesk and see whether
-            it fits your sales workflow.
+            Deploy a focused follow-up management
+            system for your team instead of relying
+            on scattered spreadsheets and reminders.
         </p>
 
 
-        <div class="hero-actions">
+        <div class="cta-actions">
 
             <a
                 href="#pricing"
                 class="button-primary"
             >
-                Get FollowUpDesk
+                View License Options
             </a>
 
 
@@ -2001,7 +2434,7 @@
                 href="../products.html"
                 class="button-secondary"
             >
-                View All Products
+                ← Back to Store
             </a>
 
         </div>
@@ -2014,9 +2447,9 @@
 </main>
 
 
-<!-- =========================================
+<!-- ==================================
      FOOTER
-========================================= -->
+================================== -->
 
 <footer>
 
@@ -2026,9 +2459,11 @@
             © 2026 Darshan Bane
         </div>
 
+
         <div>
+
             <a href="../products.html">
-                Products
+                Store
             </a>
 
             &nbsp; · &nbsp;
@@ -2042,6 +2477,7 @@
             <a href="../index.html#contact">
                 Contact
             </a>
+
         </div>
 
     </div>
@@ -2051,11 +2487,12 @@
 
 <script>
 
-    function showComingSoon() {
+    function comingSoon() {
 
         alert(
-            "FollowUpDesk purchasing will be available soon. " +
-            "Please check back shortly."
+            "FollowUpDesk purchasing is being finalized. " +
+            "Automated checkout and license delivery " +
+            "will be connected soon."
         );
 
     }
@@ -2064,4 +2501,5 @@
 
 
 </body>
+
 </html>
