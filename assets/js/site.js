@@ -3,26 +3,29 @@
   const nested = path.includes('/products/');
   const root = nested ? '../' : './';
 
-  // Global visual correction layer: keeps text contrast and product media consistent.
-  // Versioned URL prevents stale CSS from GitHub Pages/browser cache.
-  if (!document.querySelector('link[data-theme-fixes]')) {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = `${root}assets/css/theme-fixes.css?v=20260825-2`;
-    link.dataset.themeFixes = 'true';
-    document.head.appendChild(link);
-  }
+  ['assets/css/theme-fixes.css?v=20260825-3','assets/css/site-enhancements.css?v=20260825-1'].forEach((file, index) => {
+    const key = index === 0 ? 'data-theme-fixes' : 'data-site-enhancements';
+    if (!document.querySelector(`link[${key}]`)) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${root}${file}`;
+      link.setAttribute(key, 'true');
+      document.head.appendChild(link);
+    }
+  });
 
+  const whatsapp = 'https://wa.me/919372181313?text=Hi%20Darshan%2C%20I%27d%20like%20to%20discuss%20a%20software%20requirement.';
+  const cv = `${root}assets/darshan-bane-cv.pdf`;
   const nav = [
     ['About', 'about.html'], ['Projects', 'projects.html'], ['Services', 'services.html'], ['Products', 'products.html'], ['Contact', 'contact.html']
   ];
   const header = document.getElementById('site-header');
   if (header) {
-    header.innerHTML = `<header class="site-nav"><nav class="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 lg:px-8" aria-label="Primary">
+    header.innerHTML = `<header class="site-nav"><nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 lg:px-8" aria-label="Primary">
       <a href="${root}" class="brand"><span class="brand-mark">DB</span><span>Darshan Bane</span></a>
-      <div class="hidden items-center gap-7 md:flex">${nav.map(([label, href]) => `<a class="nav-link" href="${root}${href}">${label}</a>`).join('')}</div>
-      <div class="flex items-center gap-2"><a class="btn btn-primary btn-sm hidden sm:inline-flex" href="${root}contact.html">Work With Me</a><button id="menu-toggle" class="btn btn-ghost btn-square md:hidden" type="button" aria-label="Open menu" aria-expanded="false">☰</button></div>
-    </nav><div id="mobile-menu" class="hidden border-t border-base-300 bg-base-100 md:hidden"><div class="mx-auto max-w-7xl px-5 py-3">${nav.map(([label, href]) => `<a class="mobile-link" href="${root}${href}">${label}</a>`).join('')}<a class="mobile-link font-semibold text-primary" href="${root}contact.html">Work With Me</a></div></div></header>`;
+      <div class="hidden items-center gap-6 md:flex">${nav.map(([label, href]) => `<a class="nav-link" href="${root}${href}">${label}</a>`).join('')}</div>
+      <div class="flex items-center gap-2"><a class="btn btn-outline btn-sm cv-download hidden lg:inline-flex" href="${cv}" download>Download CV</a><a class="btn btn-primary btn-sm hidden sm:inline-flex" href="${whatsapp}" target="_blank" rel="noopener">WhatsApp Me</a><button id="menu-toggle" class="btn btn-ghost btn-square md:hidden" type="button" aria-label="Open menu" aria-expanded="false">☰</button></div>
+    </nav><div id="mobile-menu" class="hidden border-t border-base-300 bg-white md:hidden"><div class="mx-auto max-w-7xl px-5 py-3">${nav.map(([label, href]) => `<a class="mobile-link" href="${root}${href}">${label}</a>`).join('')}<a class="mobile-menu-action" href="${cv}" download>Download CV</a><a class="mobile-menu-action" href="${whatsapp}" target="_blank" rel="noopener">WhatsApp Me</a></div></div></header>`;
     const toggle = document.getElementById('menu-toggle'); const menu = document.getElementById('mobile-menu');
     toggle?.addEventListener('click', () => { const open = menu.classList.toggle('hidden') === false; toggle.setAttribute('aria-expanded', String(open)); });
   }
