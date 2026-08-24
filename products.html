@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Ready-to-deploy business software and MVPs by Darshan Bane.">
+
+    <title>Products | Darshan Bane</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            background: rgba(248, 250, 252, 0.92);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .nav-inner {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 24px;
+        }
+
+        .brand {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .brand span {
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+
+            color: #475569;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #0f172a;
+        }
+
+        .nav-cta {
+            padding: 10px 16px;
+
+            background: #0f172a;
+            color: white;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+
+            padding: 7px 12px;
+
+            border: 1px solid #cbd5e1;
+            border-radius: 999px;
+
+            color: #475569;
+            background: white;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+
+            margin: 24px auto 0;
+
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 0.98;
+            letter-spacing: -0.055em;
+        }
+
+        .hero p {
+            max-width: 680px;
+
+            margin: 26px auto 0;
+
+            color: #64748b;
+
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        /* Products */
+
+        .products-section {
+            padding: 20px 0 100px;
+        }
+
+        .section-heading {
+            margin-bottom: 32px;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+
+            font-size: 32px;
+            letter-spacing: -0.03em;
+        }
+
+        .section-heading p {
+            margin: 10px 0 0;
+
+            color: #64748b;
+        }
+
+        .product-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 24px;
+        }
+
+        .product-card {
+            padding: 32px;
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+
+            border-color: #cbd5e1;
+
+            box-shadow:
+                0 20px 40px rgba(15, 23, 42, 0.08);
+        }
+
+        .product-label {
+            color: #64748b;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .product-card h3 {
+            margin: 12px 0 10px;
+
+            font-size: 28px;
+            letter-spacing: -0.035em;
+        }
+
+        .product-card > p {
+            min-height: 54px;
+
+            color: #64748b;
+
+            line-height: 1.6;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin: 24px 0;
+        }
+
+        .feature {
+            padding: 6px 9px;
+
+            background: #f1f5f9;
+
+            border-radius: 6px;
+
+            color: #475569;
+
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .product-footer {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding-top: 24px;
+
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .price-label {
+            display: block;
+
+            color: #94a3b8;
+
+            font-size: 12px;
+        }
+
+        .price {
+            display: block;
+
+            margin-top: 3px;
+
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .product-button {
+            padding: 12px 18px;
+
+            background: #0f172a;
+            color: white;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 40px 0;
+
+            border-top: 1px solid #e2e8f0;
+
+            color: #64748b;
+
+            font-size: 14px;
+        }
+
+        .footer-inner {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 760px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 0 55px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                padding: 24px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a href="index.html" class="brand">
+            DB <span>/ Darshan Bane</span>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Portfolio
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="index.html#experience">
+                Experience
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+        <a href="#products" class="nav-cta">
+            Browse Products
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <span class="eyebrow">
+                Software Products
+            </span>
+
+            <h1>
+                Ready-to-deploy
+                business software.
+            </h1>
+
+            <p>
+                Practical software products and MVPs
+                built for real-world business workflows.
+                Deploy, customize and start using them
+                instead of building everything from zero.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section
+        id="products"
+        class="products-section"
+    >
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    Products
+                </h2>
+
+                <p>
+                    Explore available software products
+                    and ready-to-deploy MVPs.
+                </p>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <!-- FOLLOWUPDESK -->
+
+                <article class="product-card">
+
+                    <span class="product-label">
+                        Sales & CRM
+                    </span>
+
+                    <h3>
+                        FollowUpDesk
+                    </h3>
+
+                    <p>
+                        Manage leads, customers,
+                        follow-ups, tasks and sales
+                        activities from one application.
+                    </p>
+
+                    <div class="features">
+
+                        <span class="feature">
+                            .NET 8
+                        </span>
+
+                        <span class="feature">
+                            ASP.NET Core
+                        </span>
+
+                        <span class="feature">
+                            SQL Server
+                        </span>
+
+                        <span class="feature">
+                            Self Hosted
+                        </span>
+
+                    </div>
+
+                    <div class="product-footer">
+
+                        <div>
+
+                            <span class="price-label">
+                                Starting from
+                            </span>
+
+                            <span class="price">
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="products/followupdesk.html"
+                            class="product-button"
+                        >
+                            View Product
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- QUOTEDESK -->
+
+                <article class="product-card">
+
+                    <span class="product-label">
+                        Sales & Quotations
+                    </span>
+
+                    <h3>
+                        QuoteDesk
+                    </h3>
+
+                    <p>
+                        Create professional quotations,
+                        proposals and branded documents
+                        using reusable templates.
+                    </p>
+
+                    <div class="features">
+
+                        <span class="feature">
+                            .NET 8
+                        </span>
+
+                        <span class="feature">
+                            MVC
+                        </span>
+
+                        <span class="feature">
+                            PDF
+                        </span>
+
+                        <span class="feature">
+                            Templates
+                        </span>
+
+                    </div>
+
+                    <div class="product-footer">
+
+                        <div>
+
+                            <span class="price-label">
+                                Starting from
+                            </span>
+
+                            <span class="price">
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="products/quotedesk.html"
+                            class="product-button"
+                        >
+                            View Product
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ASSETDESK -->
+
+                <article class="product-card">
+
+                    <span class="product-label">
+                        Asset Management
+                    </span>
+
+                    <h3>
+                        AssetDesk
+                    </h3>
+
+                    <p>
+                        Track business assets,
+                        assignments, users and
+                        operational information.
+                    </p>
+
+                    <div class="features">
+
+                        <span class="feature">
+                            .NET 8
+                        </span>
+
+                        <span class="feature">
+                            MVC
+                        </span>
+
+                        <span class="feature">
+                            SQL
+                        </span>
+
+                        <span class="feature">
+                            Self Hosted
+                        </span>
+
+                    </div>
+
+                    <div class="product-footer">
+
+                        <div>
+
+                            <span class="price-label">
+                                Starting from
+                            </span>
+
+                            <span class="price">
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="products/assetdesk.html"
+                            class="product-button"
+                        >
+                            View Product
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- RESUMEDESK -->
+
+                <article class="product-card">
+
+                    <span class="product-label">
+                        Productivity
+                    </span>
+
+                    <h3>
+                        ResumeDesk
+                    </h3>
+
+                    <p>
+                        A practical resume management
+                        application designed around
+                        structured candidate workflows.
+                    </p>
+
+                    <div class="features">
+
+                        <span class="feature">
+                            .NET 8
+                        </span>
+
+                        <span class="feature">
+                            MVC
+                        </span>
+
+                        <span class="feature">
+                            SQLite
+                        </span>
+
+                        <span class="feature">
+                            Self Hosted
+                        </span>
+
+                    </div>
+
+                    <div class="product-footer">
+
+                        <div>
+
+                            <span class="price-label">
+                                Starting from
+                            </span>
+
+                            <span class="price">
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="products/resumedesk.html"
+                            class="product-button"
+                        >
+                            View Product
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+            © 2026 Darshan Bane
+        </div>
+
+        <div>
+            Software Products · MVPs · .NET
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
