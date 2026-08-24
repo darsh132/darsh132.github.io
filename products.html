@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -7,11 +8,12 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Ready-to-deploy business software and MVPs by Darshan Bane.">
+          content="Browse production-ready software MVPs by Darshan Bane. Self-hosted business software for teams and organizations.">
 
-    <title>Products | Darshan Bane</title>
+    <title>MVP Store | Darshan Bane</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -31,6 +33,7 @@
 
             background: #f8fafc;
             color: #0f172a;
+            line-height: 1.6;
         }
 
         a {
@@ -43,14 +46,15 @@
             margin: 0 auto;
         }
 
-        /* Navigation */
+
+        /* NAV */
 
         .navbar {
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
 
-            background: rgba(248, 250, 252, 0.92);
+            background: rgba(248,250,252,.94);
             backdrop-filter: blur(14px);
 
             border-bottom: 1px solid #e2e8f0;
@@ -63,13 +67,12 @@
             align-items: center;
             justify-content: space-between;
 
-            gap: 24px;
+            gap: 25px;
         }
 
         .brand {
             font-size: 18px;
             font-weight: 800;
-            letter-spacing: -0.02em;
         }
 
         .brand span {
@@ -80,7 +83,7 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 25px;
 
             color: #475569;
             font-size: 14px;
@@ -91,7 +94,7 @@
             color: #0f172a;
         }
 
-        .nav-cta {
+        .nav-button {
             padding: 10px 16px;
 
             background: #0f172a;
@@ -99,15 +102,26 @@
 
             border-radius: 8px;
 
-            font-size: 14px;
-            font-weight: 700;
+            font-size: 13px;
+            font-weight: 800;
         }
 
-        /* Hero */
+
+        /* HERO */
 
         .hero {
             padding: 100px 0 80px;
-            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(148,163,184,.18),
+                    transparent 35%
+                );
+        }
+
+        .hero-content {
+            max-width: 850px;
         }
 
         .eyebrow {
@@ -118,30 +132,36 @@
             border: 1px solid #cbd5e1;
             border-radius: 999px;
 
-            color: #475569;
             background: white;
 
-            font-size: 12px;
-            font-weight: 700;
+            color: #475569;
+
+            font-size: 11px;
+            font-weight: 800;
 
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: .08em;
         }
 
         .hero h1 {
-            max-width: 850px;
+            margin: 22px 0 0;
 
-            margin: 24px auto 0;
+            font-size:
+                clamp(45px, 7vw, 76px);
 
-            font-size: clamp(42px, 7vw, 72px);
-            line-height: 0.98;
-            letter-spacing: -0.055em;
+            line-height: .98;
+
+            letter-spacing: -.06em;
         }
 
-        .hero p {
-            max-width: 680px;
+        .hero h1 span {
+            color: #64748b;
+        }
 
-            margin: 26px auto 0;
+        .hero-description {
+            max-width: 720px;
+
+            margin-top: 25px;
 
             color: #64748b;
 
@@ -149,208 +169,597 @@
             line-height: 1.7;
         }
 
-        /* Products */
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
 
-        .products-section {
-            padding: 20px 0 100px;
+            margin-top: 30px;
         }
 
-        .section-heading {
-            margin-bottom: 32px;
+        .meta {
+            padding: 8px 11px;
+
+            background: #f1f5f9;
+
+            border-radius: 7px;
+
+            color: #475569;
+
+            font-size: 12px;
+            font-weight: 700;
         }
 
-        .section-heading h2 {
+
+        /* FILTER */
+
+        .catalog {
+            padding: 80px 0 110px;
+        }
+
+        .catalog-top {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: end;
+
+            gap: 30px;
+
+            margin-bottom: 35px;
+        }
+
+        .catalog-title h2 {
             margin: 0;
 
-            font-size: 32px;
-            letter-spacing: -0.03em;
+            font-size: 35px;
+            letter-spacing: -.04em;
         }
 
-        .section-heading p {
-            margin: 10px 0 0;
+        .catalog-title p {
+            margin: 8px 0 0;
 
             color: #64748b;
+
+            font-size: 15px;
         }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter {
+            padding: 9px 13px;
+
+            background: white;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 8px;
+
+            color: #475569;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .filter.active,
+        .filter:hover {
+            background: #0f172a;
+            color: white;
+            border-color: #0f172a;
+        }
+
+
+        /* PRODUCTS */
 
         .product-grid {
             display: grid;
 
             grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+                repeat(2, 1fr);
 
-            gap: 24px;
+            gap: 20px;
         }
 
         .product-card {
-            padding: 32px;
+            overflow: hidden;
 
             background: white;
 
             border: 1px solid #e2e8f0;
-            border-radius: 18px;
+
+            border-radius: 16px;
 
             transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                border-color 0.2s ease;
+                transform .2s ease,
+                box-shadow .2s ease;
         }
 
         .product-card:hover {
             transform: translateY(-4px);
 
-            border-color: #cbd5e1;
-
             box-shadow:
-                0 20px 40px rgba(15, 23, 42, 0.08);
+                0 20px 45px
+                rgba(15,23,42,.09);
         }
 
-        .product-label {
-            color: #64748b;
 
-            font-size: 12px;
-            font-weight: 800;
+        /* PRODUCT VISUAL */
 
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
+        .product-visual {
+            height: 250px;
 
-        .product-card h3 {
-            margin: 12px 0 10px;
-
-            font-size: 28px;
-            letter-spacing: -0.035em;
-        }
-
-        .product-card > p {
-            min-height: 54px;
-
-            color: #64748b;
-
-            line-height: 1.6;
-        }
-
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-
-            gap: 8px;
-
-            margin: 24px 0;
-        }
-
-        .feature {
-            padding: 6px 9px;
+            padding: 20px;
 
             background: #f1f5f9;
 
-            border-radius: 6px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .browser {
+            height: 100%;
+
+            overflow: hidden;
+
+            background: white;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 15px 30px
+                rgba(15,23,42,.10);
+        }
+
+        .browser-bar {
+            height: 30px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 5px;
+
+            padding: 0 10px;
+
+            background: #f8fafc;
+
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .browser-dot {
+            width: 6px;
+            height: 6px;
+
+            background: #cbd5e1;
+
+            border-radius: 50%;
+        }
+
+        .mockup {
+            display: grid;
+
+            grid-template-columns: 75px 1fr;
+
+            height: calc(100% - 30px);
+        }
+
+        .mock-sidebar {
+            padding: 13px 8px;
+
+            background: #0f172a;
+        }
+
+        .mock-sidebar-title {
+            margin-bottom: 15px;
+
+            color: white;
+
+            font-size: 8px;
+            font-weight: 900;
+        }
+
+        .mock-nav {
+            height: 7px;
+
+            margin-bottom: 8px;
+
+            background: #334155;
+
+            border-radius: 3px;
+        }
+
+        .mock-nav.short {
+            width: 65%;
+        }
+
+        .mock-main {
+            padding: 15px;
+
+            background: #f8fafc;
+        }
+
+        .mock-heading {
+            width: 35%;
+
+            height: 10px;
+
+            margin-bottom: 15px;
+
+            background: #0f172a;
+
+            border-radius: 4px;
+        }
+
+        .mock-stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 7px;
+
+            margin-bottom: 10px;
+        }
+
+        .mock-stat {
+            height: 38px;
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 5px;
+        }
+
+        .mock-table {
+            height: 70px;
+
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 5px;
+        }
+
+
+        /* PRODUCT INFO */
+
+        .product-body {
+            padding: 28px;
+        }
+
+        .product-top {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: start;
+
+            gap: 15px;
+        }
+
+        .product-name {
+            margin: 0;
+
+            font-size: 25px;
+
+            letter-spacing: -.03em;
+        }
+
+        .status {
+            padding: 6px 9px;
+
+            border-radius: 999px;
+
+            background: #f1f5f9;
 
             color: #475569;
 
-            font-size: 12px;
-            font-weight: 600;
+            font-size: 10px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+        }
+
+        .product-description {
+            margin: 12px 0 0;
+
+            color: #64748b;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 18px;
+        }
+
+        .tag {
+            padding: 5px 8px;
+
+            background: #f8fafc;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 5px;
+
+            color: #64748b;
+
+            font-size: 10px;
+            font-weight: 700;
         }
 
         .product-footer {
             display: flex;
 
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
 
             gap: 20px;
 
-            padding-top: 24px;
+            margin-top: 25px;
+
+            padding-top: 20px;
 
             border-top: 1px solid #e2e8f0;
         }
 
         .price-label {
-            display: block;
-
             color: #94a3b8;
 
-            font-size: 12px;
+            font-size: 10px;
+            font-weight: 800;
+
+            text-transform: uppercase;
         }
 
         .price {
-            display: block;
+            margin-top: 2px;
 
-            margin-top: 3px;
-
-            font-size: 24px;
-            font-weight: 800;
+            font-size: 20px;
+            font-weight: 900;
         }
 
-        .product-button {
-            padding: 12px 18px;
+        .view-button {
+            padding: 11px 16px;
 
             background: #0f172a;
             color: white;
 
             border-radius: 8px;
 
-            font-size: 14px;
-            font-weight: 700;
+            font-size: 12px;
+            font-weight: 800;
         }
 
-        /* Footer */
+        .view-button:hover {
+            background: #1e293b;
+        }
+
+
+        /* WHY */
+
+        .why {
+            padding: 100px 0;
+
+            background: #0f172a;
+
+            color: white;
+        }
+
+        .why-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .why-card {
+            padding: 28px;
+
+            background: #1e293b;
+
+            border: 1px solid #334155;
+
+            border-radius: 13px;
+        }
+
+        .why-number {
+            color: #94a3b8;
+
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .why-card h3 {
+            margin: 17px 0 7px;
+
+            font-size: 19px;
+        }
+
+        .why-card p {
+            margin: 0;
+
+            color: #94a3b8;
+
+            font-size: 13px;
+        }
+
+
+        /* CTA */
+
+        .cta {
+            padding: 100px 0;
+
+            text-align: center;
+        }
+
+        .cta h2 {
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            font-size:
+                clamp(35px, 5vw, 55px);
+
+            line-height: 1;
+
+            letter-spacing: -.05em;
+        }
+
+        .cta p {
+            max-width: 600px;
+
+            margin: 20px auto 0;
+
+            color: #64748b;
+
+            font-size: 17px;
+        }
+
+        .cta-actions {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 30px;
+        }
+
+        .button-primary {
+            padding: 13px 20px;
+
+            background: #0f172a;
+            color: white;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .button-secondary {
+            padding: 13px 20px;
+
+            background: white;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+
+        /* FOOTER */
 
         footer {
             padding: 40px 0;
 
-            border-top: 1px solid #e2e8f0;
+            background: #020617;
 
             color: #64748b;
 
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .footer-inner {
             display: flex;
 
-            align-items: center;
             justify-content: space-between;
 
             gap: 20px;
         }
 
-        /* Responsive */
 
-        @media (max-width: 760px) {
+        /* RESPONSIVE */
+
+        @media (max-width: 850px) {
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .catalog-top {
+                align-items: start;
+                flex-direction: column;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+                width:
+                    min(
+                        100% - 28px,
+                        1180px
+                    );
+            }
 
             .nav-links {
                 display: none;
             }
 
             .hero {
-                padding: 70px 0 55px;
+                padding: 70px 0;
             }
 
-            .product-grid {
+            .product-visual {
+                height: 210px;
+            }
+
+            .why-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .product-card {
-                padding: 24px;
             }
 
             .footer-inner {
                 flex-direction: column;
-                align-items: flex-start;
             }
         }
+
     </style>
+
 </head>
 
+
 <body>
+
+
+<!-- NAVIGATION -->
 
 <header class="navbar">
 
     <div class="container nav-inner">
 
-        <a href="index.html" class="brand">
+        <a
+            href="index.html"
+            class="brand"
+        >
             DB <span>/ Darshan Bane</span>
         </a>
+
 
         <nav class="nav-links">
 
@@ -359,21 +768,25 @@
             </a>
 
             <a href="products.html">
+                Store
+            </a>
+
+            <a href="#products">
                 Products
             </a>
 
-            <a href="index.html#experience">
-                Experience
-            </a>
-
-            <a href="index.html#contact">
-                Contact
+            <a href="#why">
+                Why Buy
             </a>
 
         </nav>
 
-        <a href="#products" class="nav-cta">
-            Browse Products
+
+        <a
+            href="#products"
+            class="nav-button"
+        >
+            Browse MVPs
         </a>
 
     </div>
@@ -383,323 +796,810 @@
 
 <main>
 
-    <!-- HERO -->
 
-    <section class="hero">
+<!-- HERO -->
 
-        <div class="container">
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
 
             <span class="eyebrow">
-                Software Products
+                Independent Software Store
             </span>
 
+
             <h1>
-                Ready-to-deploy
-                business software.
+
+                Software built to
+                <span>solve real problems.</span>
+
             </h1>
 
-            <p>
-                Practical software products and MVPs
-                built for real-world business workflows.
-                Deploy, customize and start using them
-                instead of building everything from zero.
+
+            <p class="hero-description">
+
+                Production-focused business MVPs designed
+                for organizations that want practical,
+                self-hosted software without unnecessary
+                complexity.
+
             </p>
+
+
+            <div class="hero-meta">
+
+                <span class="meta">
+                    Self Hosted
+                </span>
+
+                <span class="meta">
+                    .NET 8
+                </span>
+
+                <span class="meta">
+                    Business Software
+                </span>
+
+                <span class="meta">
+                    Commercial Licensing
+                </span>
+
+            </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- PRODUCTS -->
+<!-- PRODUCTS -->
 
-    <section
-        id="products"
-        class="products-section"
-    >
+<section
+    id="products"
+    class="catalog"
+>
 
-        <div class="container">
+    <div class="container">
 
-            <div class="section-heading">
+
+        <div class="catalog-top">
+
+            <div class="catalog-title">
 
                 <h2>
-                    Products
+                    MVP Store
                 </h2>
 
                 <p>
-                    Explore available software products
-                    and ready-to-deploy MVPs.
+                    Browse available and upcoming products.
                 </p>
 
             </div>
 
 
-            <div class="product-grid">
-
-
-                <!-- FOLLOWUPDESK -->
-
-                <article class="product-card">
-
-                    <span class="product-label">
-                        Sales & CRM
-                    </span>
-
-                    <h3>
-                        FollowUpDesk
-                    </h3>
-
-                    <p>
-                        Manage leads, customers,
-                        follow-ups, tasks and sales
-                        activities from one application.
-                    </p>
-
-                    <div class="features">
-
-                        <span class="feature">
-                            .NET 8
-                        </span>
-
-                        <span class="feature">
-                            ASP.NET Core
-                        </span>
-
-                        <span class="feature">
-                            SQL Server
-                        </span>
-
-                        <span class="feature">
-                            Self Hosted
-                        </span>
-
-                    </div>
-
-                    <div class="product-footer">
-
-                        <div>
-
-                            <span class="price-label">
-                                Starting from
-                            </span>
-
-                            <span class="price">
-                                Coming Soon
-                            </span>
-
-                        </div>
-
-                        <a
-                            href="products/followupdesk.html"
-                            class="product-button"
-                        >
-                            View Product
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- QUOTEDESK -->
-
-                <article class="product-card">
-
-                    <span class="product-label">
-                        Sales & Quotations
-                    </span>
-
-                    <h3>
-                        QuoteDesk
-                    </h3>
-
-                    <p>
-                        Create professional quotations,
-                        proposals and branded documents
-                        using reusable templates.
-                    </p>
-
-                    <div class="features">
-
-                        <span class="feature">
-                            .NET 8
-                        </span>
-
-                        <span class="feature">
-                            MVC
-                        </span>
-
-                        <span class="feature">
-                            PDF
-                        </span>
-
-                        <span class="feature">
-                            Templates
-                        </span>
-
-                    </div>
-
-                    <div class="product-footer">
-
-                        <div>
-
-                            <span class="price-label">
-                                Starting from
-                            </span>
-
-                            <span class="price">
-                                Coming Soon
-                            </span>
-
-                        </div>
-
-                        <a
-                            href="products/quotedesk.html"
-                            class="product-button"
-                        >
-                            View Product
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ASSETDESK -->
-
-                <article class="product-card">
-
-                    <span class="product-label">
-                        Asset Management
-                    </span>
-
-                    <h3>
-                        AssetDesk
-                    </h3>
-
-                    <p>
-                        Track business assets,
-                        assignments, users and
-                        operational information.
-                    </p>
-
-                    <div class="features">
-
-                        <span class="feature">
-                            .NET 8
-                        </span>
-
-                        <span class="feature">
-                            MVC
-                        </span>
-
-                        <span class="feature">
-                            SQL
-                        </span>
-
-                        <span class="feature">
-                            Self Hosted
-                        </span>
-
-                    </div>
-
-                    <div class="product-footer">
-
-                        <div>
-
-                            <span class="price-label">
-                                Starting from
-                            </span>
-
-                            <span class="price">
-                                Coming Soon
-                            </span>
-
-                        </div>
-
-                        <a
-                            href="products/assetdesk.html"
-                            class="product-button"
-                        >
-                            View Product
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- RESUMEDESK -->
-
-                <article class="product-card">
-
-                    <span class="product-label">
-                        Productivity
-                    </span>
-
-                    <h3>
-                        ResumeDesk
-                    </h3>
-
-                    <p>
-                        A practical resume management
-                        application designed around
-                        structured candidate workflows.
-                    </p>
-
-                    <div class="features">
-
-                        <span class="feature">
-                            .NET 8
-                        </span>
-
-                        <span class="feature">
-                            MVC
-                        </span>
-
-                        <span class="feature">
-                            SQLite
-                        </span>
-
-                        <span class="feature">
-                            Self Hosted
-                        </span>
-
-                    </div>
-
-                    <div class="product-footer">
-
-                        <div>
-
-                            <span class="price-label">
-                                Starting from
-                            </span>
-
-                            <span class="price">
-                                Coming Soon
-                            </span>
-
-                        </div>
-
-                        <a
-                            href="products/resumedesk.html"
-                            class="product-button"
-                        >
-                            View Product
-                        </a>
-
-                    </div>
-
-                </article>
-
+            <div class="filters">
+
+                <button
+                    class="filter active"
+                    onclick="filterProducts('all', this)"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter"
+                    onclick="filterProducts('business', this)"
+                >
+                    Business
+                </button>
+
+                <button
+                    class="filter"
+                    onclick="filterProducts('productivity', this)"
+                >
+                    Productivity
+                </button>
+
+                <button
+                    class="filter"
+                    onclick="filterProducts('operations', this)"
+                >
+                    Operations
+                </button>
 
             </div>
 
         </div>
 
-    </section>
+
+        <div class="product-grid">
+
+
+            <!-- FOLLOW UP DESK -->
+
+            <article
+                class="product-card"
+                data-category="business productivity"
+            >
+
+                <div class="product-visual">
+
+                    <div class="browser">
+
+                        <div class="browser-bar">
+
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+
+                        </div>
+
+
+                        <div class="mockup">
+
+                            <div class="mock-sidebar">
+
+                                <div class="mock-sidebar-title">
+                                    FollowUpDesk
+                                </div>
+
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav short"></div>
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav short"></div>
+
+                            </div>
+
+
+                            <div class="mock-main">
+
+                                <div class="mock-heading"></div>
+
+                                <div class="mock-stats">
+
+                                    <div class="mock-stat"></div>
+                                    <div class="mock-stat"></div>
+                                    <div class="mock-stat"></div>
+
+                                </div>
+
+                                <div class="mock-table"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <div class="product-top">
+
+                        <h3 class="product-name">
+                            FollowUpDesk
+                        </h3>
+
+                        <span class="status">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <p class="product-description">
+
+                        A structured follow-up management
+                        system for teams that need to
+                        manage leads, customers, tasks
+                        and follow-up activities.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            CRM
+                        </span>
+
+                        <span class="tag">
+                            Follow-ups
+                        </span>
+
+                        <span class="tag">
+                            .NET 8
+                        </span>
+
+                        <span class="tag">
+                            Self Hosted
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-footer">
+
+                        <div>
+
+                            <div class="price-label">
+                                License
+                            </div>
+
+                            <div class="price">
+                                View Product
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="products/followupdesk.html"
+                            class="view-button"
+                        >
+                            View Product →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- QUOTE DESK -->
+
+            <article
+                class="product-card"
+                data-category="business operations"
+            >
+
+                <div class="product-visual">
+
+                    <div class="browser">
+
+                        <div class="browser-bar">
+
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+
+                        </div>
+
+
+                        <div class="mockup">
+
+                            <div class="mock-sidebar">
+
+                                <div class="mock-sidebar-title">
+                                    QuoteDesk
+                                </div>
+
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav short"></div>
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav short"></div>
+
+                            </div>
+
+
+                            <div class="mock-main">
+
+                                <div class="mock-heading"></div>
+
+                                <div class="mock-stats">
+
+                                    <div class="mock-stat"></div>
+                                    <div class="mock-stat"></div>
+                                    <div class="mock-stat"></div>
+
+                                </div>
+
+                                <div class="mock-table"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <div class="product-top">
+
+                        <h3 class="product-name">
+                            QuoteDesk
+                        </h3>
+
+                        <span class="status">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <p class="product-description">
+
+                        Corporate quotation and proposal
+                        management software with reusable
+                        templates, branding and
+                        professional document generation.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Quotations
+                        </span>
+
+                        <span class="tag">
+                            Templates
+                        </span>
+
+                        <span class="tag">
+                            Branding
+                        </span>
+
+                        <span class="tag">
+                            .NET 8
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-footer">
+
+                        <div>
+
+                            <div class="price-label">
+                                License
+                            </div>
+
+                            <div class="price">
+                                View Product
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="products/quotedesk.html"
+                            class="view-button"
+                        >
+                            View Product →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ASSET DESK -->
+
+            <article
+                class="product-card"
+                data-category="business operations"
+            >
+
+                <div class="product-visual">
+
+                    <div class="browser">
+
+                        <div class="browser-bar">
+
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+
+                        </div>
+
+
+                        <div class="mockup">
+
+                            <div class="mock-sidebar">
+
+                                <div class="mock-sidebar-title">
+                                    AssetDesk
+                                </div>
+
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav short"></div>
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav"></div>
+
+                            </div>
+
+
+                            <div class="mock-main">
+
+                                <div class="mock-heading"></div>
+
+                                <div class="mock-stats">
+
+                                    <div class="mock-stat"></div>
+                                    <div class="mock-stat"></div>
+                                    <div class="mock-stat"></div>
+
+                                </div>
+
+                                <div class="mock-table"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <div class="product-top">
+
+                        <h3 class="product-name">
+                            AssetDesk
+                        </h3>
+
+                        <span class="status">
+                            Available
+                        </span>
+
+                    </div>
+
+
+                    <p class="product-description">
+
+                        Centralized IT asset management
+                        software for tracking equipment,
+                        employees, locations and asset
+                        lifecycle information.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Asset Management
+                        </span>
+
+                        <span class="tag">
+                            Inventory
+                        </span>
+
+                        <span class="tag">
+                            IT Operations
+                        </span>
+
+                        <span class="tag">
+                            .NET 8
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-footer">
+
+                        <div>
+
+                            <div class="price-label">
+                                License
+                            </div>
+
+                            <div class="price">
+                                View Product
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="products/assetdesk.html"
+                            class="view-button"
+                        >
+                            View Product →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- COMING SOON -->
+
+            <article
+                class="product-card"
+                data-category="productivity"
+            >
+
+                <div class="product-visual">
+
+                    <div class="browser">
+
+                        <div class="browser-bar">
+
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+
+                        </div>
+
+
+                        <div class="mockup">
+
+                            <div class="mock-sidebar">
+
+                                <div class="mock-sidebar-title">
+                                    Product
+                                </div>
+
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav short"></div>
+                                <div class="mock-nav"></div>
+                                <div class="mock-nav short"></div>
+
+                            </div>
+
+
+                            <div class="mock-main">
+
+                                <div class="mock-heading"></div>
+
+                                <div class="mock-stats">
+
+                                    <div class="mock-stat"></div>
+                                    <div class="mock-stat"></div>
+                                    <div class="mock-stat"></div>
+
+                                </div>
+
+                                <div class="mock-table"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-body">
+
+                    <div class="product-top">
+
+                        <h3 class="product-name">
+                            More Products
+                        </h3>
+
+                        <span class="status">
+                            Coming Soon
+                        </span>
+
+                    </div>
+
+
+                    <p class="product-description">
+
+                        New focused business applications
+                        are currently being developed and
+                        will be added to the store.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            SaaS
+                        </span>
+
+                        <span class="tag">
+                            Business
+                        </span>
+
+                        <span class="tag">
+                            Productivity
+                        </span>
+
+                    </div>
+
+
+                    <div class="product-footer">
+
+                        <div>
+
+                            <div class="price-label">
+                                Status
+                            </div>
+
+                            <div class="price">
+                                Coming Soon
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="index.html#contact"
+                            class="view-button"
+                        >
+                            Contact Me →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY BUY -->
+
+<section
+    id="why"
+    class="why"
+>
+
+    <div class="container">
+
+
+        <div class="catalog-title">
+
+            <span class="eyebrow">
+                Why These Products
+            </span>
+
+            <h2 style="margin-top:18px;">
+                Built for practical deployment.
+            </h2>
+
+        </div>
+
+
+        <div
+            class="why-grid"
+            style="margin-top:40px;"
+        >
+
+
+            <article class="why-card">
+
+                <span class="why-number">
+                    01
+                </span>
+
+                <h3>
+                    Self Hosted
+                </h3>
+
+                <p>
+                    Keep your business data inside
+                    infrastructure you control instead
+                    of relying entirely on external SaaS.
+                </p>
+
+            </article>
+
+
+            <article class="why-card">
+
+                <span class="why-number">
+                    02
+                </span>
+
+                <h3>
+                    Business First
+                </h3>
+
+                <p>
+                    Each application is designed around
+                    a specific operational problem rather
+                    than trying to become an everything app.
+                </p>
+
+            </article>
+
+
+            <article class="why-card">
+
+                <span class="why-number">
+                    03
+                </span>
+
+                <h3>
+                    Deployable Software
+                </h3>
+
+                <p>
+                    Products are built with deployment,
+                    configuration and maintainability
+                    in mind.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Have a specific
+            business problem?
+        </h2>
+
+
+        <p>
+            If you need a customized version of an
+            existing product or want a completely
+            different internal business application,
+            get in touch.
+        </p>
+
+
+        <div class="cta-actions">
+
+            <a
+                href="index.html#contact"
+                class="button-primary"
+            >
+                Discuss a Project
+            </a>
+
+
+            <a
+                href="index.html"
+                class="button-secondary"
+            >
+                Back to Portfolio
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 </main>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -709,13 +1609,80 @@
             © 2026 Darshan Bane
         </div>
 
+
         <div>
-            Software Products · MVPs · .NET
+
+            <a href="index.html">
+                Portfolio
+            </a>
+
+            &nbsp; · &nbsp;
+
+            <a href="products.html">
+                Store
+            </a>
+
+            &nbsp; · &nbsp;
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
         </div>
 
     </div>
 
 </footer>
 
+
+<script>
+
+    function filterProducts(category, button) {
+
+        const products =
+            document.querySelectorAll(".product-card");
+
+        const filters =
+            document.querySelectorAll(".filter");
+
+
+        filters.forEach(function (filter) {
+
+            filter.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        products.forEach(function (product) {
+
+            const categories =
+                product.dataset.category;
+
+
+            if (
+                category === "all" ||
+                categories.includes(category)
+            ) {
+
+                product.style.display = "";
+
+            }
+            else {
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
+
 </body>
+
 </html>
