@@ -2,6 +2,16 @@
   const path = window.location.pathname;
   const nested = path.includes('/products/');
   const root = nested ? '../' : './';
+
+  // Global visual correction layer: keeps text contrast and product media consistent.
+  if (!document.querySelector('link[data-theme-fixes]')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${root}assets/css/theme-fixes.css`;
+    link.dataset.themeFixes = 'true';
+    document.head.appendChild(link);
+  }
+
   const nav = [
     ['About', 'about.html'], ['Projects', 'projects.html'], ['Services', 'services.html'], ['Products', 'products.html'], ['Contact', 'contact.html']
   ];
