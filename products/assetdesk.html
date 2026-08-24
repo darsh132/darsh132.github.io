@@ -5,16 +5,17 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="AssetDesk - self-hosted IT asset and equipment management software for businesses.">
+    <meta
+        name="description"
+        content="AssetDesk - self-hosted asset and equipment management software for businesses."
+    >
 
-    <meta name="keywords"
-          content="AssetDesk, IT asset management, asset tracking, equipment management, inventory software, .NET 8">
-
-    <title>AssetDesk | IT Asset Management | Darshan Bane</title>
+    <title>AssetDesk | Asset Management Software</title>
 
 
     <style>
@@ -46,21 +47,27 @@
 
         a {
             color: inherit;
+
             text-decoration: none;
         }
 
         .container {
-            width: min(1180px, calc(100% - 40px));
+            width:
+                min(
+                    1180px,
+                    calc(100% - 40px)
+                );
 
             margin: 0 auto;
         }
 
 
-        /* ==============================
-           NAVIGATION
-        ============================== */
+        /* =====================================
+           NAVBAR
+        ===================================== */
 
         .navbar {
+
             position: sticky;
 
             top: 0;
@@ -68,7 +75,7 @@
             z-index: 1000;
 
             background:
-                rgba(248, 250, 252, 0.94);
+                rgba(248, 250, 252, .94);
 
             backdrop-filter: blur(14px);
 
@@ -77,6 +84,7 @@
         }
 
         .nav-inner {
+
             min-height: 72px;
 
             display: flex;
@@ -85,29 +93,30 @@
 
             justify-content: space-between;
 
-            gap: 24px;
+            gap: 25px;
         }
 
         .brand {
+
             font-size: 18px;
 
             font-weight: 800;
-
-            letter-spacing: -0.02em;
         }
 
         .brand span {
+
             color: #64748b;
 
             font-weight: 500;
         }
 
         .nav-links {
+
             display: flex;
 
             align-items: center;
 
-            gap: 26px;
+            gap: 25px;
 
             color: #475569;
 
@@ -117,10 +126,12 @@
         }
 
         .nav-links a:hover {
+
             color: #0f172a;
         }
 
         .nav-button {
+
             padding: 10px 16px;
 
             background: #0f172a;
@@ -129,28 +140,94 @@
 
             border-radius: 8px;
 
-            font-size: 14px;
+            font-size: 13px;
 
-            font-weight: 700;
+            font-weight: 800;
         }
 
 
-        /* ==============================
+        /* =====================================
+           BUTTONS
+        ===================================== */
+
+        .button-primary {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 13px 20px;
+
+            background: #0f172a;
+
+            color: white;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .button-primary:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 15px 30px
+                rgba(15, 23, 42, .15);
+        }
+
+        .button-secondary {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 13px 20px;
+
+            background: white;
+
+            color: #0f172a;
+
+            border:
+                1px solid #cbd5e1;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================
            HERO
-        ============================== */
+        ===================================== */
 
         .hero {
+
             padding: 90px 0 80px;
 
             background:
                 radial-gradient(
                     circle at top right,
-                    rgba(148, 163, 184, 0.18),
+                    rgba(148, 163, 184, .18),
                     transparent 35%
                 );
         }
 
         .hero-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -162,47 +239,51 @@
         }
 
         .eyebrow {
+
             display: inline-flex;
 
             padding: 7px 12px;
+
+            background: white;
 
             border:
                 1px solid #cbd5e1;
 
             border-radius: 999px;
 
-            background: white;
-
             color: #475569;
 
-            font-size: 12px;
+            font-size: 11px;
 
             font-weight: 800;
 
             text-transform: uppercase;
 
-            letter-spacing: 0.08em;
+            letter-spacing: .08em;
         }
 
         .hero h1 {
+
             margin: 22px 0 0;
 
             font-size:
                 clamp(44px, 6vw, 70px);
 
-            line-height: 0.98;
+            line-height: .98;
 
-            letter-spacing: -0.055em;
+            letter-spacing: -.055em;
         }
 
         .hero h1 span {
+
             color: #64748b;
         }
 
         .hero-description {
+
             max-width: 650px;
 
-            margin: 26px 0 0;
+            margin-top: 25px;
 
             color: #64748b;
 
@@ -212,86 +293,30 @@
         }
 
         .hero-actions {
-            display: flex;
 
-            flex-wrap: wrap;
-
-            gap: 12px;
-
-            margin-top: 34px;
-        }
-
-        .button-primary {
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding: 13px 20px;
-
-            background: #0f172a;
-
-            color: white;
-
-            border-radius: 9px;
-
-            font-size: 14px;
-
-            font-weight: 800;
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .button-primary:hover {
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 12px 25px
-                rgba(15, 23, 42, 0.15);
-        }
-
-        .button-secondary {
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            padding: 13px 20px;
-
-            background: white;
-
-            color: #0f172a;
-
-            border:
-                1px solid #cbd5e1;
-
-            border-radius: 9px;
-
-            font-size: 14px;
-
-            font-weight: 800;
-        }
-
-        .button-secondary:hover {
-            border-color: #94a3b8;
-        }
-
-        .hero-meta {
             display: flex;
 
             flex-wrap: wrap;
 
             gap: 10px;
 
-            margin-top: 30px;
+            margin-top: 32px;
         }
 
-        .meta-item {
-            padding: 7px 10px;
+        .hero-meta {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 25px;
+        }
+
+        .meta {
+
+            padding: 6px 9px;
 
             background: #f1f5f9;
 
@@ -299,24 +324,26 @@
 
             color: #475569;
 
-            font-size: 12px;
+            font-size: 11px;
 
             font-weight: 700;
         }
 
 
-        /* ==============================
-           DASHBOARD MOCKUP
-        ============================== */
+        /* =====================================
+           DASHBOARD PREVIEW
+        ===================================== */
 
-        .dashboard-wrapper {
+        .preview {
+
             padding: 10px;
         }
 
-        .dashboard {
+        .window {
+
             overflow: hidden;
 
-            background: white;
+            background: #e2e8f0;
 
             border:
                 1px solid #cbd5e1;
@@ -325,10 +352,11 @@
 
             box-shadow:
                 0 30px 70px
-                rgba(15, 23, 42, 0.14);
+                rgba(15, 23, 42, .14);
         }
 
-        .dashboard-top {
+        .window-bar {
+
             height: 42px;
 
             display: flex;
@@ -342,10 +370,11 @@
             background: #f1f5f9;
 
             border-bottom:
-                1px solid #e2e8f0;
+                1px solid #cbd5e1;
         }
 
         .dot {
+
             width: 9px;
 
             height: 9px;
@@ -355,24 +384,28 @@
             background: #cbd5e1;
         }
 
-        .dashboard-body {
+        .dashboard {
+
             display: grid;
 
-            grid-template-columns: 150px 1fr;
+            grid-template-columns:
+                145px 1fr;
 
-            min-height: 390px;
+            min-height: 430px;
         }
 
         .sidebar {
-            padding: 20px 14px;
+
+            padding: 20px 13px;
 
             background: #0f172a;
 
             color: #cbd5e1;
         }
 
-        .sidebar-title {
-            margin-bottom: 24px;
+        .sidebar-brand {
+
+            margin-bottom: 25px;
 
             color: white;
 
@@ -382,9 +415,10 @@
         }
 
         .sidebar-item {
-            padding: 9px 8px;
 
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+
+            padding: 9px 8px;
 
             border-radius: 6px;
 
@@ -392,35 +426,40 @@
         }
 
         .sidebar-item.active {
+
             background: #334155;
 
             color: white;
         }
 
-        .dashboard-content {
-            padding: 25px;
+        .dashboard-main {
+
+            padding: 22px;
 
             background: #f8fafc;
         }
 
-        .dashboard-heading {
-            display: flex;
+        .dashboard-header {
 
-            justify-content: space-between;
+            display: flex;
 
             align-items: center;
 
-            margin-bottom: 20px;
+            justify-content: space-between;
+
+            margin-bottom: 18px;
         }
 
-        .dashboard-heading h3 {
-            margin: 0;
+        .dashboard-title {
 
-            font-size: 18px;
+            font-size: 17px;
+
+            font-weight: 900;
         }
 
-        .dashboard-button {
-            padding: 7px 11px;
+        .new-button {
+
+            padding: 7px 10px;
 
             background: #0f172a;
 
@@ -428,130 +467,138 @@
 
             border-radius: 6px;
 
-            font-size: 9px;
+            font-size: 8px;
 
             font-weight: 800;
         }
 
-        .stat-grid {
+        .stats {
+
             display: grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 10px;
+            gap: 8px;
 
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
         .stat {
-            padding: 14px;
+
+            padding: 13px;
 
             background: white;
 
             border:
                 1px solid #e2e8f0;
 
-            border-radius: 8px;
+            border-radius: 7px;
         }
 
         .stat-label {
+
             color: #94a3b8;
 
-            font-size: 8px;
+            font-size: 7px;
 
-            font-weight: 800;
-
-            text-transform: uppercase;
+            font-weight: 700;
         }
 
         .stat-value {
-            margin-top: 4px;
 
-            font-size: 20px;
+            margin-top: 5px;
+
+            font-size: 16px;
 
             font-weight: 900;
         }
 
         .asset-table {
-            width: 100%;
 
-            border-collapse: collapse;
+            overflow: hidden;
 
             background: white;
 
             border:
                 1px solid #e2e8f0;
 
-            border-radius: 8px;
-
-            overflow: hidden;
-
-            font-size: 9px;
+            border-radius: 7px;
         }
 
-        .asset-table th {
+        .asset-row {
+
+            display: grid;
+
+            grid-template-columns:
+                1.4fr 1fr .7fr .7fr;
+
             padding: 10px;
+
+            border-bottom:
+                1px solid #e2e8f0;
+
+            font-size: 7px;
+        }
+
+        .asset-row:last-child {
+
+            border-bottom: 0;
+        }
+
+        .asset-row.header {
 
             background: #f1f5f9;
 
-            text-align: left;
-        }
-
-        .asset-table td {
-            padding: 10px;
-
-            border-top:
-                1px solid #e2e8f0;
+            font-weight: 900;
         }
 
         .status {
+
             display: inline-block;
 
-            padding: 3px 7px;
-
-            border-radius: 999px;
+            padding: 3px 5px;
 
             background: #f1f5f9;
 
-            color: #475569;
+            border-radius: 4px;
 
-            font-size: 8px;
+            font-size: 6px;
 
             font-weight: 800;
         }
 
 
-        /* ==============================
-           GENERAL SECTIONS
-        ============================== */
+        /* =====================================
+           SECTIONS
+        ===================================== */
 
         section {
+
             padding: 100px 0;
         }
 
         .section-heading {
-            max-width: 720px;
+
+            max-width: 760px;
 
             margin-bottom: 45px;
         }
 
-        .section-heading .eyebrow {
-            margin-bottom: 15px;
-        }
-
         .section-heading h2 {
-            margin: 0;
+
+            margin: 15px 0 0;
 
             font-size:
                 clamp(32px, 4vw, 48px);
 
             line-height: 1.05;
 
-            letter-spacing: -0.04em;
+            letter-spacing: -.04em;
         }
 
         .section-heading p {
+
             margin-top: 15px;
 
             color: #64748b;
@@ -560,11 +607,66 @@
         }
 
 
-        /* ==============================
+        /* =====================================
+           PROBLEM
+        ===================================== */
+
+        .problem-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .problem-card {
+
+            padding: 28px;
+
+            background: white;
+
+            border:
+                1px solid #e2e8f0;
+
+            border-radius: 13px;
+        }
+
+        .number {
+
+            color: #94a3b8;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+        .problem-card h3 {
+
+            margin: 17px 0 8px;
+
+            font-size: 19px;
+        }
+
+        .problem-card p {
+
+            margin: 0;
+
+            color: #64748b;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================
            FEATURES
-        ============================== */
+        ===================================== */
 
         .feature-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -574,6 +676,7 @@
         }
 
         .feature-card {
+
             padding: 28px;
 
             background: white;
@@ -581,115 +684,97 @@
             border:
                 1px solid #e2e8f0;
 
-            border-radius: 14px;
-        }
-
-        .feature-number {
-            color: #94a3b8;
-
-            font-size: 12px;
-
-            font-weight: 800;
+            border-radius: 13px;
         }
 
         .feature-card h3 {
-            margin: 16px 0 8px;
 
-            font-size: 20px;
+            margin: 15px 0 7px;
 
-            letter-spacing: -0.02em;
+            font-size: 19px;
         }
 
         .feature-card p {
+
             margin: 0;
 
             color: #64748b;
 
-            font-size: 14px;
-
-            line-height: 1.7;
+            font-size: 13px;
         }
 
 
-        /* ==============================
-           WORKFLOW
-        ============================== */
+        /* =====================================
+           ASSET LIFECYCLE
+        ===================================== */
 
-        .workflow-section {
+        .lifecycle {
+
             background: #0f172a;
 
             color: white;
         }
 
-        .workflow-section
+        .lifecycle
         .section-heading p {
+
             color: #94a3b8;
         }
 
-        .workflow {
+        .lifecycle-grid {
+
             display: grid;
 
             grid-template-columns:
-                repeat(4, 1fr);
+                repeat(5, 1fr);
 
-            gap: 15px;
+            gap: 12px;
         }
 
-        .workflow-step {
-            position: relative;
+        .lifecycle-card {
 
-            padding: 25px;
+            padding: 22px;
 
             background: #1e293b;
 
             border:
                 1px solid #334155;
 
-            border-radius: 12px;
+            border-radius: 11px;
         }
 
-        .workflow-number {
-            width: 34px;
+        .lifecycle-number {
 
-            height: 34px;
+            color: #94a3b8;
 
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            background: #334155;
-
-            border-radius: 50%;
-
-            color: white;
-
-            font-size: 12px;
+            font-size: 10px;
 
             font-weight: 900;
         }
 
-        .workflow-step h3 {
-            margin: 20px 0 7px;
+        .lifecycle-card h3 {
 
-            font-size: 17px;
+            margin: 15px 0 6px;
+
+            font-size: 16px;
         }
 
-        .workflow-step p {
+        .lifecycle-card p {
+
             margin: 0;
 
             color: #94a3b8;
 
-            font-size: 13px;
+            font-size: 11px;
         }
 
 
-        /* ==============================
-           ASSET TYPES
-        ============================== */
+        /* =====================================
+           ASSET CATEGORIES
+        ===================================== */
 
-        .asset-grid {
+        .category-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -698,7 +783,8 @@
             gap: 14px;
         }
 
-        .asset-card {
+        .category-card {
+
             padding: 25px;
 
             background: white;
@@ -709,10 +795,11 @@
             border-radius: 12px;
         }
 
-        .asset-icon {
-            width: 42px;
+        .category-icon {
 
-            height: 42px;
+            width: 40px;
+
+            height: 40px;
 
             display: flex;
 
@@ -722,31 +809,34 @@
 
             background: #f1f5f9;
 
-            border-radius: 9px;
+            border-radius: 8px;
 
-            font-size: 18px;
+            font-size: 16px;
         }
 
-        .asset-card h3 {
-            margin: 16px 0 5px;
+        .category-card h3 {
+
+            margin: 15px 0 6px;
 
             font-size: 17px;
         }
 
-        .asset-card p {
+        .category-card p {
+
             margin: 0;
 
             color: #64748b;
 
-            font-size: 13px;
+            font-size: 12px;
         }
 
 
-        /* ==============================
+        /* =====================================
            INCLUDED
-        ============================== */
+        ===================================== */
 
         .included-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -756,9 +846,10 @@
         }
 
         .check-list {
+
             display: grid;
 
-            gap: 14px;
+            gap: 12px;
 
             padding: 0;
 
@@ -768,28 +859,28 @@
         }
 
         .check-list li {
+
             display: flex;
+
+            align-items: center;
 
             gap: 12px;
 
-            align-items: flex-start;
-
-            padding: 16px;
+            padding: 15px;
 
             background: white;
 
             border:
                 1px solid #e2e8f0;
 
-            border-radius: 10px;
+            border-radius: 9px;
 
             color: #334155;
 
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .check {
-            flex-shrink: 0;
 
             width: 22px;
 
@@ -801,49 +892,54 @@
 
             justify-content: center;
 
+            flex-shrink: 0;
+
             background: #f1f5f9;
 
             border-radius: 50%;
 
-            font-size: 12px;
+            font-size: 11px;
 
             font-weight: 900;
         }
 
         .requirements {
+
             padding: 30px;
 
-            background: #0f172a;
-
-            color: white;
+            background: #f1f5f9;
 
             border-radius: 14px;
         }
 
         .requirements h3 {
+
             margin-top: 0;
 
-            font-size: 22px;
+            font-size: 21px;
         }
 
         .requirements ul {
+
             padding-left: 20px;
 
-            color: #cbd5e1;
+            color: #64748b;
 
             line-height: 2;
         }
 
 
-        /* ==============================
+        /* =====================================
            PRICING
-        ============================== */
+        ===================================== */
 
         .pricing {
+
             background: #f1f5f9;
         }
 
         .pricing-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -853,26 +949,29 @@
         }
 
         .pricing-card {
-            padding: 32px;
+
+            padding: 30px;
 
             background: white;
 
             border:
                 1px solid #e2e8f0;
 
-            border-radius: 16px;
+            border-radius: 15px;
         }
 
         .pricing-card.featured {
+
             border:
                 2px solid #0f172a;
 
             box-shadow:
                 0 20px 45px
-                rgba(15, 23, 42, 0.10);
+                rgba(15, 23, 42, .1);
         }
 
         .pricing-badge {
+
             display: inline-block;
 
             padding: 5px 9px;
@@ -883,7 +982,7 @@
 
             border-radius: 999px;
 
-            font-size: 10px;
+            font-size: 9px;
 
             font-weight: 800;
 
@@ -891,57 +990,61 @@
         }
 
         .pricing-name {
-            margin-top: 18px;
+
+            margin-top: 15px;
 
             color: #64748b;
 
-            font-size: 12px;
+            font-size: 11px;
 
             font-weight: 800;
 
             text-transform: uppercase;
 
-            letter-spacing: 0.08em;
+            letter-spacing: .08em;
         }
 
         .pricing-card h3 {
-            margin: 7px 0 0;
 
-            font-size: 25px;
+            margin: 6px 0 0;
+
+            font-size: 24px;
         }
 
         .price {
+
             margin-top: 20px;
 
-            font-size: 32px;
+            font-size: 30px;
 
             font-weight: 900;
 
-            letter-spacing: -0.04em;
+            letter-spacing: -.04em;
         }
 
         .price-note {
-            min-height: 42px;
 
-            margin-top: 3px;
+            min-height: 42px;
 
             color: #94a3b8;
 
-            font-size: 12px;
+            font-size: 11px;
         }
 
-        .pricing-divider {
+        .divider {
+
             height: 1px;
 
-            margin: 25px 0;
+            margin: 22px 0;
 
             background: #e2e8f0;
         }
 
         .pricing-features {
+
             display: grid;
 
-            gap: 11px;
+            gap: 10px;
 
             padding: 0;
 
@@ -951,91 +1054,98 @@
 
             color: #475569;
 
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .pricing-features li::before {
+
             content: "✓";
 
-            margin-right: 8px;
+            margin-right: 7px;
 
             font-weight: 900;
         }
 
         .pricing-button {
+
+            display: block;
+
             width: 100%;
 
-            margin-top: 28px;
+            margin-top: 25px;
 
-            padding: 13px;
-
-            border: 0;
+            padding: 12px;
 
             background: #0f172a;
 
             color: white;
 
-            border-radius: 9px;
+            border: 0;
 
-            font-size: 14px;
+            border-radius: 8px;
+
+            font-size: 12px;
 
             font-weight: 800;
+
+            text-align: center;
 
             cursor: pointer;
         }
 
 
-        /* ==============================
+        /* =====================================
            FAQ
-        ============================== */
+        ===================================== */
 
         .faq {
+
             max-width: 850px;
 
-            margin: 0 auto;
+            margin: auto;
         }
 
         details {
-            margin-bottom: 12px;
+
+            margin-bottom: 10px;
 
             background: white;
 
             border:
                 1px solid #e2e8f0;
 
-            border-radius: 10px;
-
-            overflow: hidden;
+            border-radius: 9px;
         }
 
         summary {
-            padding: 20px;
+
+            padding: 18px;
 
             cursor: pointer;
 
-            font-size: 15px;
+            font-size: 14px;
 
             font-weight: 800;
         }
 
         details p {
+
             margin: 0;
 
-            padding: 0 20px 20px;
+            padding: 0 18px 18px;
 
             color: #64748b;
 
-            font-size: 14px;
-
-            line-height: 1.7;
+            font-size: 13px;
         }
 
 
-        /* ==============================
+        /* =====================================
            CTA
-        ============================== */
+        ===================================== */
 
-        .final-cta {
+        .cta {
+
             padding: 90px 0;
 
             background: #0f172a;
@@ -1045,34 +1155,46 @@
             text-align: center;
         }
 
-        .final-cta h2 {
+        .cta h2 {
+
             max-width: 700px;
 
             margin: 0 auto;
 
             font-size:
-                clamp(34px, 5vw, 55px);
+                clamp(35px, 5vw, 55px);
 
             line-height: 1;
 
-            letter-spacing: -0.045em;
+            letter-spacing: -.05em;
         }
 
-        .final-cta p {
+        .cta p {
+
             max-width: 600px;
 
-            margin: 22px auto 0;
+            margin: 20px auto 0;
 
             color: #94a3b8;
 
-            font-size: 17px;
+            font-size: 16px;
         }
 
-        .final-cta .hero-actions {
+        .cta-actions {
+
+            display: flex;
+
             justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 30px;
         }
 
-        .final-cta .button-secondary {
+        .cta .button-secondary {
+
             background: transparent;
 
             color: white;
@@ -1081,21 +1203,23 @@
         }
 
 
-        /* ==============================
+        /* =====================================
            FOOTER
-        ============================== */
+        ===================================== */
 
         footer {
+
             padding: 40px 0;
 
             background: #020617;
 
             color: #64748b;
 
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .footer-inner {
+
             display: flex;
 
             align-items: center;
@@ -1106,45 +1230,53 @@
         }
 
 
-        /* ==============================
+        /* =====================================
            RESPONSIVE
-        ============================== */
+        ===================================== */
 
         @media (max-width: 950px) {
 
             .hero-grid {
+
                 grid-template-columns: 1fr;
             }
 
+            .problem-grid,
             .feature-grid {
+
                 grid-template-columns:
                     repeat(2, 1fr);
             }
 
-            .workflow {
+            .lifecycle-grid {
+
                 grid-template-columns:
-                    repeat(2, 1fr);
+                    repeat(3, 1fr);
             }
 
-            .asset-grid {
+            .category-grid {
+
                 grid-template-columns:
                     repeat(2, 1fr);
             }
 
             .pricing-grid {
+
                 grid-template-columns: 1fr;
             }
 
             .included-grid {
+
                 grid-template-columns: 1fr;
             }
 
         }
 
 
-        @media (max-width: 650px) {
+        @media (max-width: 600px) {
 
             .container {
+
                 width:
                     min(
                         100% - 28px,
@@ -1153,36 +1285,41 @@
             }
 
             .nav-links {
+
                 display: none;
             }
 
             .hero {
+
                 padding: 65px 0;
             }
 
-            section {
-                padding: 70px 0;
-            }
-
+            .problem-grid,
             .feature-grid,
-            .workflow,
-            .asset-grid {
+            .lifecycle-grid,
+            .category-grid {
+
                 grid-template-columns: 1fr;
             }
 
-            .dashboard-body {
-                grid-template-columns: 90px 1fr;
-            }
+            .dashboard {
 
-            .dashboard-content {
-                padding: 15px;
+                grid-template-columns:
+                    90px 1fr;
             }
 
             .sidebar {
+
                 padding: 15px 8px;
             }
 
+            .dashboard-main {
+
+                padding: 15px;
+            }
+
             .footer-inner {
+
                 flex-direction: column;
 
                 align-items: flex-start;
@@ -1198,19 +1335,23 @@
 <body>
 
 
-<!-- ==============================
+<!-- =====================================
      NAVIGATION
-============================== -->
+===================================== -->
 
 <header class="navbar">
 
     <div class="container nav-inner">
 
+
         <a
             href="../index.html"
             class="brand"
         >
-            DB <span>/ Darshan Bane</span>
+
+            DB
+            <span>/ Darshan Bane</span>
+
         </a>
 
 
@@ -1221,7 +1362,7 @@
             </a>
 
             <a href="../products.html">
-                Products
+                Store
             </a>
 
             <a href="#features">
@@ -1242,6 +1383,7 @@
             Get AssetDesk
         </a>
 
+
     </div>
 
 </header>
@@ -1250,9 +1392,9 @@
 <main>
 
 
-<!-- ==============================
+<!-- =====================================
      HERO
-============================== -->
+===================================== -->
 
 <section class="hero">
 
@@ -1261,8 +1403,9 @@
 
         <div>
 
+
             <span class="eyebrow">
-                IT Asset Management
+                Asset Management
             </span>
 
 
@@ -1273,7 +1416,7 @@
                 <br>
 
                 <span>
-                    Know what you own.
+                    Know where everything is.
                 </span>
 
             </h1>
@@ -1281,21 +1424,23 @@
 
             <p class="hero-description">
 
-                Track company computers, equipment,
-                software and other business assets
-                from a centralized self-hosted
-                management system.
+                A self-hosted asset management
+                application for businesses that need
+                a structured way to track equipment,
+                ownership, assignment, status and
+                lifecycle information.
 
             </p>
 
 
             <div class="hero-actions">
 
+
                 <a
                     href="#pricing"
                     class="button-primary"
                 >
-                    Get AssetDesk
+                    View License Options
                 </a>
 
 
@@ -1306,116 +1451,141 @@
                     Explore Features
                 </a>
 
+
             </div>
 
 
             <div class="hero-meta">
 
-                <span class="meta-item">
+                <span class="meta">
                     .NET 8
                 </span>
 
-                <span class="meta-item">
+                <span class="meta">
                     ASP.NET Core MVC
                 </span>
 
-                <span class="meta-item">
-                    Asset Tracking
+                <span class="meta">
+                    SQL Server / SQLite
                 </span>
 
-                <span class="meta-item">
-                    User Assignment
-                </span>
-
-                <span class="meta-item">
+                <span class="meta">
                     Self Hosted
+                </span>
+
+                <span class="meta">
+                    Windows Friendly
                 </span>
 
             </div>
 
+
         </div>
 
 
-        <!-- DASHBOARD -->
+        <!-- =================================
+             DASHBOARD MOCKUP
+        ================================= -->
 
-        <div class="dashboard-wrapper">
-
-            <div class="dashboard">
+        <div class="preview">
 
 
-                <div class="dashboard-top">
+            <div class="window">
+
+
+                <div class="window-bar">
 
                     <span class="dot"></span>
+
                     <span class="dot"></span>
+
                     <span class="dot"></span>
 
                 </div>
 
 
-                <div class="dashboard-body">
+                <div class="dashboard">
 
 
                     <aside class="sidebar">
 
-                        <div class="sidebar-title">
+
+                        <div class="sidebar-brand">
                             AssetDesk
                         </div>
 
 
-                        <div class="sidebar-item active">
+                        <div
+                            class="sidebar-item active"
+                        >
                             Dashboard
                         </div>
+
 
                         <div class="sidebar-item">
                             Assets
                         </div>
 
-                        <div class="sidebar-item">
-                            Employees
-                        </div>
 
                         <div class="sidebar-item">
                             Categories
                         </div>
 
+
+                        <div class="sidebar-item">
+                            Employees
+                        </div>
+
+
                         <div class="sidebar-item">
                             Locations
                         </div>
+
+
+                        <div class="sidebar-item">
+                            Assignments
+                        </div>
+
 
                         <div class="sidebar-item">
                             Reports
                         </div>
 
+
                         <div class="sidebar-item">
                             Settings
                         </div>
 
+
                     </aside>
 
 
-                    <div class="dashboard-content">
+                    <div class="dashboard-main">
 
 
-                        <div class="dashboard-heading">
+                        <div class="dashboard-header">
 
-                            <h3>
-                                Asset Overview
-                            </h3>
 
-                            <span class="dashboard-button">
+                            <div class="dashboard-title">
+                                Asset Dashboard
+                            </div>
+
+
+                            <div class="new-button">
                                 + Add Asset
-                            </span>
+                            </div>
+
 
                         </div>
 
 
-                        <div class="stat-grid">
+                        <div class="stats">
 
 
                             <div class="stat">
 
                                 <div class="stat-label">
-                                    Total Assets
+                                    TOTAL ASSETS
                                 </div>
 
                                 <div class="stat-value">
@@ -1428,11 +1598,11 @@
                             <div class="stat">
 
                                 <div class="stat-label">
-                                    Assigned
+                                    ASSIGNED
                                 </div>
 
                                 <div class="stat-value">
-                                    193
+                                    187
                                 </div>
 
                             </div>
@@ -1441,11 +1611,11 @@
                             <div class="stat">
 
                                 <div class="stat-label">
-                                    Available
+                                    AVAILABLE
                                 </div>
 
                                 <div class="stat-value">
-                                    55
+                                    61
                                 </div>
 
                             </div>
@@ -1454,147 +1624,273 @@
                         </div>
 
 
-                        <table class="asset-table">
-
-                            <thead>
-
-                                <tr>
-
-                                    <th>
-                                        Asset
-                                    </th>
-
-                                    <th>
-                                        Category
-                                    </th>
-
-                                    <th>
-                                        Assigned To
-                                    </th>
-
-                                    <th>
-                                        Status
-                                    </th>
-
-                                </tr>
-
-                            </thead>
+                        <div class="asset-table">
 
 
-                            <tbody>
+                            <div class="asset-row header">
 
-                                <tr>
+                                <div>
+                                    Asset
+                                </div>
 
-                                    <td>
-                                        Dell Latitude 5440
-                                    </td>
+                                <div>
+                                    Category
+                                </div>
 
-                                    <td>
-                                        Laptop
-                                    </td>
+                                <div>
+                                    Status
+                                </div>
 
-                                    <td>
-                                        John Smith
-                                    </td>
+                                <div>
+                                    Location
+                                </div>
 
-                                    <td>
-                                        <span class="status">
-                                            Assigned
-                                        </span>
-                                    </td>
-
-                                </tr>
+                            </div>
 
 
-                                <tr>
+                            <div class="asset-row">
 
-                                    <td>
-                                        iPhone 15
-                                    </td>
+                                <div>
+                                    Dell Latitude 5440
+                                </div>
 
-                                    <td>
-                                        Mobile
-                                    </td>
+                                <div>
+                                    Laptop
+                                </div>
 
-                                    <td>
-                                        Sarah Lee
-                                    </td>
+                                <div>
+                                    <span class="status">
+                                        Assigned
+                                    </span>
+                                </div>
 
-                                    <td>
-                                        <span class="status">
-                                            Assigned
-                                        </span>
-                                    </td>
+                                <div>
+                                    Mumbai
+                                </div>
 
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>
-                                        HP LaserJet
-                                    </td>
-
-                                    <td>
-                                        Printer
-                                    </td>
-
-                                    <td>
-                                        IT Department
-                                    </td>
-
-                                    <td>
-                                        <span class="status">
-                                            Available
-                                        </span>
-                                    </td>
-
-                                </tr>
+                            </div>
 
 
-                            </tbody>
+                            <div class="asset-row">
 
-                        </table>
+                                <div>
+                                    HP LaserJet Pro
+                                </div>
+
+                                <div>
+                                    Printer
+                                </div>
+
+                                <div>
+                                    <span class="status">
+                                        Available
+                                    </span>
+                                </div>
+
+                                <div>
+                                    Office
+                                </div>
+
+                            </div>
+
+
+                            <div class="asset-row">
+
+                                <div>
+                                    Lenovo ThinkPad
+                                </div>
+
+                                <div>
+                                    Laptop
+                                </div>
+
+                                <div>
+                                    <span class="status">
+                                        Assigned
+                                    </span>
+                                </div>
+
+                                <div>
+                                    Pune
+                                </div>
+
+                            </div>
+
+
+                            <div class="asset-row">
+
+                                <div>
+                                    Samsung Monitor
+                                </div>
+
+                                <div>
+                                    Monitor
+                                </div>
+
+                                <div>
+                                    <span class="status">
+                                        Available
+                                    </span>
+                                </div>
+
+                                <div>
+                                    Mumbai
+                                </div>
+
+                            </div>
+
+
+                        </div>
 
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ==============================
-     FEATURES
-============================== -->
+<!-- =====================================
+     PROBLEM
+===================================== -->
 
-<section id="features">
+<section>
+
 
     <div class="container">
 
 
         <div class="section-heading">
 
+
+            <span class="eyebrow">
+                The Problem
+            </span>
+
+
+            <h2>
+                Stop managing company
+                assets through spreadsheets.
+            </h2>
+
+
+            <p>
+                As a business grows, equipment,
+                devices and other physical assets
+                become increasingly difficult to track
+                manually.
+            </p>
+
+
+        </div>
+
+
+        <div class="problem-grid">
+
+
+            <article class="problem-card">
+
+                <span class="number">
+                    01
+                </span>
+
+
+                <h3>
+                    Unknown Ownership
+                </h3>
+
+
+                <p>
+                    Quickly identify who currently
+                    has a particular device, asset
+                    or piece of equipment.
+                </p>
+
+            </article>
+
+
+            <article class="problem-card">
+
+                <span class="number">
+                    02
+                </span>
+
+
+                <h3>
+                    Spreadsheet Dependency
+                </h3>
+
+
+                <p>
+                    Replace disconnected spreadsheets
+                    with a centralized asset database.
+                </p>
+
+            </article>
+
+
+            <article class="problem-card">
+
+                <span class="number">
+                    03
+                </span>
+
+
+                <h3>
+                    Poor Lifecycle Visibility
+                </h3>
+
+
+                <p>
+                    Track assets from acquisition and
+                    assignment through maintenance,
+                    return and retirement.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     FEATURES
+===================================== -->
+
+<section id="features">
+
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+
             <span class="eyebrow">
                 Features
             </span>
 
+
             <h2>
-                A central system for
-                business assets.
+                A structured system
+                for your physical assets.
             </h2>
 
-            <p>
-                Keep track of equipment throughout
-                its lifecycle instead of relying on
-                spreadsheets and disconnected records.
-            </p>
 
         </div>
 
@@ -1604,18 +1900,20 @@
 
             <article class="feature-card">
 
-                <span class="feature-number">
+                <span class="number">
                     01
                 </span>
+
 
                 <h3>
                     Asset Registry
                 </h3>
 
+
                 <p>
-                    Maintain a centralized inventory
-                    of company equipment and assets
-                    with structured information.
+                    Maintain a central record of
+                    company assets and their important
+                    information.
                 </p>
 
             </article>
@@ -1623,17 +1921,19 @@
 
             <article class="feature-card">
 
-                <span class="feature-number">
+                <span class="number">
                     02
                 </span>
 
+
                 <h3>
-                    Employee Assignment
+                    Assignment Tracking
                 </h3>
+
 
                 <p>
                     Track which employee or department
-                    currently has possession of an asset.
+                    currently has an asset.
                 </p>
 
             </article>
@@ -1641,18 +1941,20 @@
 
             <article class="feature-card">
 
-                <span class="feature-number">
+                <span class="number">
                     03
                 </span>
 
+
                 <h3>
-                    Asset Categories
+                    Categories
                 </h3>
 
+
                 <p>
-                    Organize laptops, phones, monitors,
-                    printers and other equipment into
-                    manageable categories.
+                    Organize assets into categories such
+                    as laptops, monitors, furniture and
+                    equipment.
                 </p>
 
             </article>
@@ -1660,18 +1962,39 @@
 
             <article class="feature-card">
 
-                <span class="feature-number">
+                <span class="number">
                     04
                 </span>
+
+
+                <h3>
+                    Location Management
+                </h3>
+
+
+                <p>
+                    Track where assets are physically
+                    located across offices and sites.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <span class="number">
+                    05
+                </span>
+
 
                 <h3>
                     Asset Status
                 </h3>
 
+
                 <p>
-                    Track whether equipment is assigned,
-                    available, under maintenance or
-                    retired.
+                    Track availability, assignment,
+                    maintenance and retirement states.
                 </p>
 
             </article>
@@ -1679,37 +2002,19 @@
 
             <article class="feature-card">
 
-                <span class="feature-number">
-                    05
-                </span>
-
-                <h3>
-                    Locations
-                </h3>
-
-                <p>
-                    Organize assets by office, branch,
-                    department or other business
-                    locations.
-                </p>
-
-            </article>
-
-
-            <article class="feature-card">
-
-                <span class="feature-number">
+                <span class="number">
                     06
                 </span>
 
+
                 <h3>
-                    Reporting
+                    Search & Reporting
                 </h3>
 
+
                 <p>
-                    Generate useful operational views
-                    to understand asset distribution
-                    and availability.
+                    Find assets quickly and obtain
+                    useful operational information.
                 </p>
 
             </article>
@@ -1717,108 +2022,143 @@
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- ==============================
-     WORKFLOW
-============================== -->
+<!-- =====================================
+     LIFECYCLE
+===================================== -->
 
-<section class="workflow-section">
+<section class="lifecycle">
+
 
     <div class="container">
 
 
         <div class="section-heading">
 
+
             <span class="eyebrow">
-                Workflow
+                Asset Lifecycle
             </span>
 
+
             <h2>
-                From purchase to retirement.
+                Follow an asset from
+                purchase to retirement.
             </h2>
 
+
             <p>
-                Maintain visibility throughout the
-                lifecycle of company equipment.
+                Keep a clear history of how assets
+                move through your organization.
             </p>
+
 
         </div>
 
 
-        <div class="workflow">
+        <div class="lifecycle-grid">
 
 
-            <article class="workflow-step">
+            <article class="lifecycle-card">
 
-                <div class="workflow-number">
+                <div class="lifecycle-number">
                     01
                 </div>
 
+
                 <h3>
-                    Register
+                    Acquired
                 </h3>
 
+
                 <p>
-                    Add the asset with identification,
-                    category and purchase information.
+                    Record the asset when it enters
+                    your organization.
                 </p>
 
             </article>
 
 
-            <article class="workflow-step">
+            <article class="lifecycle-card">
 
-                <div class="workflow-number">
+                <div class="lifecycle-number">
                     02
                 </div>
 
+
                 <h3>
-                    Assign
+                    Available
                 </h3>
 
+
                 <p>
-                    Assign the asset to an employee,
-                    department or location.
+                    Keep unused assets ready for
+                    assignment.
                 </p>
 
             </article>
 
 
-            <article class="workflow-step">
+            <article class="lifecycle-card">
 
-                <div class="workflow-number">
+                <div class="lifecycle-number">
                     03
                 </div>
 
+
                 <h3>
-                    Track
+                    Assigned
                 </h3>
 
+
                 <p>
-                    Maintain its current status and
-                    ownership information.
+                    Associate the asset with an
+                    employee or department.
                 </p>
 
             </article>
 
 
-            <article class="workflow-step">
+            <article class="lifecycle-card">
 
-                <div class="workflow-number">
+                <div class="lifecycle-number">
                     04
                 </div>
 
+
                 <h3>
-                    Retire
+                    Maintenance
                 </h3>
 
+
                 <p>
-                    Record assets that are retired,
-                    replaced or removed from service.
+                    Identify assets temporarily
+                    unavailable for use.
+                </p>
+
+            </article>
+
+
+            <article class="lifecycle-card">
+
+                <div class="lifecycle-number">
+                    05
+                </div>
+
+
+                <h3>
+                    Retired
+                </h3>
+
+
+                <p>
+                    Preserve information when an
+                    asset reaches the end of its life.
                 </p>
 
             </article>
@@ -1826,131 +2166,157 @@
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- ==============================
-     ASSET TYPES
-============================== -->
+<!-- =====================================
+     CATEGORIES
+===================================== -->
 
 <section>
+
 
     <div class="container">
 
 
         <div class="section-heading">
+
 
             <span class="eyebrow">
                 Asset Categories
             </span>
 
+
             <h2>
-                Track the equipment
-                your business actually uses.
+                Track more than just laptops.
             </h2>
+
+
+            <p>
+                AssetDesk can be adapted to different
+                types of physical business assets.
+            </p>
+
 
         </div>
 
 
-        <div class="asset-grid">
+        <div class="category-grid">
 
 
-            <article class="asset-card">
+            <article class="category-card">
 
-                <div class="asset-icon">
-                    💻
+                <div class="category-icon">
+                    IT
                 </div>
 
+
                 <h3>
-                    Computers
+                    IT Equipment
                 </h3>
 
+
                 <p>
-                    Laptops, desktops and workstations.
+                    Laptops, desktops, servers,
+                    networking equipment and peripherals.
                 </p>
 
             </article>
 
 
-            <article class="asset-card">
+            <article class="category-card">
 
-                <div class="asset-icon">
-                    📱
+                <div class="category-icon">
+                    OF
                 </div>
 
-                <h3>
-                    Mobile Devices
-                </h3>
-
-                <p>
-                    Smartphones and tablets.
-                </p>
-
-            </article>
-
-
-            <article class="asset-card">
-
-                <div class="asset-icon">
-                    🖥️
-                </div>
-
-                <h3>
-                    Peripherals
-                </h3>
-
-                <p>
-                    Monitors, keyboards and accessories.
-                </p>
-
-            </article>
-
-
-            <article class="asset-card">
-
-                <div class="asset-icon">
-                    🖨️
-                </div>
 
                 <h3>
                     Office Equipment
                 </h3>
 
+
                 <p>
-                    Printers, scanners and other devices.
+                    Printers, scanners, projectors and
+                    other office equipment.
+                </p>
+
+            </article>
+
+
+            <article class="category-card">
+
+                <div class="category-icon">
+                    FU
+                </div>
+
+
+                <h3>
+                    Furniture
+                </h3>
+
+
+                <p>
+                    Desks, chairs, cabinets and other
+                    physical workplace assets.
+                </p>
+
+            </article>
+
+
+            <article class="category-card">
+
+                <div class="category-icon">
+                    EQ
+                </div>
+
+
+                <h3>
+                    Business Equipment
+                </h3>
+
+
+                <p>
+                    Track specialized equipment used
+                    by different teams or locations.
                 </p>
 
             </article>
 
 
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ==============================
-     INCLUDED
-============================== -->
+<!-- =====================================
+     PACKAGE
+===================================== -->
 
 <section>
+
 
     <div class="container">
 
 
         <div class="section-heading">
 
+
             <span class="eyebrow">
-                Included
+                Product Package
             </span>
 
+
             <h2>
-                Everything needed
-                to get started.
+                What you receive.
             </h2>
+
 
         </div>
 
@@ -1981,33 +2347,33 @@
                     </span>
 
                     <span>
+                        Asset registry
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Employee assignment tracking
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <span>
                         Asset categories
-                    </span>
-
-                </li>
-
-
-                <li>
-
-                    <span class="check">
-                        ✓
-                    </span>
-
-                    <span>
-                        Employee management
-                    </span>
-
-                </li>
-
-
-                <li>
-
-                    <span class="check">
-                        ✓
-                    </span>
-
-                    <span>
-                        Asset assignment workflow
                     </span>
 
                 </li>
@@ -2033,7 +2399,7 @@
                     </span>
 
                     <span>
-                        Reporting and operational views
+                        Deployment documentation
                     </span>
 
                 </li>
@@ -2044,14 +2410,16 @@
 
             <div class="requirements">
 
+
                 <h3>
-                    Deployment Requirements
+                    Technical Requirements
                 </h3>
 
 
                 <ul>
 
                     <li>
+                        Windows Server or compatible
                         Windows environment
                     </li>
 
@@ -2060,58 +2428,62 @@
                     </li>
 
                     <li>
-                        .NET 8 runtime or
-                        self-contained deployment
+                        .NET 8
                     </li>
 
                     <li>
-                        SQL Server
+                        SQL Server or supported database
                     </li>
 
                     <li>
-                        Administrator access for
-                        deployment configuration
+                        Modern web browser
                     </li>
 
                 </ul>
+
 
             </div>
 
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- ==============================
+<!-- =====================================
      PRICING
-============================== -->
+===================================== -->
 
 <section
     id="pricing"
     class="pricing"
 >
 
+
     <div class="container">
 
 
         <div class="section-heading">
 
+
             <span class="eyebrow">
                 Licensing
             </span>
 
+
             <h2>
-                Start small.
-                Scale when needed.
+                Choose the right deployment.
             </h2>
 
+
             <p>
-                Final pricing and licensing rights
-                will be published before launch.
+                Automated checkout and license delivery
+                will be connected to these plans.
             </p>
+
 
         </div>
 
@@ -2119,43 +2491,57 @@
         <div class="pricing-grid">
 
 
+            <!-- STARTER -->
+
             <article class="pricing-card">
 
+
                 <div class="pricing-name">
-                    Developer
+                    Starter
                 </div>
 
+
                 <h3>
-                    Personal
+                    Small Business
                 </h3>
+
 
                 <div class="price">
                     Coming Soon
                 </div>
 
+
                 <div class="price-note">
-                    For evaluation and development.
+
+                    For small businesses that need
+                    centralized asset tracking.
+
                 </div>
 
-                <div class="pricing-divider"></div>
+
+                <div class="divider"></div>
 
 
                 <ul class="pricing-features">
 
                     <li>
-                        Application access
+                        Asset registry
                     </li>
 
                     <li>
-                        Development use
+                        Assignment tracking
                     </li>
 
                     <li>
-                        Documentation
+                        Categories
                     </li>
 
                     <li>
-                        Deployment guidance
+                        Locations
+                    </li>
+
+                    <li>
+                        Self-hosted deployment
                     </li>
 
                 </ul>
@@ -2163,17 +2549,21 @@
 
                 <button
                     class="pricing-button"
-                    onclick="showComingSoon()"
+                    onclick="comingSoon()"
                 >
                     Coming Soon
                 </button>
 
+
             </article>
 
+
+            <!-- BUSINESS -->
 
             <article
                 class="pricing-card featured"
             >
+
 
                 <span class="pricing-badge">
                     Recommended
@@ -2184,41 +2574,48 @@
                     Business
                 </div>
 
+
                 <h3>
-                    Commercial
+                    Professional
                 </h3>
+
 
                 <div class="price">
                     Coming Soon
                 </div>
 
+
                 <div class="price-note">
-                    For internal business deployment.
+
+                    For organizations managing
+                    multiple teams, assets and locations.
+
                 </div>
 
-                <div class="pricing-divider"></div>
+
+                <div class="divider"></div>
 
 
                 <ul class="pricing-features">
 
                     <li>
-                        Commercial usage
+                        Full asset management
                     </li>
 
                     <li>
-                        Self-hosted deployment
+                        Employee assignment
                     </li>
 
                     <li>
-                        Source package
+                        Location tracking
                     </li>
 
                     <li>
-                        Database scripts
+                        Asset lifecycle
                     </li>
 
                     <li>
-                        Documentation
+                        Reporting
                     </li>
 
                     <li>
@@ -2230,33 +2627,44 @@
 
                 <button
                     class="pricing-button"
-                    onclick="showComingSoon()"
+                    onclick="comingSoon()"
                 >
-                    Get Commercial License
+                    Get Professional License
                 </button>
+
 
             </article>
 
 
+            <!-- ENTERPRISE -->
+
             <article class="pricing-card">
 
+
                 <div class="pricing-name">
-                    Extended
+                    Enterprise
                 </div>
+
 
                 <h3>
-                    Business Plus
+                    Custom
                 </h3>
 
+
                 <div class="price">
-                    Coming Soon
+                    Contact
                 </div>
+
 
                 <div class="price-note">
-                    For larger deployments.
+
+                    For organizations requiring
+                    customization and larger deployments.
+
                 </div>
 
-                <div class="pricing-divider"></div>
+
+                <div class="divider"></div>
 
 
                 <ul class="pricing-features">
@@ -2266,59 +2674,65 @@
                     </li>
 
                     <li>
-                        Multiple deployments
+                        Multiple locations
                     </li>
 
                     <li>
-                        Source package
+                        Custom workflows
                     </li>
 
                     <li>
-                        Documentation
+                        Custom reporting
                     </li>
 
                     <li>
-                        Extended support
+                        Custom development
                     </li>
 
                 </ul>
 
 
-                <button
+                <a
+                    href="../index.html#contact"
                     class="pricing-button"
-                    onclick="showComingSoon()"
                 >
                     Contact Sales
-                </button>
+                </a>
+
 
             </article>
 
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- ==============================
+<!-- =====================================
      FAQ
-============================== -->
+===================================== -->
 
 <section>
+
 
     <div class="container">
 
 
         <div class="section-heading">
 
+
             <span class="eyebrow">
                 FAQ
             </span>
 
+
             <h2>
-                Frequently asked questions.
+                Before you purchase.
             </h2>
+
 
         </div>
 
@@ -2329,14 +2743,14 @@
             <details>
 
                 <summary>
-                    What is AssetDesk?
+                    Is AssetDesk self-hosted?
                 </summary>
 
                 <p>
-                    AssetDesk is designed to help
-                    organizations maintain a centralized
-                    record of company equipment and
-                    track its assignment and status.
+                    Yes. AssetDesk is designed for
+                    organizations that want to deploy
+                    the application within their own
+                    infrastructure.
                 </p>
 
             </details>
@@ -2345,28 +2759,14 @@
             <details>
 
                 <summary>
-                    Who is AssetDesk for?
+                    What type of assets can I track?
                 </summary>
 
                 <p>
-                    It is intended for businesses,
-                    offices and organizations that need
-                    a structured way to manage internal
-                    equipment and assets.
-                </p>
-
-            </details>
-
-
-            <details>
-
-                <summary>
-                    Can I host AssetDesk myself?
-                </summary>
-
-                <p>
-                    Yes. The product is designed around
-                    a self-hosted deployment model.
+                    AssetDesk can be used for IT
+                    equipment, office equipment,
+                    furniture and other physical
+                    business assets.
                 </p>
 
             </details>
@@ -2379,8 +2779,23 @@
                 </summary>
 
                 <p>
-                    Yes. Employee assignment is one of
-                    the core workflows of the application.
+                    Yes. Asset assignment is one of the
+                    core workflows of the application.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    Can I track different office locations?
+                </summary>
+
+                <p>
+                    Location management can be used to
+                    organize assets across offices,
+                    departments or other business sites.
                 </p>
 
             </details>
@@ -2393,10 +2808,9 @@
                 </summary>
 
                 <p>
-                    Customization capabilities depend
-                    on the specific edition and license.
-                    Enterprise customization can be
-                    offered separately.
+                    Customization and additional
+                    organization-specific functionality
+                    can be discussed separately.
                 </p>
 
             </details>
@@ -2405,14 +2819,14 @@
             <details>
 
                 <summary>
-                    Can I resell AssetDesk?
+                    Can I resell the software?
                 </summary>
 
                 <p>
-                    Standard commercial licensing does
-                    not automatically include redistribution
-                    or resale rights. Separate licensing
-                    would be required.
+                    Standard licensing does not include
+                    redistribution, resale or white-label
+                    rights unless specifically agreed
+                    under a separate license.
                 </p>
 
             </details>
@@ -2420,40 +2834,42 @@
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- ==============================
-     FINAL CTA
-============================== -->
+<!-- =====================================
+     CTA
+===================================== -->
 
-<section class="final-cta">
+<section class="cta">
+
 
     <div class="container">
 
 
         <h2>
-            Stop managing assets
-            in spreadsheets.
+            Know what your business owns.
         </h2>
 
 
         <p>
-            Bring equipment, assignments and
-            operational asset information into
-            one centralized system.
+            Bring assets, assignments, locations and
+            lifecycle information into one structured
+            system.
         </p>
 
 
-        <div class="hero-actions">
+        <div class="cta-actions">
+
 
             <a
                 href="#pricing"
                 class="button-primary"
             >
-                Get AssetDesk
+                View License Options
             </a>
 
 
@@ -2461,12 +2877,15 @@
                 href="../products.html"
                 class="button-secondary"
             >
-                View All Products
+                ← Back to Store
             </a>
+
 
         </div>
 
+
     </div>
+
 
 </section>
 
@@ -2474,13 +2893,15 @@
 </main>
 
 
-<!-- ==============================
+<!-- =====================================
      FOOTER
-============================== -->
+===================================== -->
 
 <footer>
 
+
     <div class="container footer-inner">
+
 
         <div>
             © 2026 Darshan Bane
@@ -2490,7 +2911,7 @@
         <div>
 
             <a href="../products.html">
-                Products
+                Store
             </a>
 
             &nbsp; · &nbsp;
@@ -2507,19 +2928,21 @@
 
         </div>
 
+
     </div>
+
 
 </footer>
 
 
 <script>
 
-    function showComingSoon() {
+    function comingSoon() {
 
         alert(
-            "AssetDesk purchasing will be available soon. " +
-            "Final pricing and licensing options will be " +
-            "published before launch."
+            "AssetDesk purchasing is being finalized. " +
+            "Automated checkout and license delivery " +
+            "will be connected soon."
         );
 
     }
