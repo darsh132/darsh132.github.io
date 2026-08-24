@@ -1,8 +1,8 @@
 {
-  "name": "darshan-bane-software-store",
-  "version": "1.0.0",
+  "name": "darshan-bane-site",
+  "version": "2.0.0",
   "private": true,
-  "description": "Corporate software marketplace for Darshan Bane MVP products",
+  "description": "Darshan Bane personal software platform and portfolio",
   "scripts": {
     "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/app.css --minify",
     "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/app.css --watch"
