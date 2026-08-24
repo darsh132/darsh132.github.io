@@ -1047,7 +1047,47 @@
         }
 
     </style>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: [
+                        "DM Sans",
+                        "sans-serif"
+                    ],
 
+                    display: [
+                        "Manrope",
+                        "sans-serif"
+                    ]
+                }
+            }
+        },
+
+        daisyui: {
+            themes: [
+                {
+                    "darshan-corporate": {
+                        "primary": "#0f172a",
+                        "secondary": "#334155",
+                        "accent": "#2563eb",
+                        "neutral": "#111827",
+                        "base-100": "#ffffff",
+                        "base-200": "#f8fafc",
+                        "base-300": "#e2e8f0",
+                        "info": "#0284c7",
+                        "success": "#059669",
+                        "warning": "#d97706",
+                        "error": "#dc2626"
+                    }
+                }
+            ]
+        }
+    };
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 
