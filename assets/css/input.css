@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@plugin "daisyui";
+
+
+/* =========================================================
+   DARSHAN BANE SOFTWARE STORE THEME
+   ========================================================= */
+
+@plugin "daisyui/theme" {
+
+  name: "light";
+
+  default: false;
+
+  prefersdark: false;
+
+  color-scheme: "dark";
+
+  --color-base-100: oklch(12% 0.042 264.695);
+
+  --color-base-200: oklch(20% 0.042 265.755);
+
+  --color-base-300: oklch(27% 0.041 260.031);
+
+  --color-base-content: oklch(96% 0.007 247.896);
+
+  --color-primary: oklch(84% 0.238 128.85);
+
+  --color-primary-content: oklch(27% 0.072 132.109);
+
+  --color-secondary: oklch(79% 0.209 151.711);
+
+  --color-secondary-content: oklch(26% 0.065 152.934);
+
+  --color-accent: oklch(70% 0.191 22.216);
+
+  --color-accent-content: oklch(25% 0.092 26.042);
+
+  --color-neutral: oklch(20% 0.042 265.755);
+
+  --color-neutral-content: oklch(98% 0.003 247.858);
+
+  --color-info: oklch(68% 0.169 237.323);
+
+  --color-info-content: oklch(97% 0.013 236.62);
+
+  --color-success: oklch(70% 0.14 182.503);
+
+  --color-success-content: oklch(98% 0.014 180.72);
+
+  --color-warning: oklch(70% 0.213 47.604);
+
+  --color-warning-content: oklch(98% 0.016 73.684);
+
+  --color-error: oklch(64% 0.246 16.439);
+
+  --color-error-content: oklch(96% 0.015 12.422);
+
+  --radius-selector: 0.25rem;
+
+  --radius-field: 2rem;
+
+  --radius-box: 0.25rem;
+
+  --size-selector: 0.25rem;
+
+  --size-field: 0.25rem;
+
+  --border: 1.5px;
+
+  --depth: 0;
+
+  --noise: 1;
+}
+
+
+/* =========================================================
+   SOURCE FILES
+   Tailwind scans these files for classes.
+   ========================================================= */
+
+@source "../../*.html";
+
+@source "../../products/**/*.html";
+
+@source "../../assets/js/**/*.js";
+
+
+/* =========================================================
+   CUSTOM STORE CSS
+   ========================================================= */
+
+@import "./store.css";

@@ -1,0 +1,15 @@
+{
+  "name": "darshan-bane-software-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Corporate software marketplace for Darshan Bane MVP products",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/app.css --minify",
+    "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/app.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "daisyui": "^5.0.50",
+    "tailwindcss": "^4.1.12"
+  }
+}
